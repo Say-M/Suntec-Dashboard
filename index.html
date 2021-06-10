@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suntec Dashboard</title>
+
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css"
+      integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.min.js"
+      integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- chart js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- custom styling -->
+    <link rel="stylesheet" href="./assets/css/styles.min.css" />
+
+    <!-- custom scripts -->
+    <script src="./js/app.js" defer></script>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="/"><img src="./assets/images/logo 1.png" alt="" /></a>
+      </div>
+      <div class="sidebar-body">
+        <ul>
+          <li>
+            <a href="#" class="active">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#home"></use>
+              </svg>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#user"></use>
+              </svg>
+              Agents</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#file"></use>
+              </svg>
+              Proposals</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#layers"></use>
+              </svg>
+              Projects</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#file-text"></use>
+              </svg>
+              Statements</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#calculator"></use>
+              </svg>
+              Calculator</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#filter"></use>
+              </svg>
+              Leads</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#calender"></use>
+              </svg>
+              Calendar</a
+            >
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <div class="overlay hide"></div>
+    <main>
+      <header class="header">
+        <div class="left-header">
+          <div class="menu"><i class="fas fa-bars"></i></div>
+          <div class="search">
+            <i class="fas fa-search"></i>
+            <input
+              type="text"
+              class="form-control form-control-lg"
+              placeholder="Search..."
+            />
+          </div>
+          <div class="icons">
+            <i class="fas fa-search left-header-search"></i>
+            <i class="fas fa-ellipsis-v right-header-menu"></i>
+          </div>
+        </div>
+        <div class="right-header">
+          <div class="language">
+            <div class="language-btn">
+              <img src="./assets/images/flags/united-states.png" alt="" />
+              <i class="fas fa-angle-down"></i>
+            </div>
+            <ul class="shadow-sm language-list">
+              <li>Eng</li>
+              <li>বাংলা</li>
+              <li>اَلْعَرَبِيَّةُ</li>
+            </ul>
+          </div>
+          <div class="page-settings">
+            <ul>
+              <li><i class="fas fa-expand-alt"></i></li>
+              <li><i class="fas fa-cog"></i></li>
+              <li><i class="far fa-bell"></i></li>
+            </ul>
+          </div>
+          <div class="user">
+            <img src="./assets/images/user.png" alt="" />
+            <div>
+              <h6>Jhon Doe</h6>
+              <small>Admin</small>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="home">
+        <h3 class="greeting">Hi <strong>Jhon Doe,</strong> Welcome back!</h3>
+        <p>Overview</p>
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="calender">
+              <div class="calender-header">
+                <div>
+                  <h3>Project Calender</h3>
+                  <p>Schedule for current month</p>
+                </div>
+                <div class="plus"><i class="fas fa-plus"></i></div>
+              </div>
+              <div class="calender-filter">
+                <input type="date" class="form-control form-control-lg" />
+                <div>
+                  <p>
+                    <small>Sort by</small><br /><span style="color: #000000"
+                      >Relevant</span
+                    >
+                  </p>
+                  <div class="sort"><i class="fas fa-sliders-h"></i></div>
+                </div>
+              </div>
+              <div class="calender-body">
+                <div class="calender-inner"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="award">
+              <div>
+                <img src="./assets/images/winner.png" alt="" />
+              </div>
+              <h3 class="text-black">$1,220,757.86</h3>
+              <p>
+                Total generated commissions from Contract Projects as of today.
+              </p>
+              <div class="border-top mt-3 pt-3">
+                <a href="#" class="btn btn-lg btn-red">View project</a>
+              </div>
+            </div>
+            <div class="project">
+              <h3 class="text-black mb-5">Project Summary</h3>
+              <canvas id="project-chart"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="commission">
+          <div class="title-header">
+            <div>
+              <h3>Project Calender</h3>
+              <p>Schedule for current month</p>
+            </div>
+            <div class="info"><i class="fas fa-info-circle"></i></div>
+          </div>
+          <canvas id="commission-chart"></canvas>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="top-seller">
+              <div class="title-header">
+                <div>
+                  <h3>Top sellers</h3>
+                  <p>Schedule for current month</p>
+                </div>
+                <div class="info"><i class="fas fa-ellipsis-h"></i></div>
+              </div>
+              <ul>
+                <li>
+                  <div>
+                    <h6 class="text-black">Jhon Doe</h6>
+                    <small>Manager</small>
+                  </div>
+                  <strong class="text-black">$250.00</strong>
+                </li>
+                <li>
+                  <div>
+                    <h6 class="text-black">Jhon Doe</h6>
+                    <small>Manager</small>
+                  </div>
+                  <strong class="text-black">$250.00</strong>
+                </li>
+                <li>
+                  <div>
+                    <h6 class="text-black">Jhon Doe</h6>
+                    <small>Manager</small>
+                  </div>
+                  <strong class="text-black">$250.00</strong>
+                </li>
+                <li>
+                  <div>
+                    <h6 class="text-black">Jhon Doe</h6>
+                    <small>Manager</small>
+                  </div>
+                  <strong class="text-black">$250.00</strong>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="chats">
+              <div class="title-header">
+                <div>
+                  <h3>Chats</h3>
+                  <p>Schedule for current month</p>
+                </div>
+                <div class="info"><i class="fas fa-ellipsis-h"></i></div>
+              </div>
+              <div class="chat-body">
+                <ul>
+                  <li>
+                    Hi there! I have a query I don’t know how to save my points
+                    securely
+                  </li>
+                  <li>
+                    Hi don’t worry I will help you with that ...share your
+                    profile link please...
+                  </li>
+                </ul>
+                <div class="message-box">
+                  <input
+                    type="text"
+                    class="form-control form-control-lg"
+                    placeholder="Type your message here"
+                  />
+                  <i class="far fa-paper-plane"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      const project_ctx = document
+        .getElementById('project-chart')
+        .getContext('2d')
+      const commission_ctx = document
+        .getElementById('commission-chart')
+        .getContext('2d')
+      const projectChart = new Chart(project_ctx, {
+        type: 'doughnut',
+        data: {
+          labels: ['Contract', 'Pending', 'Cancelled'],
+          datasets: [
+            {
+              label: '',
+              data: [12, 19, 3],
+              backgroundColor: [
+                '#e65912',
+                'rgb(255, 206, 86)',
+                'rgb(255, 159, 64)',
+              ],
+              borderColor: [
+                '#e65912',
+                'rgb(255, 206, 86)',
+                'rgb(255, 159, 64)',
+              ],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom',
+            },
+            title: {
+              display: false,
+            },
+          },
+        },
+      })
+
+      const commissionChart = new Chart(commission_ctx, {
+        type: 'line',
+        data: {
+          labels: [
+            'Jan',
+            'Feb',
+            'Mar',
+            'Apr',
+            'May',
+            'June',
+            'July',
+            'Aug',
+            'Sep',
+            'Oct',
+            'Nov',
+            'Dec',
+          ],
+          datasets: [
+            {
+              label: '',
+              data: [0, 20, 20, 60, 60, 120, 50, 180, 120, 125, 105, 110, 170],
+              backgroundColor: '#e65912',
+              borderColor: '#e65912',
+              borderWidth: 3,
+              tension: 0.4,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: false,
+            },
+            title: {
+              display: false,
+            },
+          },
+        },
+      })
+    </script>
+  </body>
+</html>

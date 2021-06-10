@@ -1,0 +1,62 @@
+.sidebar {
+  width: 360px;
+  border-right: 1px solid $borderColor;
+  height: 100vh;
+  overflow: auto;
+  position: sticky;
+  top: 0;
+  transition: 0.3s ease-in-out;
+  @media screen and(max-width: 991.98px) {
+    width: 260px;
+  }
+  &.active {
+    margin-left: -100%;
+  }
+  @media screen and(max-width: 991.98px) {
+    position: fixed;
+    z-index: 11111;
+    background: $white;
+    margin-left: -100%;
+    &.active {
+      margin-left: 0;
+    }
+  }
+  .sidebar-header {
+    padding: 1rem;
+    a {
+      text-decoration: none;
+      img {
+        width: 13rem;
+      }
+    }
+  }
+  .sidebar-body {
+    ul {
+      list-style: none;
+      margin-bottom: 0;
+      padding-left: 0;
+      li {
+        a {
+          display: flex;
+          text-decoration: none;
+          color: $gray;
+          padding: 1rem 2rem;
+          align-items: center;
+          svg {
+            width: 1.2rem;
+            height: 1.2rem;
+            margin-right: 0.5rem;
+          }
+          &:hover {
+            color: $red;
+          }
+          &.active {
+            background-image: url(../images/icons/Union.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
+        }
+      }
+    }
+  }
+}

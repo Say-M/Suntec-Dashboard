@@ -1,0 +1,186 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  @media screen and(max-width:991.98px) {
+    flex-direction: column;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    position: sticky;
+    top: 0;
+    padding: 0;
+    position: relative;
+  }
+  .left-header {
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and(max-width:991.98px) {
+      width: 100%;
+      padding: 1rem;
+      background: $white;
+      position: relative;
+      z-index: 11;
+    }
+    .menu {
+      margin-right: 1rem;
+      border: 1px solid $lightGray;
+      padding: 0.3rem 0.7rem;
+      font-size: 1.3rem;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      background: $white;
+      display: none;
+      @media screen and(max-width:991.98px) {
+        display: block;
+      }
+    }
+    .search {
+      position: relative;
+      @media screen and(max-width:991.98px) {
+        width: 0;
+        overflow: hidden;
+        pointer-events: none;
+        transition: 0.2s ease-in-out;
+        &.active {
+          width: 100%;
+        }
+      }
+      i {
+        position: absolute;
+        left: 1rem;
+        top: 1rem;
+        color: $gray;
+      }
+      input {
+        border-radius: 2rem;
+        padding-left: 2.5rem;
+      }
+    }
+    .icons {
+      display: none;
+      @media screen and(max-width:991.98px) {
+        display: flex;
+        font-size: 1.3rem;
+        i {
+          margin-left: 1.5rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .right-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: calc(100% - 400px);
+    @media screen and(max-width:991.98px) {
+      width: 100%;
+      padding: 1rem;
+      background: $white;
+      transition: 0.2s ease-in-out;
+      position: absolute;
+      top: 0;
+      border-top: 1px solid $lightGray;
+      z-index: 1;
+      &.active {
+        top: 5rem;
+      }
+    }
+    .language {
+      position: relative;
+      border-right: 1px solid $borderColor;
+      margin-right: 1.5rem;
+      padding-right: 2rem;
+      @media screen and(max-width:991.98px) {
+        border-right: none;
+        margin-right: 1rem;
+        padding-right: 0;
+      }
+      .language-btn {
+        border: 1px solid $borderColor;
+        border-radius: 2rem;
+        padding: 0.1rem;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        color: $gray;
+      }
+      img {
+        width: 1.5rem;
+        margin-right: 0.5rem;
+      }
+      ul {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+        position: absolute;
+        right: 0;
+        top: 2.5rem;
+        border: 1px solid $borderColor;
+        background: $white;
+        width: 5rem;
+        transition: 0.2s ease-in-out;
+        transform-origin: top left;
+        transform: scale(0);
+        @media screen and(max-width:991.98px) {
+          left: 0;
+        }
+        &.active {
+          transform: scale(1);
+        }
+        li {
+          font-size: 90%;
+          padding: 0.2rem 0.5rem;
+          color: $gray;
+          cursor: pointer;
+          &:hover {
+            background: $lightGray;
+          }
+        }
+      }
+    }
+    .page-settings {
+      border-right: 1px solid $borderColor;
+      margin-right: 2rem;
+      padding-right: 2rem;
+      @media screen and(max-width:991.98px) {
+        border-right: none;
+        margin-right: 1rem;
+        padding-right: 0;
+      }
+      ul {
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+        display: flex;
+        li {
+          padding: 0.5rem;
+          margin-right: 0.5rem;
+          cursor: pointer;
+          color: $gray;
+        }
+      }
+    }
+    .user {
+      display: flex;
+      img {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 0.5rem;
+      }
+      & > div {
+        h6 {
+          font-weight: 700;
+          margin-bottom: 0;
+          color: $black;
+        }
+        small {
+          color: $gray;
+        }
+      }
+    }
+  }
+}

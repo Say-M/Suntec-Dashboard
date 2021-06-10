@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  @media screen and(max-width: 991.98px) {
+    font-size: 15px;
+  }
+  @media screen and(max-width:767.98px) {
+    font-size: 14.5px;
+  }
+}
+body {
+  font-family: $roboto;
+  font-size: 1rem;
+  background: $background;
+  color: $gray;
+  display: flex;
+  justify-content: space-between;
+}
+main {
+  width: calc(100vw - 360px);
+  transition: 0.3s ease-in-out;
+  @media screen and(max-width: 991.98px) {
+    width: 100%;
+  }
+  &.full-width {
+    width: 100%;
+  }
+}
+input,
+select,
+textarea {
+  border: 1px solid $borderColor;
+}
+.text-black {
+  color: $black !important;
+}
+.btn {
+  border-radius: 2rem;
+}
+.border,
+.border-top,
+.border-right,
+.border-bottom,
+.border-left {
+  border-color: $lightGray;
+}
+.btn-red {
+  background: $red;
+  color: $white;
+}
+.btn-outline-red {
+  border: 1px solid $red;
+  color: $red;
+  &:hover {
+    color: $white;
+    background: $red;
+  }
+}
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 111;
+  background: transparentize($color: $black, $amount: 0.7);
+  opacity: 1;
+  transition: 0.2s ease-in-out;
+}
+.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.title-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  & > div {
+    h3 {
+      color: $black;
+    }
+  }
+  .info {
+    font-size: 1.3rem;
+  }
+}
