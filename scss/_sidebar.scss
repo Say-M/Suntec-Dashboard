@@ -42,9 +42,10 @@
           color: $gray;
           padding: 1rem 2rem;
           align-items: center;
+          font-size: 1rem;
           svg {
-            width: 1.2rem;
-            height: 1.2rem;
+            width: 1rem;
+            height: 1rem;
             margin-right: 0.5rem;
           }
           &:hover {

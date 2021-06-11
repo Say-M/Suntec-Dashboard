@@ -5,16 +5,16 @@
 }
 html {
   font-size: 16px;
-  @media screen and(max-width: 991.98px) {
-    font-size: 15px;
-  }
-  @media screen and(max-width:767.98px) {
-    font-size: 14.5px;
-  }
+  // @media screen and(max-width: 991.98px) {
+  //   font-size: 15px;
+  // }
+  // @media screen and(max-width:767.98px) {
+  //   font-size: 14.5px;
+  // }
 }
 body {
   font-family: $roboto;
-  font-size: 1rem;
+  font-size: 1.125rem;
   background: $background;
   color: $gray;
   display: flex;
@@ -37,7 +37,13 @@ main {
 input,
 select,
 textarea {
-  border: 1px solid $borderColor;
+  border: 1px solid $lightGray !important;
+  &:active,
+  &:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: $lightGray !important;
+  }
 }
 .text-black {
   color: $black !important;
@@ -83,7 +89,8 @@ textarea {
 .title-header {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+  // padding: 1rem;
+  margin-bottom: 1rem;
   flex-wrap: wrap;
   & > div {
     h3 {
@@ -96,4 +103,14 @@ textarea {
 }
 .bg-red {
   background-color: $red !important;
+}
+.section-shadow {
+  box-shadow: 0 4px 4px transparentize($color: $black, $amount: 0.98);
+}
+h3 {
+  font-size: 1.5rem;
+}
+small,
+.small {
+  font-size: 0.8125rem;
 }

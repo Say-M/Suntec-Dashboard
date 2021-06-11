@@ -11,7 +11,7 @@
     position: relative;
   }
   .left-header {
-    width: 400px;
+    width: 25.875rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,6 +37,8 @@
     }
     .search {
       position: relative;
+      width: 100%;
+      font-size: 1rem;
       @media screen and(max-width:991.98px) {
         width: 0;
         overflow: hidden;
@@ -55,6 +57,7 @@
       input {
         border-radius: 2rem;
         padding-left: 2.5rem;
+        border-color: $lightGray;
       }
     }
     .icons {
