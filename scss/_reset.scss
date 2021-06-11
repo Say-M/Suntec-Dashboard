@@ -61,6 +61,17 @@ textarea {
 .btn-red {
   background: $red;
   color: $white;
+  font-size: 1rem !important;
+  &:hover {
+    color: $white;
+    box-shadow: 0px 11px 17px rgba(230, 89, 18, 0.15);
+  }
+  &:active,
+  &:focus {
+    border-color: none;
+    outline: none;
+    box-shadow: 0px 11px 17px rgba(230, 89, 18, 0.15);
+  }
 }
 .btn-outline-red {
   border: 1px solid $red;
