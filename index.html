@@ -33,6 +33,9 @@
     <!-- chart js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    <!-- apex chart -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
     <!-- custom styling -->
     <link rel="stylesheet" href="./assets/css/styles.min.css" />
 
@@ -386,7 +389,7 @@
             </div>
             <div class="project section-shadow">
               <h3 class="text-black mb-5">Project Summary</h3>
-              <canvas id="project-chart"></canvas>
+              <div id="project-chart"></div>
             </div>
           </div>
         </div>
@@ -398,12 +401,12 @@
             </div>
             <div class="info"><i class="fas fa-info-circle"></i></div>
           </div>
-          <canvas id="commission-chart"></canvas>
+          <div id="commission-chart"></div>
         </div>
         <div class="row">
           <div class="col-xl-7">
             <div class="lead section-shadow">
-              <canvas id="lead-chart"></canvas>
+              <div id="lead-chart"></div>
             </div>
           </div>
           <div class="col-xl-5">
@@ -540,52 +543,182 @@
       </section>
     </main>
     <script>
-      const project_ctx = document
-        .getElementById('project-chart')
-        .getContext('2d')
-      const commission_ctx = document
-        .getElementById('commission-chart')
-        .getContext('2d')
-      const lead_ctx = document.getElementById('lead-chart').getContext('2d')
-      const projectChart = new Chart(project_ctx, {
-        type: 'doughnut',
-        data: {
-          labels: ['Contract', 'Pending', 'Cancelled'],
-          datasets: [
-            {
-              label: '',
-              data: [12, 19, 3],
-              backgroundColor: [
-                '#e65912',
-                'rgb(255, 206, 86)',
-                'rgb(255, 159, 64)',
-              ],
-              borderColor: [
-                '#e65912',
-                'rgb(255, 206, 86)',
-                'rgb(255, 159, 64)',
-              ],
-              borderWidth: 1,
-            },
-          ],
-        },
-        options: {
-          responsive: true,
-          plugins: {
-            legend: {
-              position: 'bottom',
-            },
-            title: {
-              display: false,
-            },
+      // const project_ctx = document
+      //   .getElementById('project-chart')
+      //   .getContext('2d')
+      // const commission_ctx = document
+      //   .getElementById('commission-chart')
+      //   .getContext('2d')
+      // const lead_ctx = document.getElementById('lead-chart').getContext('2d')
+      // // const projectChart = new Chart(project_ctx, {
+      // //   type: 'doughnut',
+      // //   data: {
+      // //     labels: ['Contract', 'Pending', 'Cancelled'],
+      // //     datasets: [
+      // //       {
+      // //         label: '',
+      // //         data: [12, 19, 3],
+      // //         backgroundColor: [
+      // //           '#e65912',
+      // //           'rgb(255, 206, 86)',
+      // //           'rgb(255, 159, 64)',
+      // //         ],
+      // //         borderColor: [
+      // //           '#e65912',
+      // //           'rgb(255, 206, 86)',
+      // //           'rgb(255, 159, 64)',
+      // //         ],
+      // //         borderWidth: 1,
+      // //       },
+      // //     ],
+      // //   },
+      // //   options: {
+      // //     responsive: true,
+      // //     plugins: {
+      // //       legend: {
+      // //         position: 'bottom',
+      // //       },
+      // //       title: {
+      // //         display: true,
+      // //         text: '161 projects',
+      // //       },
+      // //     },
+      // //   },
+      // // })
+
+      // const commissionChart = new Chart(commission_ctx, {
+      //   type: 'line',
+      //   data: {
+      //     labels: [
+      //       'Jan',
+      //       'Feb',
+      //       'Mar',
+      //       'Apr',
+      //       'May',
+      //       'June',
+      //       'July',
+      //       'Aug',
+      //       'Sep',
+      //       'Oct',
+      //       'Nov',
+      //       'Dec',
+      //     ],
+      //     datasets: [
+      //       {
+      //         label: '  Money earned',
+      //         data: [0, 20, 20, 60, 60, 120, 50, 180, 120, 125, 105, 110, 170],
+      //         backgroundColor: '#e65912',
+      //         borderColor: '#e65912',
+      //         borderWidth: 3,
+      //         tension: 0.4,
+      //       },
+      //     ],
+      //   },
+      //   options: {
+      //     responsive: true,
+      //     plugins: {
+      //       legend: {
+      //         position: false,
+      //       },
+      //       title: {
+      //         display: false,
+      //       },
+      //     },
+      //   },
+      // })
+      // const leadChart = new Chart(lead_ctx, {
+      //   type: 'line',
+      //   data: {
+      //     labels: [
+      //       'Jan',
+      //       'Feb',
+      //       'Mar',
+      //       'Apr',
+      //       'May',
+      //       'June',
+      //       'July',
+      //       'Aug',
+      //       'Sep',
+      //       'Oct',
+      //       'Nov',
+      //       'Dec',
+      //     ],
+      //     datasets: [
+      //       {
+      //         label: '  Money earned',
+      //         data: [0, 20, 20, 60, 60, 120, 50, 180, 120, 125, 105, 110, 170],
+      //         backgroundColor: '#e65912',
+      //         borderColor: '#e65912',
+      //         borderWidth: 3,
+      //         tension: 0.4,
+      //         yAxisID: 'y',
+      //       },
+      //       {
+      //         label: '  Money earned',
+      //         data: [0, 50, 20, 80, 60, 153, 67, 243, 120, 125, 105, 110, 170],
+      //         backgroundColor: '#1e83f9',
+      //         borderColor: '#1e83f9',
+      //         borderWidth: 2,
+      //         tension: 0.4,
+      //         yAxisID: 'y1',
+      //       },
+      //     ],
+      //   },
+      //   options: {
+      //     responsive: true,
+      //     plugins: {
+      //       legend: {
+      //         position: false,
+      //       },
+      //       title: {
+      //         display: false,
+      //       },
+      //     },
+      //     scales: {
+      //       y: {
+      //         type: 'linear',
+      //         display: true,
+      //         position: 'left',
+      //       },
+      //       y1: {
+      //         type: 'linear',
+      //         display: true,
+      //         position: 'right',
+
+      //         // grid line settings
+      //         grid: {
+      //           drawOnChartArea: false, // only want the grid lines for one axis to show up
+      //         },
+      //       },
+      //     },
+      //   },
+      // })
+
+      // apex chart js
+      //line
+      const commissionOptions = {
+        chart: {
+          type: 'area',
+          // height: 550,
+          zoom: {
+            enabled: false,
           },
         },
-      })
-
-      const commissionChart = new Chart(commission_ctx, {
-        type: 'line',
-        data: {
-          labels: [
+        dataLabels: {
+          enabled: false,
+        },
+        stroke: {
+          curve: 'smooth',
+        },
+        colors: ['#e65912'],
+        series: [
+          {
+            name: 'sales',
+            data: [30, 40, 35, 50, 49, 60, 70, 91, 125, 120, 125, 105],
+          },
+        ],
+        xaxis: {
+          categories: [
             'Jan',
             'Feb',
             'Mar',
@@ -599,96 +732,115 @@
             'Nov',
             'Dec',
           ],
-          datasets: [
-            {
-              label: '  Money earned',
-              data: [0, 20, 20, 60, 60, 120, 50, 180, 120, 125, 105, 110, 170],
-              backgroundColor: '#e65912',
-              borderColor: '#e65912',
-              borderWidth: 3,
-              tension: 0.4,
-            },
-          ],
         },
-        options: {
-          responsive: true,
-          plugins: {
-            legend: {
-              position: false,
-            },
-            title: {
-              display: false,
-            },
-          },
-        },
-      })
-      const leadChart = new Chart(lead_ctx, {
-        type: 'line',
-        data: {
-          labels: [
-            'Jan',
-            'Feb',
-            'Mar',
-            'Apr',
-            'May',
-            'June',
-            'July',
-            'Aug',
-            'Sep',
-            'Oct',
-            'Nov',
-            'Dec',
-          ],
-          datasets: [
-            {
-              label: '  Money earned',
-              data: [0, 20, 20, 60, 60, 120, 50, 180, 120, 125, 105, 110, 170],
-              backgroundColor: '#e65912',
-              borderColor: '#e65912',
-              borderWidth: 3,
-              tension: 0.4,
-              yAxisID: 'y',
-            },
-            {
-              label: '  Money earned',
-              data: [0, 50, 20, 80, 60, 153, 67, 243, 120, 125, 105, 110, 170],
-              backgroundColor: '#1e83f9',
-              borderColor: '#1e83f9',
-              borderWidth: 2,
-              tension: 0.4,
-              yAxisID: 'y1',
-            },
-          ],
-        },
-        options: {
-          responsive: true,
-          plugins: {
-            legend: {
-              position: false,
-            },
-            title: {
-              display: false,
-            },
-          },
-          scales: {
-            y: {
-              type: 'linear',
-              display: true,
-              position: 'left',
-            },
-            y1: {
-              type: 'linear',
-              display: true,
-              position: 'right',
+      }
+      const commissionChart = new ApexCharts(
+        document.querySelector('#commission-chart'),
+        commissionOptions
+      )
+      commissionChart.render()
 
-              // grid line settings
-              grid: {
-                drawOnChartArea: false, // only want the grid lines for one axis to show up
+      //donut
+      var projectOptions = {
+        series: [44, 55, 41],
+        chart: {
+          type: 'donut',
+        },
+        legend: {
+          position: 'bottom',
+        },
+        dataLabels: {
+          enabled: false,
+        },
+        colors: ['#e65912', '#f08418', '#f9ac1e'],
+        labels: ['Contract', 'Pending', 'Canceled'],
+        plotOptions: {
+          pie: {
+            donut: {
+              labels: {
+                show: true,
+                value: {
+                  show: true,
+                  showAlways: true,
+                  fontSize: '30px',
+                  fontWeight: 700,
+                  color: '#000000',
+                },
+                total: {
+                  showAlways: true,
+                  show: true,
+                  fontSize: '14px',
+                  fontWeight: 300,
+                  label: 'Projects',
+                  color: '#8c8c8c',
+                },
               },
             },
           },
         },
-      })
+        // responsive: [
+        //   {
+        //     breakpoint: 480,
+        //     options: {
+        //       chart: {
+        //         width: 200,
+        //       },
+        //       legend: {
+        //         position: 'bottom',
+        //       },
+        //     },
+        //   },
+        // ],
+      }
+      const leadOptions = {
+        chart: {
+          type: 'area',
+          // height: 550,
+          zoom: {
+            enabled: false,
+          },
+        },
+        dataLabels: {
+          enabled: false,
+        },
+        stroke: {
+          curve: 'smooth',
+        },
+        colors: ['#e65912'],
+        series: [
+          {
+            name: 'sales',
+            data: [30, 40, 35, 50, 49, 60, 70, 91, 125, 120, 125, 105],
+          },
+        ],
+        xaxis: {
+          categories: [
+            'Jan',
+            'Feb',
+            'Mar',
+            'Apr',
+            'May',
+            'June',
+            'July',
+            'Aug',
+            'Sep',
+            'Oct',
+            'Nov',
+            'Dec',
+          ],
+        },
+      }
+      const leadChart = new ApexCharts(
+        document.querySelector('#lead-chart'),
+        leadOptions
+      )
+      leadChart.render()
+
+      var projectChart = new ApexCharts(
+        document.querySelector('#project-chart'),
+        projectOptions
+      )
+      projectChart.render()
 
       //fullscreen
       const elem = document.documentElement
