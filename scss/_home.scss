@@ -51,8 +51,8 @@
         height: 3.125rem;
       }
       input[type='month']::-webkit-calendar-picker-indicator {
-        // background-image: url('../images/icons/input-calendar.svg');
-        background-image: none;
+        background-image: url('../images/icons/input-calendar.svg');
+        // background-image: none;
         background-size: cover;
         background-position-x: left;
         &::after {
