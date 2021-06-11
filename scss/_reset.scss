@@ -22,7 +22,10 @@ body {
 }
 main {
   width: calc(100vw - 360px);
-  transition: 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+  @media screen and(max-width: 1200px) {
+    width: calc(100vw - 260px);
+  }
   @media screen and(max-width: 991.98px) {
     width: 100%;
   }
@@ -80,6 +83,7 @@ textarea {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
+  flex-wrap: wrap;
   & > div {
     h3 {
       color: $black;
@@ -88,4 +92,7 @@ textarea {
   .info {
     font-size: 1.3rem;
   }
+}
+.bg-red {
+  background-color: $red !important;
 }

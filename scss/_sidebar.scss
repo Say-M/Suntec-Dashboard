@@ -5,8 +5,8 @@
   overflow: auto;
   position: sticky;
   top: 0;
-  transition: 0.3s ease-in-out;
-  @media screen and(max-width: 991.98px) {
+  transition: margin-left 0.3s ease-in-out;
+  @media screen and(max-width: 1200px) {
     width: 260px;
   }
   &.active {

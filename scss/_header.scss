@@ -91,7 +91,7 @@
       position: relative;
       border-right: 1px solid $borderColor;
       margin-right: 1.5rem;
-      padding-right: 2rem;
+      padding-right: 1.5rem;
       @media screen and(max-width:991.98px) {
         border-right: none;
         margin-right: 1rem;
@@ -142,23 +142,124 @@
     }
     .page-settings {
       border-right: 1px solid $borderColor;
-      margin-right: 2rem;
-      padding-right: 2rem;
+      margin-right: 1.5rem;
+      padding-right: 1.5rem;
       @media screen and(max-width:991.98px) {
         border-right: none;
         margin-right: 1rem;
         padding-right: 0;
       }
-      ul {
+      & > ul {
         padding-left: 0;
         margin-bottom: 0;
         list-style: none;
         display: flex;
-        li {
+        & > li {
           padding: 0.5rem;
           margin-right: 0.5rem;
           cursor: pointer;
           color: $gray;
+          &:hover {
+            color: $black;
+          }
+          &:last-child {
+            margin-right: 0;
+            position: relative;
+            &:hover {
+              & > div {
+                transform: scale(1);
+                @media screen and(max-width:575.98px) {
+                  transform: translateX(-50%);
+                  opacity: 1;
+                  pointer-events: unset;
+                }
+              }
+            }
+            & > div {
+              padding-top: 2rem;
+              top: 1rem;
+              min-width: 310px;
+              width: 100%;
+              right: 0;
+              position: absolute;
+              z-index: 1111;
+              transform-origin: top right;
+              transition: 0.3s ease-in-out;
+              transform: scale(0);
+              border-radius: 1rem;
+              @media screen and(max-width:575.98px) {
+                opacity: 0;
+                pointer-events: none;
+                right: unset;
+                left: 50%;
+                transform: translateX(-50%);
+                padding-top: 3rem;
+              }
+              @media screen and(max-width:400px) {
+                min-width: 300px;
+              }
+              h3 {
+                padding: 1rem;
+                border-bottom: 1px solid $lightGray;
+                background: $white;
+                margin-bottom: 0;
+                border-radius: 1rem 1rem 0 0;
+              }
+            }
+            ul {
+              list-style: none;
+              padding-left: 0;
+              margin-bottom: 0;
+              background: $white;
+              max-height: 20rem;
+              overflow: auto;
+              border-radius: 0 0 1rem 1rem;
+              /* width */
+              &::-webkit-scrollbar {
+                width: 8px;
+              }
+
+              /* Track */
+              &::-webkit-scrollbar-track {
+                background: $white;
+              }
+
+              /* Handle */
+              &::-webkit-scrollbar-thumb {
+                background: $lightGray;
+                border-radius: 0.25rem;
+              }
+
+              /* Handle on hover */
+              &::-webkit-scrollbar-thumb:hover {
+                background: $gray;
+              }
+              li {
+                &:last-child {
+                  a {
+                    border-bottom: 0 !important;
+                  }
+                }
+                a {
+                  display: flex;
+                  justify-content: space-between;
+                  padding: 0.5rem 1rem;
+                  text-decoration: none;
+                  border-bottom: 1px solid $lightGray;
+                  p {
+                    color: $black;
+                    margin-bottom: 0;
+                  }
+                  span {
+                    color: $gray;
+                    font-size: 80%;
+                    white-space: nowrap;
+                    margin-left: 0.5rem;
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -172,6 +273,7 @@
         margin-right: 0.5rem;
       }
       & > div {
+        white-space: nowrap;
         h6 {
           font-weight: 700;
           margin-bottom: 0;
