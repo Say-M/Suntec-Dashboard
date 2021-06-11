@@ -145,8 +145,17 @@
           </div>
           <div class="page-settings">
             <ul>
-              <li><i class="fas fa-expand-alt"></i></li>
-              <li><i class="fas fa-cog"></i></li>
+              <li class="expand"><i class="fas fa-expand-alt"></i></li>
+              <li>
+                <i class="fas fa-cog"></i>
+                <div>
+                  <ul class="shadow">
+                    <li><a href="#">Site 1</a></li>
+                    <li><a href="#">Site 2</a></li>
+                    <li><a href="#">Site 3</a></li>
+                  </ul>
+                </div>
+              </li>
               <li>
                 <i class="far fa-bell"></i>
                 <div>
@@ -154,59 +163,70 @@
                   <ul>
                     <li>
                       <a href="#">
-                        <p>
-                          Lorem ipsum dolor sit, amet consectetur adipisicing
-                          elit. Ullam, distinctio?
-                        </p>
-                        <span>50m ago</span>
+                        <div class="icon comment">
+                          <span>
+                            <i class="far fa-comment"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <p>
-                          Lorem ipsum dolor sit, amet consectetur adipisicing
-                          elit. Ullam, distinctio?
-                        </p>
-                        <span>50m ago</span>
+                        <div class="icon user">
+                          <span>
+                            <i class="far fa-user"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <p>
-                          Lorem ipsum dolor sit, amet consectetur adipisicing
-                          elit. Ullam, distinctio?
-                        </p>
-                        <span>50m ago</span>
+                        <div class="icon comment">
+                          <span>
+                            <i class="far fa-comment"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <p>
-                          Lorem ipsum dolor sit, amet consectetur adipisicing
-                          elit. Ullam, distinctio?
-                        </p>
-                        <span>50m ago</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <p>
-                          Lorem ipsum dolor sit, amet consectetur adipisicing
-                          elit. Ullam, distinctio?
-                        </p>
-                        <span>50m ago</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <p>
-                          Lorem ipsum dolor sit, amet consectetur adipisicing
-                          elit. Ullam, distinctio?
-                        </p>
-                        <span>50m ago</span>
+                        <div class="icon user">
+                          <span>
+                            <i class="far fa-user"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
                       </a>
                     </li>
                   </ul>
+                  <a href="#" class="all">View all notifications</a>
                 </div>
               </li>
             </ul>
@@ -216,6 +236,13 @@
             <div>
               <h6>Jhon Doe</h6>
               <small>Admin</small>
+            </div>
+            <div class="user-opt">
+              <ul class="shadow">
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -299,89 +326,45 @@
                     <span>6.00</span>
                   </div>
                   <div class="calender-inner-body">
-                    <div class="row">
-                      <div class="col-6">
-                        <div class="project-item">
-                          <div class="project-header">
-                            <div>
-                              <h6>Project A</h6>
-                              <span>Need to finish ASAP</span>
-                            </div>
-                            <i class="fas fa-ellipsis-h"></i>
-                          </div>
-                          <ul>
-                            <li>
-                              <div>
-                                <h6>Project Updates</h6>
-                                <small>Mon 18th 2021</small>
-                              </div>
-                              <span>30m</span>
-                            </li>
-                            <li>
-                              <div>
-                                <h6>Project Updates</h6>
-                                <small>Mon 18th 2021</small>
-                              </div>
-                              <span>57m</span>
-                            </li>
-                          </ul>
+                    <div class="project-item">
+                      <div class="project-header">
+                        <div>
+                          <h6>Project A</h6>
+                          <span>Need to finish ASAP</span>
                         </div>
+                        <i class="fas fa-ellipsis-h"></i>
                       </div>
-                      <div class="col-6">
-                        <div class="project-item">
-                          <div class="project-header">
-                            <div>
-                              <h6>Project B</h6>
-                              <span>Need to finish ASAP</span>
-                            </div>
-                            <i class="fas fa-ellipsis-h"></i>
-                          </div>
-                          <ul>
-                            <li>
-                              <div>
-                                <h6>Project Updates</h6>
-                                <small>Mon 18th 2021</small>
-                              </div>
-                              <span>30m</span>
-                            </li>
-                            <li>
-                              <div>
-                                <h6>Project Updates</h6>
-                                <small>Mon 18th 2021</small>
-                              </div>
-                              <span>57m</span>
-                            </li>
-                            <li>
-                              <div>
-                                <h6>Project Updates</h6>
-                                <small>Mon 18th 2021</small>
-                              </div>
-                              <span>30m</span>
-                            </li>
-                            <li>
-                              <div>
-                                <h6>Project Updates</h6>
-                                <small>Mon 18th 2021</small>
-                              </div>
-                              <span>57m</span>
-                            </li>
-                            <li>
-                              <div>
-                                <h6>Project Updates</h6>
-                                <small>Mon 18th 2021</small>
-                              </div>
-                              <span>30m</span>
-                            </li>
-                            <li>
-                              <div>
-                                <h6>Project Updates</h6>
-                                <small>Mon 18th 2021</small>
-                              </div>
-                              <span>57m</span>
-                            </li>
-                          </ul>
+                      <div class="project-header bg-white text-black">
+                        <div>
+                          <h6>Project A</h6>
+                          <span>Need to finish ASAP</span>
                         </div>
+                        <i class="fas fa-ellipsis-h"></i>
                       </div>
+                      <ul>
+                        <li>
+                          <div>
+                            <h6>Project Updates</h6>
+                            <small>Mon 18th 2021</small>
+                          </div>
+                          <span>30m</span>
+                        </li>
+                        <li>
+                          <div>
+                            <h6>Project Updates</h6>
+                            <small>Mon 18th 2021</small>
+                          </div>
+                          <span>57m</span>
+                        </li>
+                        <li>
+                          <div>
+                            <h6>Project Updates</h6>
+                            <small>Mon 18th 2021</small>
+                          </div>
+                          <span>57m</span>
+                        </li>
+                      </ul>
+                      <img src="./assets/images/dooted-load.png" alt="" />
                     </div>
                   </div>
                 </div>
@@ -440,8 +423,8 @@
                           xlink:href="./assets/svg/sidebar.svg#dashboard"
                         ></use>
                       </svg>
+                      Demos
                     </span>
-                    <span>Demos</span>
                     <span>157</span>
                   </li>
                   <li>
@@ -449,8 +432,8 @@
                       <svg>
                         <use xlink:href="./assets/svg/sidebar.svg#user"></use>
                       </svg>
+                      Demos
                     </span>
-                    <span>Demos</span>
                     <span>157</span>
                   </li>
                   <li>
@@ -458,8 +441,8 @@
                       <svg>
                         <use xlink:href="./assets/svg/sidebar.svg#info"></use>
                       </svg>
+                      Demos
                     </span>
-                    <span>Demos</span>
                     <span>157</span>
                   </li>
                 </ul>
@@ -706,6 +689,22 @@
           },
         },
       })
+
+      //fullscreen
+      const elem = document.documentElement
+      const expand = document.querySelector('.expand')
+      function openFullscreen() {
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen()
+        } else if (elem.webkitRequestFullscreen) {
+          /* Safari */
+          elem.webkitRequestFullscreen()
+        } else if (elem.msRequestFullscreen) {
+          /* IE11 */
+          elem.msRequestFullscreen()
+        }
+      }
+      expand.addEventListener('click', openFullscreen)
     </script>
   </body>
 </html>

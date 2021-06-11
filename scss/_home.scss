@@ -154,7 +154,10 @@
         }
         .calender-inner-body {
           .project-item {
+            position: relative;
             .project-header {
+              position: relative;
+              left: 10%;
               background: $red;
               color: $white;
               display: flex;
@@ -162,6 +165,15 @@
               align-items: center;
               padding: 1rem;
               border-radius: 1rem;
+              width: 15rem;
+              box-shadow: 0px 14px 58px $lightRed;
+              &:last-of-type {
+                position: absolute;
+                top: 20%;
+                left: 45%;
+                padding: 0.5rem 1rem;
+                box-shadow: 0px 14px 58px $lightGray;
+              }
               & > div {
                 h6 {
                   margin-bottom: 0;
@@ -175,8 +187,19 @@
                 cursor: pointer;
               }
             }
+            img {
+              position: absolute;
+              left: 33%;
+              top: 50%;
+              z-index: 1;
+            }
             ul {
+              position: relative;
+              z-index: 11;
+              left: 10%;
               margin-top: 1rem;
+              margin-left: 2.5rem;
+              width: 10.3125rem;
               list-style: none;
               padding-left: 0;
               margin-bottom: 0;
@@ -186,7 +209,7 @@
               li {
                 display: flex;
                 justify-content: space-between;
-                margin-bottom: 1rem;
+                margin-bottom: 2rem;
                 &:last-child {
                   margin-bottom: 0;
                 }
@@ -259,6 +282,8 @@
     border-radius: 1rem;
   }
   .top-seller {
+    min-height: 510px;
+    overflow: auto;
     ul {
       list-style: none;
       padding-left: 0;
@@ -294,19 +319,17 @@
           margin-top: 1rem;
           span {
             svg {
-              width: 18px;
-              height: 18px;
+              width: 54px;
+              height: 54px;
+              background: #ffdac8;
+              padding: 1rem;
+              border-radius: 1.25rem;
+              margin-right: 1.3125rem;
             }
             &:first-child {
-              background: $lightRed;
-              border-radius: 1rem;
-              height: 4rem;
-              width: 4rem;
               display: flex;
               justify-content: center;
               align-items: center;
-            }
-            &:nth-child(2) {
               font-weight: 700;
               color: $black;
               font-size: 1rem;
@@ -332,6 +355,8 @@
         list-style: none;
         padding-left: 0;
         margin-bottom: 0;
+        min-height: 298px;
+        overflow: auto;
         li {
           width: 75%;
           margin: 1rem 0;
