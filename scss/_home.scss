@@ -109,7 +109,7 @@
         .calender-inner-header {
           display: flex;
           justify-content: space-between;
-          padding: 0 1rem;
+          // padding: 0 1rem;
           & > div {
             padding: 0 1rem;
             width: calc(100% / 7);
@@ -121,6 +121,7 @@
             align-items: center;
             padding: 0.5rem;
             font-size: 0.75rem;
+            cursor: pointer;
             &.active {
               border: 1px solid $red;
               border-radius: 1rem;
@@ -136,15 +137,19 @@
           justify-content: space-between;
           background: $white;
           border-radius: 2rem;
-          padding: 1rem;
+          padding: 1rem 0;
           margin: 1rem 0;
           color: $black;
           font-size: 0.5625rem;
           box-shadow: 0 5px 15px transparentize($color: $black, $amount: 0.9);
-          span {
-            padding: 0.2rem 1rem;
+          & > div {
             width: calc(100% / 7);
             text-align: center;
+            padding: 0 1rem;
+          }
+          span {
+            padding: 0.2rem 1rem;
+            cursor: pointer;
             &.active {
               background: $red;
               border-radius: 2rem;
