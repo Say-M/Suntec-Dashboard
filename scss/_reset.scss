@@ -19,6 +19,7 @@ body {
   color: $gray;
   display: flex;
   justify-content: space-between;
+  overflow-x: hidden;
 }
 main {
   width: calc(100vw - 360px);
