@@ -1,14 +1,11 @@
 .sidebar {
-  width: 360px;
+  width: 244px;
   border-right: 1px solid $borderColor;
   height: 100vh;
   overflow: auto;
   position: sticky;
   top: 0;
   transition: margin-left 0.3s ease-in-out;
-  @media screen and(max-width: 1200px) {
-    width: 260px;
-  }
   &.active {
     margin-left: -100%;
   }

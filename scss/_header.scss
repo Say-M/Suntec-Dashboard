@@ -53,15 +53,15 @@
       }
       i {
         position: absolute;
-        left: 1rem;
+        left: 1.25rem;
         top: 50%;
         transform: translateY(-50%);
         color: $gray;
       }
       input {
         border-radius: 2rem;
-        padding-left: 2.5rem;
-        border-color: $lightGray;
+        padding-left: 3.0625rem;
+        border: none !important;
       }
     }
     .icons {
@@ -96,9 +96,6 @@
     }
     .language {
       position: relative;
-      border-right: 1px solid $borderColor;
-      margin-right: 1.5rem;
-      padding-right: 1.5rem;
       @media screen and(max-width:991.98px) {
         border-right: none;
         margin-right: 1rem;
@@ -149,9 +146,10 @@
       }
     }
     .page-settings {
+      border-left: 1px solid $borderColor;
       border-right: 1px solid $borderColor;
-      margin-right: 1.5rem;
-      padding-right: 1.5rem;
+      margin: 0 1.5rem;
+      padding: 0 1.5rem;
       @media screen and(max-width:991.98px) {
         border-right: none;
         margin-right: 1rem;
@@ -163,7 +161,7 @@
         list-style: none;
         display: flex;
         & > li {
-          padding: 0.5rem;
+          padding: 0.344rem 0.5rem;
           margin-right: 0.5rem;
           cursor: pointer;
           color: $gray;
@@ -172,7 +170,7 @@
           }
           &:nth-child(2) {
             position: relative;
-            &:hover {
+            &:focus {
               & > div {
                 transform: scale(1);
                 @media screen and(max-width:575.98px) {
@@ -186,8 +184,7 @@
               position: absolute;
               z-index: 11;
               width: 200px;
-              padding-top: 2rem;
-              top: 1rem;
+              top: 3rem;
               transform-origin: top left;
               transition: 0.3s ease-in-out;
               transform: scale(0);
@@ -214,7 +211,7 @@
           &:last-child {
             margin-right: 0;
             position: relative;
-            &:hover {
+            &:focus {
               & > div {
                 transform: scale(1);
                 @media screen and(max-width:575.98px) {
@@ -225,8 +222,7 @@
               }
             }
             & > div {
-              padding-top: 2rem;
-              top: 1rem;
+              top: 3rem;
               min-width: 310px;
               width: 100%;
               right: 0;
@@ -350,7 +346,7 @@
     .user {
       display: flex;
       cursor: pointer;
-      &:hover {
+      &:focus {
         .user-opt {
           transform: scale(1);
           @media screen and(max-width:575.98px) {
@@ -382,8 +378,7 @@
         position: absolute;
         z-index: 11;
         width: 200px;
-        padding-top: 4rem;
-        top: 1rem;
+        top: 5rem;
         transform-origin: top right;
         transition: 0.3s ease-in-out;
         transform: scale(0);
@@ -400,6 +395,7 @@
               text-decoration: none;
               color: $gray;
               padding: 0.5rem 0.8rem;
+              font-size: 0.875rem;
               &:hover {
                 color: $black;
               }

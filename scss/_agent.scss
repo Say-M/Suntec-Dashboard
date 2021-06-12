@@ -12,6 +12,14 @@
     padding: 2.875rem 1.875rem;
     height: calc(100% - 1.875rem);
     margin: 0.9375rem 0;
+    overflow: hidden;
+    &:hover {
+      .edit,
+      .delete {
+        opacity: 0.6;
+        top: 1.125rem;
+      }
+    }
     .point {
       position: absolute;
       top: 0;
@@ -23,15 +31,21 @@
     }
     .edit {
       position: absolute;
-      top: 1rem;
+      top: -1.6rem;
       right: 1.875rem;
       cursor: pointer;
+      color: $gray;
+      transition: 0.3s ease-in-out;
+      opacity: 0;
     }
     .delete {
       position: absolute;
-      top: 1rem;
-      right: 4.375rem;
+      top: -1.6rem;
+      right: 3.625rem;
       cursor: pointer;
+      color: $gray;
+      transition: 0.3s ease-in-out;
+      opacity: 0;
     }
     .user {
       margin-top: 1rem;
