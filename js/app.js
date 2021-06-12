@@ -34,3 +34,19 @@ const languageList = document.querySelector('.language-list')
 languageBtn.addEventListener('click', () => {
   languageList.classList.toggle('active')
 })
+
+//fullscreen
+const elem = document.documentElement
+const expand = document.querySelector('.expand')
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen()
+  } else if (elem.webkitRequestFullscreen) {
+    /* Safari */
+    elem.webkitRequestFullscreen()
+  } else if (elem.msRequestFullscreen) {
+    /* IE11 */
+    elem.msRequestFullscreen()
+  }
+}
+expand.addEventListener('click', openFullscreen)

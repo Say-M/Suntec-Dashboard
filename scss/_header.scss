@@ -39,6 +39,9 @@
       position: relative;
       width: 100%;
       font-size: 1rem;
+      @media screen and(max-width:1130px) {
+        width: 300px;
+      }
       @media screen and(max-width:991.98px) {
         width: 0;
         overflow: hidden;
@@ -51,7 +54,8 @@
       i {
         position: absolute;
         left: 1rem;
-        top: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
         color: $gray;
       }
       input {

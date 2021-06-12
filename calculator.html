@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suntec Dashboard</title>
+
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css"
+      integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.min.js"
+      integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- chart js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- apex chart -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <!-- custom styling -->
+    <link rel="stylesheet" href="./assets/css/styles.min.css" />
+
+    <!-- custom scripts -->
+    <script src="./js/app.js" defer></script>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="/"><img src="./assets/images/logo 1.png" alt="" /></a>
+      </div>
+      <div class="sidebar-body">
+        <ul>
+          <li>
+            <a href="/">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#home"></use>
+              </svg>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="./agents.html">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#user"></use>
+              </svg>
+              Agents</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#file"></use>
+              </svg>
+              Proposals</a
+            >
+          </li>
+          <li>
+            <a href="./projects.html">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#layers"></use>
+              </svg>
+              Projects</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#file-text"></use>
+              </svg>
+              Statements</a
+            >
+          </li>
+          <li>
+            <a href="./calculator.html" class="active">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#calculator"></use>
+              </svg>
+              Calculator</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#filter"></use>
+              </svg>
+              Leads</a
+            >
+          </li>
+          <li>
+            <a href="./calender.html">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#calender"></use>
+              </svg>
+              Calendar</a
+            >
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <div class="overlay hide"></div>
+    <main>
+      <header class="header">
+        <div class="left-header">
+          <div class="menu"><i class="fas fa-bars"></i></div>
+          <div class="search">
+            <i class="fas fa-search"></i>
+            <input
+              type="text"
+              class="form-control form-control-lg"
+              placeholder="Search..."
+            />
+          </div>
+          <div class="icons">
+            <i class="fas fa-search left-header-search"></i>
+            <i class="fas fa-ellipsis-v right-header-menu"></i>
+          </div>
+        </div>
+        <div class="right-header">
+          <div class="language">
+            <div class="language-btn">
+              <img src="./assets/images/flags/united-states.png" alt="" />
+              <i class="fas fa-angle-down"></i>
+            </div>
+            <ul class="shadow-sm language-list">
+              <li>Eng</li>
+              <li>বাংলা</li>
+              <li>اَلْعَرَبِيَّةُ</li>
+            </ul>
+          </div>
+          <div class="page-settings">
+            <ul>
+              <li class="expand"><i class="fas fa-expand-alt"></i></li>
+              <li>
+                <i class="fas fa-cog"></i>
+                <div>
+                  <ul class="shadow">
+                    <li><a href="#">Site 1</a></li>
+                    <li><a href="#">Site 2</a></li>
+                    <li><a href="#">Site 3</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <i class="far fa-bell"></i>
+                <div>
+                  <h3 class="text-black">Notifications</h3>
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <div class="icon comment">
+                          <span>
+                            <i class="far fa-comment"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="icon user">
+                          <span>
+                            <i class="far fa-user"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="icon comment">
+                          <span>
+                            <i class="far fa-comment"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="icon user">
+                          <span>
+                            <i class="far fa-user"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="#" class="all">View all notifications</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="user">
+            <img src="./assets/images/user.png" alt="" />
+            <div>
+              <h6>Jhon Doe</h6>
+              <small>Admin</small>
+            </div>
+            <div class="user-opt">
+              <ul class="shadow">
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="agent">
+        <div class="d-flex align-items-center my-3">
+          <h3 class="text-black mb-0">Calculator</h3>
+        </div>
+        <div class="calculator section-shadow">
+          <div class="calculator-filter">
+            <div class="d-flex flex-wrap" style="width: 1080px">
+              <select
+                class="form-select form-select-lg"
+                style="max-width: 244px"
+              >
+                <option value="">Installer</option>
+              </select>
+              <select
+                class="form-select form-select-lg"
+                style="max-width: 255px"
+              >
+                <option value="">Set Baseline for Agent</option>
+              </select>
+              <select
+                class="form-select form-select-lg"
+                style="max-width: 255px"
+              >
+                <option value="">Calculator</option>
+              </select>
+            </div>
+            <div class="count">
+              <strong class="text-black me-3">Baseline</strong>
+              <span class="minus"><i class="fas fa-minus"></i></span>
+              <input
+                type="number"
+                class="form-control number form-control-lg"
+                step="0.5"
+                min="0"
+              />
+              <span class="plus"><i class="fas fa-plus"></i></span>
+            </div>
+          </div>
+          <div class="calculator-middle">
+            <div class="left">
+              <strong class="text-black">KW</strong>
+              <div class="number">
+                <span class="active">0</span>
+                <span class="active">5</span>
+                <span class="active">10</span>
+                <span>15</span>
+                <span>20</span>
+                <span>25</span>
+              </div>
+              <span>6.000</span>
+            </div>
+            <div class="right">
+              <strong class="text-black">Final PPW </strong>
+              <div class="number">
+                <span class="active">0</span>
+                <span>4</span>
+                <span>8</span>
+              </div>
+              <span>6.000</span>
+            </div>
+          </div>
+          <div class="calculator-end">
+            <div class="left">
+              <strong>Select Finance Option</strong>
+              <span class="cash-btn">
+                <svg>
+                  <use xlink:href="./assets/svg/sidebar.svg#home"></use>
+                </svg>
+                Cash <i class="fas fa-pen"></i
+              ></span>
+            </div>
+            <div class="right">
+              <button style="height: 46px" class="btn btn-lg btn-red">
+                Calculate
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="calculator-body">
+          <p class="text-black" style="font-weight: 500">Commission</p>
+          <h1>$0.00</h1>
+          <p>
+            Net System Price
+            <span class="text-black" style="font-weight: 500">$0.00</span>
+            <span class="ms-3">Adders -</span>
+          </p>
+        </div>
+      </section>
+    </main>
+    <script>
+      const minus = document.querySelector('.minus')
+      const plus = document.querySelector('.plus')
+      const number = document.querySelector('.number')
+      plus.addEventListener('click', () => {
+        number.stepUp()
+      })
+      minus.addEventListener('click', () => {
+        number.stepDown()
+      })
+    </script>
+  </body>
+</html>

@@ -38,12 +38,18 @@ input,
 select,
 textarea {
   border: 1px solid $lightGray !important;
+  color: $gray !important;
+  border-radius: 2rem !important;
   &:active,
   &:focus {
     outline: none !important;
     box-shadow: none !important;
     border-color: $lightGray !important;
   }
+}
+.form-select {
+  background-image: url('../images/icons/chevron-down.svg');
+  background-size: auto;
 }
 .text-black {
   color: $black !important;
@@ -124,4 +130,61 @@ h3 {
 small,
 .small {
   font-size: 0.8125rem;
+}
+.plus-btn {
+  width: 2.125rem;
+  height: 2.125rem;
+  border-radius: 50%;
+  background: $red;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.filter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  margin: 2rem 0;
+  .left {
+    width: 50%;
+    margin-bottom: 1rem;
+    .search {
+      position: relative;
+      i {
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      input {
+        padding-left: 2.5rem;
+      }
+    }
+    input,
+    select {
+      font-size: 1rem !important;
+      height: 3.5rem;
+      margin-right: 0.8rem;
+    }
+  }
+  .right {
+    width: 50%;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    input,
+    select {
+      font-size: 1rem !important;
+      margin-left: 0.8rem;
+    }
+  }
+}
+.form-select-lg,
+.form-control-lg {
+  height: 3.5rem !important;
+}
+.form-check-input:checked {
+  background-color: $red;
 }

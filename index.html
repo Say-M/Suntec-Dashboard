@@ -50,7 +50,7 @@
       <div class="sidebar-body">
         <ul>
           <li>
-            <a href="#" class="active">
+            <a href="/" class="active">
               <svg>
                 <use xlink:href="./assets/svg/sidebar.svg#home"></use>
               </svg>
@@ -58,7 +58,7 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="./agents.html">
               <svg>
                 <use xlink:href="./assets/svg/sidebar.svg#user"></use>
               </svg>
@@ -74,7 +74,7 @@
             >
           </li>
           <li>
-            <a href="#">
+            <a href="./projects.html">
               <svg>
                 <use xlink:href="./assets/svg/sidebar.svg#layers"></use>
               </svg>
@@ -106,7 +106,7 @@
             >
           </li>
           <li>
-            <a href="#">
+            <a href="./calender.html">
               <svg>
                 <use xlink:href="./assets/svg/sidebar.svg#calender"></use>
               </svg>
@@ -809,157 +809,6 @@
       </section>
     </main>
     <script>
-      // const project_ctx = document
-      //   .getElementById('project-chart')
-      //   .getContext('2d')
-      // const commission_ctx = document
-      //   .getElementById('commission-chart')
-      //   .getContext('2d')
-      // const lead_ctx = document.getElementById('lead-chart').getContext('2d')
-      // // const projectChart = new Chart(project_ctx, {
-      // //   type: 'doughnut',
-      // //   data: {
-      // //     labels: ['Contract', 'Pending', 'Cancelled'],
-      // //     datasets: [
-      // //       {
-      // //         label: '',
-      // //         data: [12, 19, 3],
-      // //         backgroundColor: [
-      // //           '#e65912',
-      // //           'rgb(255, 206, 86)',
-      // //           'rgb(255, 159, 64)',
-      // //         ],
-      // //         borderColor: [
-      // //           '#e65912',
-      // //           'rgb(255, 206, 86)',
-      // //           'rgb(255, 159, 64)',
-      // //         ],
-      // //         borderWidth: 1,
-      // //       },
-      // //     ],
-      // //   },
-      // //   options: {
-      // //     responsive: true,
-      // //     plugins: {
-      // //       legend: {
-      // //         position: 'bottom',
-      // //       },
-      // //       title: {
-      // //         display: true,
-      // //         text: '161 projects',
-      // //       },
-      // //     },
-      // //   },
-      // // })
-
-      // const commissionChart = new Chart(commission_ctx, {
-      //   type: 'line',
-      //   data: {
-      //     labels: [
-      //       'Jan',
-      //       'Feb',
-      //       'Mar',
-      //       'Apr',
-      //       'May',
-      //       'June',
-      //       'July',
-      //       'Aug',
-      //       'Sep',
-      //       'Oct',
-      //       'Nov',
-      //       'Dec',
-      //     ],
-      //     datasets: [
-      //       {
-      //         label: '  Money earned',
-      //         data: [0, 20, 20, 60, 60, 120, 50, 180, 120, 125, 105, 110, 170],
-      //         backgroundColor: '#e65912',
-      //         borderColor: '#e65912',
-      //         borderWidth: 3,
-      //         tension: 0.4,
-      //       },
-      //     ],
-      //   },
-      //   options: {
-      //     responsive: true,
-      //     plugins: {
-      //       legend: {
-      //         position: false,
-      //       },
-      //       title: {
-      //         display: false,
-      //       },
-      //     },
-      //   },
-      // })
-      // const leadChart = new Chart(lead_ctx, {
-      //   type: 'line',
-      //   data: {
-      //     labels: [
-      //       'Jan',
-      //       'Feb',
-      //       'Mar',
-      //       'Apr',
-      //       'May',
-      //       'June',
-      //       'July',
-      //       'Aug',
-      //       'Sep',
-      //       'Oct',
-      //       'Nov',
-      //       'Dec',
-      //     ],
-      //     datasets: [
-      //       {
-      //         label: '  Money earned',
-      //         data: [0, 20, 20, 60, 60, 120, 50, 180, 120, 125, 105, 110, 170],
-      //         backgroundColor: '#e65912',
-      //         borderColor: '#e65912',
-      //         borderWidth: 3,
-      //         tension: 0.4,
-      //         yAxisID: 'y',
-      //       },
-      //       {
-      //         label: '  Money earned',
-      //         data: [0, 50, 20, 80, 60, 153, 67, 243, 120, 125, 105, 110, 170],
-      //         backgroundColor: '#1e83f9',
-      //         borderColor: '#1e83f9',
-      //         borderWidth: 2,
-      //         tension: 0.4,
-      //         yAxisID: 'y1',
-      //       },
-      //     ],
-      //   },
-      //   options: {
-      //     responsive: true,
-      //     plugins: {
-      //       legend: {
-      //         position: false,
-      //       },
-      //       title: {
-      //         display: false,
-      //       },
-      //     },
-      //     scales: {
-      //       y: {
-      //         type: 'linear',
-      //         display: true,
-      //         position: 'left',
-      //       },
-      //       y1: {
-      //         type: 'linear',
-      //         display: true,
-      //         position: 'right',
-
-      //         // grid line settings
-      //         grid: {
-      //           drawOnChartArea: false, // only want the grid lines for one axis to show up
-      //         },
-      //       },
-      //     },
-      //   },
-      // })
-
       // apex chart js
       //line
       const commissionOptions = {
@@ -1116,22 +965,6 @@
         projectOptions
       )
       projectChart.render()
-
-      //fullscreen
-      const elem = document.documentElement
-      const expand = document.querySelector('.expand')
-      function openFullscreen() {
-        if (elem.requestFullscreen) {
-          elem.requestFullscreen()
-        } else if (elem.webkitRequestFullscreen) {
-          /* Safari */
-          elem.webkitRequestFullscreen()
-        } else if (elem.msRequestFullscreen) {
-          /* IE11 */
-          elem.msRequestFullscreen()
-        }
-      }
-      expand.addEventListener('click', openFullscreen)
 
       //todo calender
       const dates = document.querySelectorAll('.date')

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suntec Dashboard</title>
+
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css"
+      integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.min.js"
+      integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- chart js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- apex chart -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <!-- custom styling -->
+    <link rel="stylesheet" href="./assets/css/styles.min.css" />
+
+    <!-- custom scripts -->
+    <script src="./js/app.js" defer></script>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="/"><img src="./assets/images/logo 1.png" alt="" /></a>
+      </div>
+      <div class="sidebar-body">
+        <ul>
+          <li>
+            <a href="/">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#home"></use>
+              </svg>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="./agents.html" class="active">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#user"></use>
+              </svg>
+              Agents</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#file"></use>
+              </svg>
+              Proposals</a
+            >
+          </li>
+          <li>
+            <a href="./projects.html">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#layers"></use>
+              </svg>
+              Projects</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#file-text"></use>
+              </svg>
+              Statements</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#calculator"></use>
+              </svg>
+              Calculator</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#filter"></use>
+              </svg>
+              Leads</a
+            >
+          </li>
+          <li>
+            <a href="./calender.html">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#calender"></use>
+              </svg>
+              Calendar</a
+            >
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <div class="overlay hide"></div>
+    <main>
+      <header class="header">
+        <div class="left-header">
+          <div class="menu"><i class="fas fa-bars"></i></div>
+          <div class="search">
+            <i class="fas fa-search"></i>
+            <input
+              type="text"
+              class="form-control form-control-lg"
+              placeholder="Search..."
+            />
+          </div>
+          <div class="icons">
+            <i class="fas fa-search left-header-search"></i>
+            <i class="fas fa-ellipsis-v right-header-menu"></i>
+          </div>
+        </div>
+        <div class="right-header">
+          <div class="language">
+            <div class="language-btn">
+              <img src="./assets/images/flags/united-states.png" alt="" />
+              <i class="fas fa-angle-down"></i>
+            </div>
+            <ul class="shadow-sm language-list">
+              <li>Eng</li>
+              <li>বাংলা</li>
+              <li>اَلْعَرَبِيَّةُ</li>
+            </ul>
+          </div>
+          <div class="page-settings">
+            <ul>
+              <li class="expand"><i class="fas fa-expand-alt"></i></li>
+              <li>
+                <i class="fas fa-cog"></i>
+                <div>
+                  <ul class="shadow">
+                    <li><a href="#">Site 1</a></li>
+                    <li><a href="#">Site 2</a></li>
+                    <li><a href="#">Site 3</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <i class="far fa-bell"></i>
+                <div>
+                  <h3 class="text-black">Notifications</h3>
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <div class="icon comment">
+                          <span>
+                            <i class="far fa-comment"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="icon user">
+                          <span>
+                            <i class="far fa-user"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="icon comment">
+                          <span>
+                            <i class="far fa-comment"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="icon user">
+                          <span>
+                            <i class="far fa-user"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="#" class="all">View all notifications</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="user">
+            <img src="./assets/images/user.png" alt="" />
+            <div>
+              <h6>Jhon Doe</h6>
+              <small>Admin</small>
+            </div>
+            <div class="user-opt">
+              <ul class="shadow">
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="agent">
+        <div class="d-flex align-items-center my-3">
+          <h3 class="text-black mb-0">Agents</h3>
+          <div class="plus-btn ms-3"><i class="fas fa-plus"></i></div>
+        </div>
+        <div class="filter">
+          <div class="left">
+            <div class="search" style="max-width: 350px">
+              <i class="fas fa-search"></i>
+              <input
+                type="text"
+                placeholder="Search"
+                class="form-control form-control-lg"
+              />
+            </div>
+          </div>
+          <div class="right">
+            <select class="form-select form-select-lg" style="max-width: 172px">
+              <option value="">Sort By</option>
+              <option value="">Ascending</option>
+              <option value="">Descending</option>
+            </select>
+            <select class="form-select form-select-lg" style="max-width: 172px">
+              <option value="">All</option>
+              <option value="">Active</option>
+              <option value="">Pending</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="agent-item">
+              <span class="point">376</span>
+              <span class="edit"><i class="fas fa-pen"></i></span>
+              <div class="user">
+                <img src="./assets/images/user/user-1.png" alt="" />
+              </div>
+              <span class="status active">Active</span>
+              <h3>Priyanka Some</h3>
+              <p><i class="fas fa-phone-alt"></i>(981) 722-1229</p>
+              <p><i class="far fa-envelope"></i>Priyanka99n@gmail.com</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="agent-item">
+              <span class="point">369</span>
+              <span class="edit"><i class="fas fa-pen"></i></span>
+              <div class="user">
+                <img src="./assets/images/user/user-2.png" alt="" />
+              </div>
+              <span class="status active">Active</span>
+              <h3>Scott Fromwiller</h3>
+              <p><i class="fas fa-phone-alt"></i>91534 59729</p>
+              <p><i class="far fa-envelope"></i>Jaguaap23@icloud.com</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="agent-item">
+              <span class="point">369</span>
+              <span class="edit"><i class="fas fa-pen"></i></span>
+              <div class="user">
+                <img src="./assets/images/user/user-3.png" alt="" />
+              </div>
+              <span class="status pending">Active</span>
+              <h3>Jorge De Anda</h3>
+              <p><i class="fas fa-phone-alt"></i>(981) 722-1229</p>
+              <p><i class="far fa-envelope"></i>cjsauls15@gmail.com</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="agent-item">
+              <span class="point">376</span>
+              <span class="edit"><i class="fas fa-pen"></i></span>
+              <div class="user">
+                <img src="./assets/images/user/user-4.png" alt="" />
+              </div>
+              <span class="status active">Active</span>
+              <h3>Priyanka Some</h3>
+              <p><i class="fas fa-phone-alt"></i>(981) 722-1229</p>
+              <p><i class="far fa-envelope"></i>Priyanka99n@gmail.com</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="agent-item">
+              <span class="point">369</span>
+              <span class="edit"><i class="fas fa-pen"></i></span>
+              <div class="user">
+                <img src="./assets/images/user/user-5.png" alt="" />
+              </div>
+              <span class="status active">Active</span>
+              <h3>Scott Fromwiller</h3>
+              <p><i class="fas fa-phone-alt"></i>91534 59729</p>
+              <p><i class="far fa-envelope"></i>Jaguaap23@icloud.com</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="agent-item">
+              <span class="point">369</span>
+              <span class="edit"><i class="fas fa-pen"></i></span>
+              <div class="user">
+                <img src="./assets/images/user/user-6.png" alt="" />
+              </div>
+              <span class="status pending">Active</span>
+              <h3>Jorge De Anda</h3>
+              <p><i class="fas fa-phone-alt"></i>(981) 722-1229</p>
+              <p><i class="far fa-envelope"></i>cjsauls15@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
