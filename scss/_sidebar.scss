@@ -43,15 +43,24 @@
           svg {
             width: 1rem;
             height: 1rem;
-            margin-right: 0.5rem;
+            margin-right: 1.3rem;
+            stroke: $gray;
           }
           &:hover {
             color: $red;
+            svg {
+              stroke: $red;
+            }
           }
           &.active {
             background-image: url(../images/icons/Union.svg);
             background-repeat: no-repeat;
             background-size: contain;
+            color: $black;
+            font-weight: 500;
+            svg {
+              stroke: $red;
+            }
           }
         }
       }

@@ -260,7 +260,7 @@
           </div>
           <div class="right">
             <span class="left-btn"><i class="fas fa-chevron-left"></i></span>
-            <span class="month">2021-06</span>
+            <span class="month"></span>
             <span class="right-btn"><i class="fas fa-chevron-right"></i></span>
             <span class="add-btn"><i class="fas fa-plus"></i></span>
           </div>
@@ -324,53 +324,107 @@
             <span>Fri</span>
             <span>Sat</span>
           </div>
-          <div class="calender-date">
-            <span class="mute active">29</span>
-            <span class="mute">30</span>
-            <span class="mute">31</span>
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <span>4</span>
-          </div>
-          <div class="calender-date">
-            <span>5</span>
-            <span>6</span>
-            <span>7</span>
-            <span>8</span>
-            <span>9</span>
-            <span>10</span>
-            <span>11</span>
-          </div>
-          <div class="calender-date">
-            <span>12</span>
-            <span>13</span>
-            <span>14</span>
-            <span>15</span>
-            <span>17</span>
-            <span>18</span>
-            <span>19</span>
-          </div>
-          <div class="calender-date">
-            <span>21</span>
-            <span>22</span>
-            <span>23</span>
-            <span>24</span>
-            <span>25</span>
-            <span>26</span>
-            <span>27</span>
-          </div>
-          <div class="calender-date">
-            <span>28</span>
-            <span>29</span>
-            <span>30</span>
-            <span class="mute">1</span>
-            <span class="mute">2</span>
-            <span class="mute">3</span>
-            <span class="mute">4</span>
-          </div>
+          <div class="calender-date"></div>
         </div>
       </section>
     </main>
+    <script>
+      const leftBtn = document.querySelector('.left-btn')
+      const month = document.querySelector('.month')
+      const rightBtn = document.querySelector('.right-btn')
+      const calenderDate = document.querySelector('.calender-date')
+      let d = new Date()
+      let setYear = d.getFullYear()
+      let setMonth = d.getMonth()
+      let totalDay
+      if (
+        setMonth === 0 ||
+        setMonth === 2 ||
+        setMonth === 4 ||
+        setMonth === 6 ||
+        setMonth === 7 ||
+        setMonth === 9 ||
+        setMonth === 11
+      )
+        totalDay = 31
+      else if (setMonth === 1) totalDay = 28
+      else totalDay = 30
+      month.innerHTML = `${setYear}-${
+        setMonth + 1 <= 9 ? '0' + (setMonth + 1) : setMonth + 1
+      }`
+
+      for (let day = 1; day <= totalDay; day++) {
+        // const isWeekend = day % 7 === 0
+        // console.log(isWeekend)
+        // console.log(day)
+        calenderDate.insertAdjacentHTML('beforeend', `<span>${day}</span>`)
+      }
+      leftBtn.onclick = () => {
+        calenderDate.innerHTML = null
+        totalDay
+        if (
+          setMonth === 0 ||
+          setMonth === 2 ||
+          setMonth === 4 ||
+          setMonth === 6 ||
+          setMonth === 7 ||
+          setMonth === 9 ||
+          setMonth === 11
+        )
+          totalDay = 31
+        else if (setMonth === 1) totalDay = 28
+        else totalDay = 30
+        if (setMonth !== 0) {
+          setMonth -= 1
+          d = new Date(setYear, setMonth)
+        } else {
+          setYear -= 1
+          setMonth = 11
+        }
+        month.innerHTML = `${setYear}-${
+          setMonth + 1 <= 9 ? '0' + (setMonth + 1) : setMonth + 1
+        }`
+        // console.log({ setMonth, setYear, d })
+        for (let day = 1; day <= totalDay; day++) {
+          // const isWeekend = day % 7 === 0
+          // console.log(isWeekend)
+          // console.log(day)
+          calenderDate.insertAdjacentHTML('beforeend', `<span>${day}</span>`)
+        }
+      }
+      rightBtn.onclick = () => {
+        calenderDate.innerHTML = null
+        totalDay
+        if (
+          setMonth === 0 ||
+          setMonth === 2 ||
+          setMonth === 4 ||
+          setMonth === 6 ||
+          setMonth === 7 ||
+          setMonth === 9 ||
+          setMonth === 11
+        )
+          totalDay = 31
+        else if (setMonth === 1) totalDay = 28
+        else totalDay = 30
+        if (setMonth !== 11) {
+          setMonth += 1
+          d = new Date(setYear, setMonth)
+        } else {
+          setYear += 1
+          setMonth = 0
+        }
+        month.innerHTML = `${setYear}-${
+          setMonth + 1 <= 9 ? '0' + (setMonth + 1) : setMonth + 1
+        }`
+        // console.log({ setMonth, setYear, d })
+        for (let day = 1; day <= totalDay; day++) {
+          // const isWeekend = day % 7 === 0
+          // console.log(isWeekend)
+          // console.log(day)
+          calenderDate.insertAdjacentHTML('beforeend', `<span>${day}</span>`)
+        }
+      }
+    </script>
   </body>
 </html>
