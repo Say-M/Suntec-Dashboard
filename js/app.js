@@ -36,6 +36,7 @@ languageBtn.addEventListener('click', () => {
 })
 
 //fullscreen
+let isFullScreen = false
 const elem = document.documentElement
 const expand = document.querySelector('.expand')
 function openFullscreen() {
@@ -48,5 +49,34 @@ function openFullscreen() {
     /* IE11 */
     elem.msRequestFullscreen()
   }
+  isFullScreen = true
 }
-expand.addEventListener('click', openFullscreen)
+function exitFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen()
+  } else if (document.webkitExitFullscreen) {
+    /* Safari */
+    document.webkitExitFullscreen()
+  } else if (document.msExitFullscreen) {
+    /* IE11 */
+    document.msExitFullscreen()
+  }
+  isFullScreen = false
+}
+
+expand.addEventListener('click', () => {
+  if (isFullScreen) exitFullscreen()
+  else openFullscreen()
+})
+
+//header dropdown
+const settingBtn = document.querySelector('.setting-btn')
+const notificationBtn = document.querySelector('.notification-btn')
+settingBtn.addEventListener('click', function () {
+  notificationBtn.children[1].classList.remove('active')
+  this.children[1].classList.toggle('active')
+})
+notificationBtn.addEventListener('click', function () {
+  settingBtn.children[1].classList.remove('active')
+  this.children[1].classList.toggle('active')
+})

@@ -170,14 +170,12 @@
           }
           &:nth-child(2) {
             position: relative;
-            &:focus {
-              & > div {
-                transform: scale(1);
-                @media screen and(max-width:575.98px) {
-                  transform: translateX(-50%);
-                  opacity: 1;
-                  pointer-events: unset;
-                }
+            & > div.active {
+              transform: scale(1);
+              @media screen and(max-width:575.98px) {
+                transform: translateX(-50%);
+                opacity: 1;
+                pointer-events: unset;
               }
             }
             & > div {
@@ -211,14 +209,12 @@
           &:last-child {
             margin-right: 0;
             position: relative;
-            &:focus {
-              & > div {
-                transform: scale(1);
-                @media screen and(max-width:575.98px) {
-                  transform: translateX(-50%);
-                  opacity: 1;
-                  pointer-events: unset;
-                }
+            & > div.active {
+              transform: scale(1);
+              @media screen and(max-width:575.98px) {
+                transform: translateX(-50%);
+                opacity: 1;
+                pointer-events: unset;
               }
             }
             & > div {

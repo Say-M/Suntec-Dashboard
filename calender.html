@@ -149,7 +149,7 @@
           <div class="page-settings">
             <ul>
               <li class="expand"><i class="fas fa-expand-alt"></i></li>
-              <li tabindex="0">
+              <li class="setting-btn">
                 <i class="fas fa-cog"></i>
                 <div>
                   <ul class="shadow">
@@ -159,7 +159,7 @@
                   </ul>
                 </div>
               </li>
-              <li tabindex="0">
+              <li class="notification-btn">
                 <i class="far fa-bell"></i>
                 <div class="shadow">
                   <h3 class="text-black">Notifications</h3>
@@ -337,31 +337,7 @@
       let setYear = d.getFullYear()
       let setMonth = d.getMonth()
       let totalDay
-      if (
-        setMonth === 0 ||
-        setMonth === 2 ||
-        setMonth === 4 ||
-        setMonth === 6 ||
-        setMonth === 7 ||
-        setMonth === 9 ||
-        setMonth === 11
-      )
-        totalDay = 31
-      else if (setMonth === 1) totalDay = 28
-      else totalDay = 30
-      month.innerHTML = `${setYear}-${
-        setMonth + 1 <= 9 ? '0' + (setMonth + 1) : setMonth + 1
-      }`
-
-      for (let day = 1; day <= totalDay; day++) {
-        // const isWeekend = day % 7 === 0
-        // console.log(isWeekend)
-        // console.log(day)
-        calenderDate.insertAdjacentHTML('beforeend', `<span>${day}</span>`)
-      }
-      leftBtn.onclick = () => {
-        calenderDate.innerHTML = null
-        totalDay
+      const setTotalDay = () => {
         if (
           setMonth === 0 ||
           setMonth === 2 ||
@@ -370,10 +346,35 @@
           setMonth === 7 ||
           setMonth === 9 ||
           setMonth === 11
-        )
+        ) {
           totalDay = 31
-        else if (setMonth === 1) totalDay = 28
+        } else if (setMonth === 1) totalDay = 28
         else totalDay = 30
+        const gap = new Date(setYear, setMonth).getDay()
+        for (let day = 1; day <= gap; day++) {
+          // const isWeekend = day % 7 === 0
+          // console.log(isWeekend)
+          // console.log(day)
+          calenderDate.insertAdjacentHTML(
+            'beforeend',
+            `<span class=${day !== gap && 'border-end-0'}></span>`
+          )
+        }
+        month.innerHTML = `${setYear}-${
+          setMonth + 1 <= 9 ? '0' + (setMonth + 1) : setMonth + 1
+        }`
+
+        for (let day = 1; day <= totalDay; day++) {
+          // const isWeekend = day % 7 === 0
+          // console.log(isWeekend)
+          // console.log(day)
+          calenderDate.insertAdjacentHTML('beforeend', `<span>${day}</span>`)
+        }
+      }
+      setTotalDay()
+
+      leftBtn.onclick = () => {
+        calenderDate.innerHTML = null
         if (setMonth !== 0) {
           setMonth -= 1
           d = new Date(setYear, setMonth)
@@ -381,32 +382,10 @@
           setYear -= 1
           setMonth = 11
         }
-        month.innerHTML = `${setYear}-${
-          setMonth + 1 <= 9 ? '0' + (setMonth + 1) : setMonth + 1
-        }`
-        // console.log({ setMonth, setYear, d })
-        for (let day = 1; day <= totalDay; day++) {
-          // const isWeekend = day % 7 === 0
-          // console.log(isWeekend)
-          // console.log(day)
-          calenderDate.insertAdjacentHTML('beforeend', `<span>${day}</span>`)
-        }
+        setTotalDay()
       }
       rightBtn.onclick = () => {
         calenderDate.innerHTML = null
-        totalDay
-        if (
-          setMonth === 0 ||
-          setMonth === 2 ||
-          setMonth === 4 ||
-          setMonth === 6 ||
-          setMonth === 7 ||
-          setMonth === 9 ||
-          setMonth === 11
-        )
-          totalDay = 31
-        else if (setMonth === 1) totalDay = 28
-        else totalDay = 30
         if (setMonth !== 11) {
           setMonth += 1
           d = new Date(setYear, setMonth)
@@ -414,16 +393,7 @@
           setYear += 1
           setMonth = 0
         }
-        month.innerHTML = `${setYear}-${
-          setMonth + 1 <= 9 ? '0' + (setMonth + 1) : setMonth + 1
-        }`
-        // console.log({ setMonth, setYear, d })
-        for (let day = 1; day <= totalDay; day++) {
-          // const isWeekend = day % 7 === 0
-          // console.log(isWeekend)
-          // console.log(day)
-          calenderDate.insertAdjacentHTML('beforeend', `<span>${day}</span>`)
-        }
+        setTotalDay()
       }
     </script>
   </body>
