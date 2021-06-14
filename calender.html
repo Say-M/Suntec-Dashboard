@@ -263,7 +263,7 @@
             <span class="add-btn"><i class="fas fa-plus"></i></span>
           </div>
         </div> -->
-        <div class="my-4">
+        <!-- <div class="my-4">
           <div class="form-check form-check-inline">
             <input
               class="form-check-input"
@@ -311,7 +311,7 @@
             />
             <label class="form-check-label" for="CREDIT">CREDIT DENIED</label>
           </div>
-        </div>
+        </div> -->
         <!-- 
         <div class="calender-body">
           <div class="calender-day">
@@ -361,6 +361,36 @@
               <option value="">Month</option>
             </select>
           </div>`
+        let divElement = document.createElement('div')
+        divElement.className = 'mb-4'
+        divElement.innerHTML = `<div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="filter" id="All">
+            <label class="form-check-label" for="All">All</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="filter" id="APPOINTMENT">
+            <label class="form-check-label" for="APPOINTMENT">APPOINTMENT SET</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="filter" id="SCHEDULED">
+            <label class="form-check-label" for="SCHEDULED">RE-SCHEDULED</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="filter" id="CLOSED">
+            <label class="form-check-label" for="CLOSED">CLOSED</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="filter" id="CREDIT">
+            <label class="form-check-label" for="CREDIT">CREDIT DENIED</label>
+          </div>`
+        function insertAfter(referenceNode, newNode) {
+          referenceNode.parentNode.insertBefore(
+            newNode,
+            referenceNode.nextSibling
+          )
+        }
+        const fcHeader = document.querySelector('.fc-header-toolbar')
+        insertAfter(fcHeader, divElement)
         // document.addEventListener('resize', () => {
         //   document.querySelector('.fc-addBtn-button').innerHTML =
         //     '<i class="fas fa-plus"></i>'
