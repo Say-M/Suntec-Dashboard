@@ -30,11 +30,9 @@
       referrerpolicy="no-referrer"
     />
 
-    <!-- chart js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <!-- apex chart -->
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!-- full calender -->
+    <link rel="stylesheet" href="./js/lib/fullcalender/main.min.css" />
+    <script src="./js/lib/fullcalender/main.min.js"></script>
 
     <!-- custom styling -->
     <link rel="stylesheet" href="./assets/css/styles.min.css" />
@@ -251,7 +249,7 @@
         </div>
       </header>
       <section class="calender section-shadow">
-        <div class="calender-header">
+        <!-- <div class="calender-header">
           <div class="left">
             <h3 class="text-black">Calender</h3>
             <select class="form-select" style="width: 139px">
@@ -264,7 +262,7 @@
             <span class="right-btn"><i class="fas fa-chevron-right"></i></span>
             <span class="add-btn"><i class="fas fa-plus"></i></span>
           </div>
-        </div>
+        </div> -->
         <div class="my-4">
           <div class="form-check form-check-inline">
             <input
@@ -314,6 +312,7 @@
             <label class="form-check-label" for="CREDIT">CREDIT DENIED</label>
           </div>
         </div>
+        <!-- 
         <div class="calender-body">
           <div class="calender-day">
             <span>Sun</span>
@@ -325,10 +324,58 @@
             <span>Sat</span>
           </div>
           <div class="calender-date"></div>
-        </div>
+        </div> -->
+        <div id="calender"></div>
       </section>
     </main>
     <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var calendarEl = document.getElementById('calender')
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth',
+          customButtons: {
+            addBtn: {
+              icon: ' fas fa-plus',
+              click: function () {
+                alert('clicked the custom button!')
+              },
+            },
+            left: {
+              icon: ' fas fa-plus',
+            },
+          },
+          headerToolbar: {
+            end: 'prev,title,next,addBtn',
+            center: '',
+            start: 'left',
+          },
+        })
+        calendar.render()
+        document.querySelector('.fc-addBtn-button').innerHTML =
+          '<i class="fas fa-plus"></i>'
+        document.querySelector(
+          '.fc-toolbar-chunk:first-child'
+        ).innerHTML = `<div class="left">
+            <h3 class="text-black">Calender</h3>
+            <select class="form-select" style="width: 139px">
+              <option value="">Month</option>
+            </select>
+          </div>`
+        // document.addEventListener('resize', () => {
+        //   document.querySelector('.fc-addBtn-button').innerHTML =
+        //     '<i class="fas fa-plus"></i>'
+        //   document.querySelector(
+        //     '.fc-toolbar-chunk:first-child'
+        //   ).innerHTML = `<div class="left">
+        //     <h3 class="text-black">Calender</h3>
+        //     <select class="form-select" style="width: 139px">
+        //       <option value="">Month</option>
+        //     </select>
+        //   </div>`
+        // })
+      })
+    </script>
+    <!-- <script>
       const leftBtn = document.querySelector('.left-btn')
       const month = document.querySelector('.month')
       const rightBtn = document.querySelector('.right-btn')
@@ -357,7 +404,7 @@
           // console.log(day)
           calenderDate.insertAdjacentHTML(
             'beforeend',
-            `<span class=${day !== gap && 'border-end-0'}></span>`
+            `<span class=${'border-0'}></span>`
           )
         }
         month.innerHTML = `${setYear}-${
@@ -395,6 +442,6 @@
         }
         setTotalDay()
       }
-    </script>
+    </script> -->
   </body>
 </html>
