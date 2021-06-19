@@ -8,6 +8,7 @@
     align-items: center;
     flex-wrap: wrap;
     border-bottom: 1px solid $background;
+    justify-content: space-between;
     input,
     select {
       margin-bottom: 0.8rem;
