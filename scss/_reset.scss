@@ -393,3 +393,16 @@ input[type='date']::-webkit-calendar-picker-indicator {
     }
   }
 }
+.apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-title,
+.apexcharts-tooltip.apexcharts-theme-light {
+  background-color: $black;
+  border: none;
+  text-align: center;
+  color: $white;
+}
+.apexcharts-tooltip.apexcharts-theme-light {
+  .apexcharts-tooltip-series-group.apexcharts-active
+    .apexcharts-tooltip-marker {
+    display: none;
+  }
+}
