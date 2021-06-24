@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suntec Dashboard</title>
+
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css"
+      integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.min.js"
+      integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- custom styling -->
+    <link rel="stylesheet" href="./assets/css/styles.min.css" />
+
+    <!-- custom scripts -->
+    <script src="./js/app.js" defer></script>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="/"><img src="./assets/images/logo 1.png" alt="" /></a>
+      </div>
+      <div class="sidebar-body">
+        <ul>
+          <li>
+            <a href="./settings.html" class="active">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#bulding"></use>
+              </svg>
+              Company
+            </a>
+          </li>
+          <li>
+            <a href="./agents.html">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#ticket"></use>
+              </svg>
+              Billings</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#user"></use>
+              </svg>
+              User</a
+            >
+          </li>
+          <li>
+            <a href="./projects.html">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#layers"></use>
+              </svg>
+              Projects</a
+            >
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <div class="overlay hide"></div>
+    <main>
+      <header class="header">
+        <div class="left-header">
+          <div class="menu"><i class="fas fa-bars"></i></div>
+          <div class="exit">
+            <span><i class="fas fa-arrow-left"></i></span> Exit
+          </div>
+          <div class="icons">
+            <div class="exit">
+              <span><i class="fas fa-arrow-left ms-0"></i></span> Exit
+            </div>
+            <i class="fas fa-ellipsis-v right-header-menu"></i>
+          </div>
+        </div>
+        <div class="right-header">
+          <div class="language">
+            <div class="language-btn">
+              <img src="./assets/images/flags/united-states.png" alt="" />
+              <i class="fas fa-angle-down"></i>
+            </div>
+            <ul class="shadow-sm language-list">
+              <li>Eng</li>
+              <li>বাংলা</li>
+              <li>اَلْعَرَبِيَّةُ</li>
+            </ul>
+          </div>
+          <div class="page-settings">
+            <ul>
+              <li class="expand"><i class="fas fa-expand-alt"></i></li>
+              <li class="setting-btn">
+                <i class="fas fa-cog"></i>
+                <div>
+                  <ul class="shadow">
+                    <li><a href="#">Site 1</a></li>
+                    <li><a href="#">Site 2</a></li>
+                    <li><a href="#">Site 3</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="notification-btn">
+                <i class="far fa-bell"></i>
+                <div class="shadow">
+                  <h3 class="text-black">Notifications</h3>
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <div class="icon comment">
+                          <span>
+                            <i class="far fa-comment"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="icon user">
+                          <span>
+                            <i class="far fa-user"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="icon comment">
+                          <span>
+                            <i class="far fa-comment"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="icon user">
+                          <span>
+                            <i class="far fa-user"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="#" class="all">View all notifications</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="user" tabindex="0">
+            <img src="./assets/images/user.png" alt="" />
+            <div>
+              <h6>Jhon Doe</h6>
+              <small>Admin</small>
+            </div>
+            <div class="user-opt">
+              <ul class="shadow">
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="tab-section section-shadow">
+        <div class="tab-header">
+          <h3>Settings</h3>
+          <div>
+            <button class="btn btn-orange">Approved</button>
+            <button class="btn btn-red">Save</button>
+          </div>
+        </div>
+        <div class="tab-wrapper">
+          <aside>
+            <ul>
+              <li>
+                <a
+                  href="#"
+                  class="active tab-item"
+                  data-target="#company-details"
+                >
+                  Company Details
+                </a>
+              </li>
+              <li>
+                <a href="#" class="tab-item" data-target="#installer-partners">
+                  Installer Partners
+                </a>
+              </li>
+              <li>
+                <a href="#" class="tab-item" data-target="#company-logos">
+                  Company Logos
+                </a>
+              </li>
+            </ul>
+          </aside>
+          <div class="tab-section-item" id="company-details">
+            <div>
+              <div class="d-flex justify-content-between align-items-center">
+                <h3 class="title">Company Details</h3>
+                <span class="pnt"><i class="fas fa-pen"></i></span>
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-lg-12 col-xxl-6">
+                  <div class="detail-item">
+                    <p>Company Name:</p>
+                    <span>Suntec</span>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-12 col-xxl-6">
+                  <div class="detail-item">
+                    <p>Legal Name:</p>
+                    <span>Suntecsoft LLC</span>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-12 col-xxl-6">
+                  <div class="detail-item">
+                    <p>Owner's Name:</p>
+                    <span>Peter Lopez</span>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-12 col-xxl-6">
+                  <div class="detail-item">
+                    <p>Company Address:</p>
+                    <span>1346 N Zaragoza Rd Ste C</span>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-12 col-xxl-6">
+                  <div class="detail-item">
+                    <p>Company Name:</p>
+                    <span>Suntec</span>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-12 col-xxl-6">
+                  <div class="detail-item">
+                    <p>Legal Name:</p>
+                    <span>Suntecsoft LLC</span>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-12 col-xxl-6">
+                  <div class="detail-item">
+                    <p>
+                      Support Email:
+                      <img src="./assets/images/icons/info.svg" alt="" />
+                    </p>
+                    <span>support@suntec.io</span>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-12 col-xxl-6">
+                  <div class="detail-item">
+                    <p>Accounting Email:</p>
+                    <span>accounting@suntec.io</span>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-12 col-xxl-6">
+                  <div class="detail-item">
+                    <p>
+                      Signature:
+                      <img src="./assets/images/icons/info.svg" alt="" />
+                    </p>
+                    <div
+                      class="signature"
+                      data-bs-toggle="modal"
+                      data-bs-target="#signatureModal"
+                    ></div>
+                  </div>
+                </div>
+                <!-- signature modal start -->
+                <div
+                  class="modal fade"
+                  id="signatureModal"
+                  tabindex="-1"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5
+                          class="modal-title text-black"
+                          id="exampleModalLabel"
+                        >
+                          Write Signature
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <canvas id="signature"></canvas>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          id="sig-clearBtn"
+                        >
+                          Clear
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-lg btn-red"
+                          id="sig-submitBtn"
+                          data-bs-dismiss="modal"
+                        >
+                          Save
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- signature modal end -->
+
+                <div class="col-md-6 col-lg-12 col-xxl-6">
+                  <div class="detail-item">
+                    <p>Finance Email:</p>
+                    <span>finance@suntec.io</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-section-item d-none" id="installer-partners">
+            <div>
+              <div class="d-flex justify-content-between align-items-center">
+                <h3 class="title">Installer Partners</h3>
+                <span class="pnt"><i class="fas fa-plus-circle"></i></span>
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-lg-12 col-xxl-6">
+                  <div class="partner-item">
+                    <h5>Home Pros</h5>
+                    <p>
+                      <i class="fas fa-map-marker-alt"></i>1035 Belvidere St
+                    </p>
+                    <p>
+                      <i class="far fa-envelope"></i>accounting@homepros.com
+                    </p>
+                    <strong>Baseline <span class="text-dark">1.9</span></strong>
+                    <div class="options">
+                      <i class="fas fa-pen"></i>
+                      <i class="far fa-trash-alt"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-12 col-xxl-6">
+                  <div class="partner-item">
+                    <h5>Apollo/Titan</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> -</p>
+                    <p><i class="far fa-envelope"></i> -</p>
+                    <strong>Baseline <span class="text-dark">0</span></strong>
+                    <div class="options">
+                      <i class="fas fa-pen"></i>
+                      <i class="far fa-trash-alt"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-12 col-xxl-6">
+                  <div class="partner-item">
+                    <h5>Erus</h5>
+                    <p>
+                      <i class="fas fa-map-marker-alt"></i>1035 Belvidere St
+                    </p>
+                    <p>
+                      <i class="far fa-envelope"></i>accounting@homepros.com
+                    </p>
+                    <strong>Baseline <span class="text-dark">0</span></strong>
+                    <div class="options">
+                      <i class="fas fa-pen"></i>
+                      <i class="far fa-trash-alt"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-12 col-xxl-6">
+                  <div class="partner-item">
+                    <h5>Titan</h5>
+                    <p>
+                      <i class="fas fa-map-marker-alt"></i>525 W Baseline Rd,
+                      Mesa, AZ 85210
+                    </p>
+                    <p>
+                      <i class="far fa-envelope"></i>jwilson@titansolarpower.com
+                    </p>
+                    <strong
+                      >Baseline <span class="text-dark">2.05</span></strong
+                    >
+                    <div class="options">
+                      <i class="fas fa-pen"></i>
+                      <i class="far fa-trash-alt"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-section-item d-none" id="company-logos">
+            <div>
+              <div class="d-flex justify-content-between align-items-center">
+                <h3 class="title">Company Logos</h3>
+                <span class="pnt"><i class="fas fa-pen"></i></span>
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-lg-12 col-xxl-6">
+                  <div class="logo-item">
+                    <p>Favicon:</p>
+                    <div>
+                      <img src="./assets/images/logos/logo1.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-12 col-xxl-6">
+                  <div class="logo-item">
+                    <p>Email Logo:</p>
+                    <div>
+                      <img src="./assets/images/logos/logo2.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-12 col-xxl-6">
+                  <div class="logo-item">
+                    <p>Primary Logo:</p>
+                    <div>
+                      <img src="./assets/images/logos/logo3.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-12 col-xxl-6">
+                  <div class="logo-item">
+                    <p>Secondary Logo:</p>
+                    <div>
+                      <img src="./assets/images/logos/logo4.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-12 col-xxl-6">
+                  <div class="logo-item">
+                    <p>Login Background Image:</p>
+                    <div>
+                      <img src="./assets/images/logos/logo5.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      const tabItems = document.querySelectorAll('.tab-item')
+      tabItems.forEach((tabItem) => {
+        tabItem.addEventListener('click', (e) => {
+          e.preventDefault()
+          tabItems.forEach((tabItem) => tabItem.classList.remove('active'))
+          tabItem.classList.add('active')
+          document
+            .querySelectorAll('.tab-section-item')
+            .forEach((sectionItem) => sectionItem.classList.add('d-none'))
+          document
+            .querySelector(tabItem.getAttribute('data-target'))
+            .classList.remove('d-none')
+        })
+      })
+      //Signature
+      ;(function () {
+        window.requestAnimFrame = (function (callback) {
+          return (
+            window.requestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.mozRequestAnimationFrame ||
+            window.oRequestAnimationFrame ||
+            window.msRequestAnimaitonFrame ||
+            function (callback) {
+              window.setTimeout(callback, 1000 / 60)
+            }
+          )
+        })()
+        let canvas = document.getElementById('signature')
+        let ctx = canvas.getContext('2d')
+        ctx.strokeStyle = '#222222'
+        ctx.lineWidth = 4
+        let drawing = false
+        let mousePos = {
+          x: 0,
+          y: 0,
+        }
+        let lastPos = mousePos
+
+        canvas.addEventListener(
+          'mousedown',
+          function (e) {
+            drawing = true
+            lastPos = getMousePos(canvas, e)
+          },
+          false
+        )
+
+        canvas.addEventListener(
+          'mouseup',
+          function (e) {
+            drawing = false
+          },
+          false
+        )
+
+        canvas.addEventListener(
+          'mousemove',
+          function (e) {
+            mousePos = getMousePos(canvas, e)
+          },
+          false
+        )
+
+        // Add touch event support for mobile
+        canvas.addEventListener('touchstart', function (e) {}, false)
+
+        canvas.addEventListener(
+          'touchmove',
+          function (e) {
+            const touch = e.touches[0]
+            const me = new MouseEvent('mousemove', {
+              clientX: touch.clientX,
+              clientY: touch.clientY,
+            })
+            canvas.dispatchEvent(me)
+          },
+          false
+        )
+
+        canvas.addEventListener(
+          'touchstart',
+          function (e) {
+            mousePos = getTouchPos(canvas, e)
+            const touch = e.touches[0]
+            const me = new MouseEvent('mousedown', {
+              clientX: touch.clientX,
+              clientY: touch.clientY,
+            })
+            canvas.dispatchEvent(me)
+          },
+          false
+        )
+
+        canvas.addEventListener(
+          'touchend',
+          function (e) {
+            const me = new MouseEvent('mouseup', {})
+            canvas.dispatchEvent(me)
+          },
+          false
+        )
+
+        function getMousePos(canvasDom, mouseEvent) {
+          const rect = canvasDom.getBoundingClientRect()
+          return {
+            x: mouseEvent.clientX - rect.left,
+            y: mouseEvent.clientY - rect.top,
+          }
+        }
+
+        function getTouchPos(canvasDom, touchEvent) {
+          const rect = canvasDom.getBoundingClientRect()
+          return {
+            x: touchEvent.touches[0].clientX - rect.left,
+            y: touchEvent.touches[0].clientY - rect.top,
+          }
+        }
+
+        function renderCanvas() {
+          if (drawing) {
+            ctx.moveTo(lastPos.x, lastPos.y)
+            ctx.lineTo(mousePos.x, mousePos.y)
+            ctx.stroke()
+            lastPos = mousePos
+          }
+        }
+
+        // Prevent scrolling when touching the canvas
+        document.body.addEventListener(
+          'touchstart',
+          function (e) {
+            if (e.target == canvas) {
+              e.preventDefault()
+            }
+          },
+          false
+        )
+        document.body.addEventListener(
+          'touchend',
+          function (e) {
+            if (e.target == canvas) {
+              e.preventDefault()
+            }
+          },
+          false
+        )
+        document.body.addEventListener(
+          'touchmove',
+          function (e) {
+            if (e.target == canvas) {
+              e.preventDefault()
+            }
+          },
+          false
+        )
+        ;(function drawLoop() {
+          requestAnimFrame(drawLoop)
+          renderCanvas()
+        })()
+
+        function clearCanvas() {
+          canvas.width = canvas.width
+          ctx.lineWidth = 4
+        }
+
+        // Set up the UI
+        const sigText = document.getElementById('sig-dataUrl')
+        const sigImage = document.querySelector('.signature')
+        const clearBtn = document.getElementById('sig-clearBtn')
+        const submitBtn = document.getElementById('sig-submitBtn')
+        const image = document.createElement('img')
+        clearBtn.addEventListener(
+          'click',
+          function (e) {
+            clearCanvas()
+            image.setAttribute('src', '')
+            sigImage.innerHTML = ''
+          },
+          false
+        )
+        submitBtn.addEventListener(
+          'click',
+          function (e) {
+            const dataUrl = canvas.toDataURL()
+            image.setAttribute('src', dataUrl)
+            sigImage.append(image)
+          },
+          false
+        )
+      })()
+    </script>
+  </body>
+</html>

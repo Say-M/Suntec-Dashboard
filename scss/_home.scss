@@ -106,6 +106,7 @@
         border-radius: 1rem;
         min-width: 768px;
         overflow: auto;
+        height: 100%;
         .calender-inner-header {
           display: flex;
           justify-content: space-between;
@@ -158,8 +159,19 @@
           }
         }
         .calender-inner-body {
+          display: flex;
           .project-item {
             position: relative;
+            margin-left: 3rem;
+            @for $i from 2 to 4 {
+              &:nth-child(#{$i}) {
+                top: 15px * $i;
+                .project-header {
+                  padding: 0.5rem 1rem;
+                  box-shadow: 0px 14px 58px $lightGray;
+                }
+              }
+            }
             .project-header {
               position: relative;
               left: 10%;
@@ -172,6 +184,7 @@
               border-radius: 1rem;
               width: 15rem;
               box-shadow: 0px 14px 58px $lightRed;
+              z-index: 2;
               &:last-of-type {
                 position: absolute;
                 top: 20%;
@@ -194,9 +207,15 @@
             }
             img {
               position: absolute;
-              left: 33%;
+              left: 10rem;
               top: 50%;
               z-index: 1;
+            }
+            .project-list {
+              overflow: hidden;
+              transition: 0.3s ease-in-out;
+              height: 0;
+              position: relative;
             }
             ul {
               position: relative;

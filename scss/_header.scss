@@ -64,11 +64,36 @@
         border: none !important;
       }
     }
+    .exit {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      @media screen and(max-width:991.98px) {
+        display: none;
+      }
+      span {
+        width: 2.875rem;
+        height: 2.875rem;
+        margin-right: 0.5rem;
+        background-color: $lightGray;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+          opacity: 1;
+        }
+      }
+    }
     .icons {
       display: none;
       @media screen and(max-width:991.98px) {
         display: flex;
         font-size: 1.3rem;
+        align-items: center;
+        .exit {
+          display: flex;
+        }
         i {
           margin-left: 1.5rem;
           cursor: pointer;
@@ -91,7 +116,7 @@
       border-top: 1px solid $lightGray;
       z-index: 1;
       &.active {
-        top: 5rem;
+        top: 4.9rem;
       }
     }
     .language {

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suntec Dashboard</title>
+
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css"
+      integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.min.js"
+      integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- custom styling -->
+    <link rel="stylesheet" href="./assets/css/styles.min.css" />
+
+    <!-- custom scripts -->
+    <script src="./js/app.js" defer></script>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="/"><img src="./assets/images/logo 1.png" alt="" /></a>
+      </div>
+      <div class="sidebar-body">
+        <ul>
+          <li>
+            <a href="./settings.html">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#bulding"></use>
+              </svg>
+              Company
+            </a>
+          </li>
+          <li>
+            <a href="./agents.html">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#ticket"></use>
+              </svg>
+              Billings</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#user"></use>
+              </svg>
+              User</a
+            >
+          </li>
+          <li>
+            <a href="./projects.html" class="active">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#layers"></use>
+              </svg>
+              Projects</a
+            >
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <div class="overlay hide"></div>
+    <main>
+      <header class="header">
+        <div class="left-header">
+          <div class="menu"><i class="fas fa-bars"></i></div>
+          <div class="exit">
+            <span><i class="fas fa-arrow-left"></i></span> Exit
+          </div>
+          <div class="icons">
+            <div class="exit">
+              <span><i class="fas fa-arrow-left ms-0"></i></span> Exit
+            </div>
+            <i class="fas fa-ellipsis-v right-header-menu"></i>
+          </div>
+        </div>
+        <div class="right-header">
+          <div class="language">
+            <div class="language-btn">
+              <img src="./assets/images/flags/united-states.png" alt="" />
+              <i class="fas fa-angle-down"></i>
+            </div>
+            <ul class="shadow-sm language-list">
+              <li>Eng</li>
+              <li>বাংলা</li>
+              <li>اَلْعَرَبِيَّةُ</li>
+            </ul>
+          </div>
+          <div class="page-settings">
+            <ul>
+              <li class="expand"><i class="fas fa-expand-alt"></i></li>
+              <li class="setting-btn">
+                <i class="fas fa-cog"></i>
+                <div>
+                  <ul class="shadow">
+                    <li><a href="#">Site 1</a></li>
+                    <li><a href="#">Site 2</a></li>
+                    <li><a href="#">Site 3</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="notification-btn">
+                <i class="far fa-bell"></i>
+                <div class="shadow">
+                  <h3 class="text-black">Notifications</h3>
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <div class="icon comment">
+                          <span>
+                            <i class="far fa-comment"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="icon user">
+                          <span>
+                            <i class="far fa-user"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="icon comment">
+                          <span>
+                            <i class="far fa-comment"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="icon user">
+                          <span>
+                            <i class="far fa-user"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="#" class="all">View all notifications</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="user" tabindex="0">
+            <img src="./assets/images/user.png" alt="" />
+            <div>
+              <h6>Jhon Doe</h6>
+              <small>Admin</small>
+            </div>
+            <div class="user-opt">
+              <ul class="shadow">
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="tab-section section-shadow">
+        <div class="tab-header">
+          <h3>Edit Role</h3>
+          <div>
+            <button class="btn btn-red">Save</button>
+          </div>
+        </div>
+        <div class="tab-wrapper">
+          <aside>
+            <ul>
+              <li>
+                <a href="#" class="active tab-item" data-target="#role-details">
+                  Role Details
+                </a>
+              </li>
+              <li>
+                <a href="#" class="tab-item" data-target="#dashboard-chart">
+                  Dashboard Chart
+                </a>
+              </li>
+              <li>
+                <a href="#" class="tab-item" data-target="#agents"> Agents </a>
+              </li>
+              <li>
+                <a href="#" class="tab-item" data-target="#projects">
+                  Projects
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="tab-item"
+                  data-target="#projects-collapsible"
+                >
+                  Projects Collapsible
+                </a>
+              </li>
+              <li>
+                <a href="#" class="tab-item" data-target="#leads"> Leads </a>
+              </li>
+              <li>
+                <a href="#" class="tab-item" data-target="#statements">
+                  Statements
+                </a>
+              </li>
+              <li>
+                <a href="#" class="tab-item" data-target="#calculator">
+                  Calculator
+                </a>
+              </li>
+              <li>
+                <a href="#" class="tab-item" data-target="#appointments">
+                  Appointments
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="tab-item"
+                  data-target="#additional-permissions"
+                >
+                  Additional Permissions
+                </a>
+              </li>
+            </ul>
+          </aside>
+          <div class="tab-section-item" id="dashboard-chart">
+            <div>
+              <div
+                class="
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  flex-wrap
+                "
+              >
+                <h3 class="title">Dashboard Chart</h3>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="permission"
+                  />
+                  <label class="form-check-label" for="permission">
+                    Check All Permission(s)
+                  </label>
+                </div>
+              </div>
+              <div class="search mt-3" style="max-width: 345px">
+                <i class="fas fa-search"></i>
+                <input
+                  type="text"
+                  class="form-control form-control-lg"
+                  placeholder="Search"
+                />
+              </div>
+              <div class="table-responsive mt-4">
+                <table
+                  class="table table-borderless table-striped radius-table"
+                >
+                  <thead>
+                    <tr>
+                      <td>Name</td>
+                      <td>Permissions</td>
+                      <td class="text-end">Filter By</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="align-middle">
+                        <span>Total Commission</span>
+                      </td>
+                      <td class="align-middle">
+                        <div class="form-check form-switch permission-switch">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="permission1"
+                            checked
+                          />
+                          <label class="form-check-label" for="permission1"
+                            >Allowed</label
+                          >
+                        </div>
+                      </td>
+                      <td class="text-end align-middle">
+                        <div
+                          class="form-check form-switch d-flex flex-row-reverse"
+                        >
+                          <input
+                            class="form-check-input ms-2"
+                            type="checkbox"
+                            id="user1"
+                          />
+                          <label class="form-check-label" for="user1"
+                            >User</label
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle">
+                        <span>Project Summary</span>
+                      </td>
+                      <td class="align-middle">
+                        <div class="form-check form-switch permission-switch">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="permission2"
+                          />
+                          <label class="form-check-label" for="permission2"
+                            >Denied</label
+                          >
+                        </div>
+                      </td>
+                      <td class="text-end align-middle">
+                        <div
+                          class="form-check form-switch d-flex flex-row-reverse"
+                        >
+                          <input
+                            class="form-check-input ms-2"
+                            type="checkbox"
+                            id="user2"
+                          />
+                          <label class="form-check-label" for="user2"
+                            >User</label
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle">
+                        <span>Commission Growth</span>
+                      </td>
+                      <td class="align-middle">
+                        <div class="form-check form-switch permission-switch">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="permission3"
+                          />
+                          <label class="form-check-label" for="permission3"
+                            >Denied</label
+                          >
+                        </div>
+                      </td>
+                      <td class="text-end align-middle">
+                        <div
+                          class="form-check form-switch d-flex flex-row-reverse"
+                        >
+                          <input
+                            class="form-check-input ms-2"
+                            type="checkbox"
+                            id="user3"
+                          />
+                          <label class="form-check-label" for="user3"
+                            >User</label
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle">
+                        <span>Leads & Summary</span>
+                      </td>
+                      <td class="align-middle">
+                        <div class="form-check form-switch permission-switch">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="permission4"
+                            checked
+                          />
+                          <label class="form-check-label" for="permission4"
+                            >Allowed</label
+                          >
+                        </div>
+                      </td>
+                      <td class="text-end align-middle">
+                        <div
+                          class="form-check form-switch d-flex flex-row-reverse"
+                        >
+                          <input
+                            class="form-check-input ms-2"
+                            type="checkbox"
+                            id="user4"
+                          />
+                          <label class="form-check-label" for="user4"
+                            >User</label
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle">
+                        <span>Total Commission</span>
+                      </td>
+                      <td class="align-middle">
+                        <div class="form-check form-switch permission-switch">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="permission5"
+                          />
+                          <label class="form-check-label" for="permission5"
+                            >Denied</label
+                          >
+                        </div>
+                      </td>
+                      <td class="text-end align-middle">
+                        <div
+                          class="form-check form-switch d-flex flex-row-reverse"
+                        >
+                          <input
+                            class="form-check-input ms-2"
+                            type="checkbox"
+                            id="user5"
+                          />
+                          <label class="form-check-label" for="user5"
+                            >User</label
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      const tabItems = document.querySelectorAll('.tab-item')
+      tabItems.forEach((tabItem) => {
+        tabItem.addEventListener('click', (e) => {
+          e.preventDefault()
+          tabItems.forEach((tabItem) => tabItem.classList.remove('active'))
+          tabItem.classList.add('active')
+          document
+            .querySelectorAll('.tab-section-item')
+            .forEach((sectionItem) => sectionItem.classList.add('d-none'))
+          document
+            .querySelector(tabItem.getAttribute('data-target'))
+            .classList.remove('d-none')
+        })
+      })
+    </script>
+  </body>
+</html>

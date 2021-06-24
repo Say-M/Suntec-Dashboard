@@ -44,67 +44,35 @@
       <div class="sidebar-body">
         <ul>
           <li>
-            <a href="/">
+            <a href="./settings.html">
               <svg>
-                <use xlink:href="./assets/svg/sidebar.svg#home"></use>
+                <use xlink:href="./assets/svg/sidebar.svg#bulding"></use>
               </svg>
-              Home
+              Company
             </a>
           </li>
           <li>
             <a href="./agents.html">
               <svg>
-                <use xlink:href="./assets/svg/sidebar.svg#user"></use>
+                <use xlink:href="./assets/svg/sidebar.svg#ticket"></use>
               </svg>
-              Agents</a
+              Billings</a
             >
           </li>
           <li>
             <a href="#">
               <svg>
-                <use xlink:href="./assets/svg/sidebar.svg#file"></use>
+                <use xlink:href="./assets/svg/sidebar.svg#user"></use>
               </svg>
-              Proposals</a
+              User</a
             >
           </li>
           <li>
-            <a href="./projects.html">
+            <a href="./projects.html" class="active">
               <svg>
                 <use xlink:href="./assets/svg/sidebar.svg#layers"></use>
               </svg>
               Projects</a
-            >
-          </li>
-          <li>
-            <a href="./statement.html">
-              <svg>
-                <use xlink:href="./assets/svg/sidebar.svg#file-text"></use>
-              </svg>
-              Statements</a
-            >
-          </li>
-          <li>
-            <a href="./calculator.html" class="active">
-              <svg>
-                <use xlink:href="./assets/svg/sidebar.svg#calculator"></use>
-              </svg>
-              Calculator</a
-            >
-          </li>
-          <li>
-            <a href="./lead.html">
-              <svg>
-                <use xlink:href="./assets/svg/sidebar.svg#filter"></use>
-              </svg>
-              Leads</a
-            >
-          </li>
-          <li>
-            <a href="./calender.html">
-              <svg>
-                <use xlink:href="./assets/svg/sidebar.svg#calender"></use>
-              </svg>
-              Calendar</a
             >
           </li>
         </ul>
@@ -115,16 +83,13 @@
       <header class="header">
         <div class="left-header">
           <div class="menu"><i class="fas fa-bars"></i></div>
-          <div class="search">
-            <i class="fas fa-search"></i>
-            <input
-              type="text"
-              class="form-control form-control-lg"
-              placeholder="Search..."
-            />
+          <div class="exit">
+            <span><i class="fas fa-arrow-left"></i></span> Exit
           </div>
           <div class="icons">
-            <i class="fas fa-search left-header-search"></i>
+            <div class="exit">
+              <span><i class="fas fa-arrow-left ms-0"></i></span> Exit
+            </div>
             <i class="fas fa-ellipsis-v right-header-menu"></i>
           </div>
         </div>
@@ -244,104 +209,167 @@
           </div>
         </div>
       </header>
-      <section class="agent">
-        <div class="d-flex align-items-center my-3">
-          <h3 class="text-black mb-0">Calculator</h3>
-        </div>
-        <div class="calculator section-shadow">
-          <div class="calculator-filter">
-            <div class="d-flex flex-wrap" style="width: 1080px">
-              <select
-                class="form-select form-select-lg"
-                style="max-width: 244px"
-              >
-                <option value="">Installer</option>
-              </select>
-              <select
-                class="form-select form-select-lg"
-                style="max-width: 255px"
-              >
-                <option value="">Set Baseline for Agent</option>
-              </select>
-              <select
-                class="form-select form-select-lg"
-                style="max-width: 255px"
-              >
-                <option value="">Calculator</option>
-              </select>
-            </div>
-            <div class="count">
-              <strong class="text-black me-3">Baseline</strong>
-              <span class="minus"><i class="fas fa-minus"></i></span>
-              <input
-                type="number"
-                class="form-control number form-control-lg"
-                step="0.5"
-                min="0"
-              />
-              <span class="plus"><i class="fas fa-plus"></i></span>
-            </div>
-          </div>
-          <div class="calculator-middle">
-            <div class="left">
-              <strong class="text-black">KW</strong>
-              <div class="number">
-                <span class="active">0</span>
-                <span class="active">5</span>
-                <span class="active">10</span>
-                <span>15</span>
-                <span>20</span>
-                <span>25</span>
-              </div>
-              <span>6.000</span>
-            </div>
-            <div class="right">
-              <strong class="text-black">Final PPW </strong>
-              <div class="number">
-                <span class="active">0</span>
-                <span>4</span>
-                <span>8</span>
-              </div>
-              <span>6.000</span>
-            </div>
-          </div>
-          <div class="calculator-end">
-            <div class="left">
-              <strong>Select Finance Option</strong>
-              <span class="cash-btn">
-                <svg>
-                  <use xlink:href="./assets/svg/sidebar.svg#home"></use>
-                </svg>
-                Cash <i class="fas fa-pen"></i
-              ></span>
-            </div>
-            <div class="right">
-              <button style="height: 46px" class="btn btn-lg btn-red">
-                Calculate
-              </button>
-            </div>
+      <section class="tab-section section-shadow">
+        <div class="tab-header">
+          <h3>Project Settings</h3>
+          <div class="d-flex align-items-center">
+            <span class="text-black me-3">INSTALLERS</span>
+            <select style="width: 160px" class="form-select form-select-lg">
+              <option value="">Erus</option>
+            </select>
           </div>
         </div>
-        <div class="calculator-body">
-          <p class="text-black" style="font-weight: 500">Commission</p>
-          <h1>$0.00</h1>
-          <p>
-            Net System Price
-            <span class="text-black" style="font-weight: 500">$0.00</span>
-            <span class="ms-3">Adders -</span>
-          </p>
+        <div class="tab-wrapper tab-horizontal">
+          <aside>
+            <ul>
+              <li>
+                <a href="#" class="active tab-item" data-target="#financiers">
+                  Financiers
+                </a>
+              </li>
+              <li>
+                <a href="#" class="tab-item" data-target="#finance-options">
+                  Finance Options
+                </a>
+              </li>
+              <li>
+                <a href="#" class="tab-item" data-target="#adders"> Adders </a>
+              </li>
+              <li>
+                <a href="#" class="tab-item" data-target="#uploads">
+                  Uploads
+                </a>
+              </li>
+              <li>
+                <a href="#" class="tab-item" data-target="#calculator-setup">
+                  Calculator Setup
+                </a>
+              </li>
+            </ul>
+          </aside>
+          <div class="tab-section-item" id="financiers">
+            <div>
+              <div
+                class="
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  flex-wrap
+                "
+              >
+                <h3 class="title">
+                  Financiers <span><i class="fas fa-plus"></i></span>
+                </h3>
+                <div class="search">
+                  <i class="fas fa-search"></i>
+                  <input
+                    type="text"
+                    class="form-control form-control-lg"
+                    placeholder="Search"
+                  />
+                </div>
+              </div>
+              <div class="table-responsive mt-3">
+                <table
+                  class="table table-borderless table-striped radius-table"
+                >
+                  <thead>
+                    <tr>
+                      <td>Financier Name <i class="fas fa-sort"></i></td>
+                      <td class="text-end">
+                        Action <i class="fas fa-sort"></i>
+                      </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="align-middle">
+                        <span>Sunlight</span>
+                      </td>
+                      <td class="text-end align-middle">
+                        <span>
+                          <i class="fas fa-pen mx-2"></i>
+                          <i class="far fa-trash-alt mx-2"></i>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle">
+                        <span>Mosaic</span>
+                      </td>
+                      <td class="text-end align-middle">
+                        <span>
+                          <i class="fas fa-pen mx-2"></i>
+                          <i class="far fa-trash-alt mx-2"></i>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle">
+                        <span>LoanPal</span>
+                      </td>
+                      <td class="text-end align-middle">
+                        <span>
+                          <i class="fas fa-pen mx-2"></i>
+                          <i class="far fa-trash-alt mx-2"></i>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle">
+                        <span>Loan</span>
+                      </td>
+                      <td class="text-end align-middle">
+                        <span>
+                          <i class="fas fa-pen mx-2"></i>
+                          <i class="far fa-trash-alt mx-2"></i>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle">
+                        <span>Dividend</span>
+                      </td>
+                      <td class="text-end align-middle">
+                        <span>
+                          <i class="fas fa-pen mx-2"></i>
+                          <i class="far fa-trash-alt mx-2"></i>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle">
+                        <span>Cash</span>
+                      </td>
+                      <td class="text-end align-middle">
+                        <span>
+                          <i class="fas fa-pen mx-2"></i>
+                          <i class="far fa-trash-alt mx-2"></i>
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
     <script>
-      const minus = document.querySelector('.minus')
-      const plus = document.querySelector('.plus')
-      const number = document.querySelector('.number')
-      plus.addEventListener('click', () => {
-        number.stepUp()
-      })
-      minus.addEventListener('click', () => {
-        number.stepDown()
+      const tabItems = document.querySelectorAll('.tab-item')
+      tabItems.forEach((tabItem) => {
+        tabItem.addEventListener('click', (e) => {
+          e.preventDefault()
+          tabItems.forEach((tabItem) => tabItem.classList.remove('active'))
+          tabItem.classList.add('active')
+          document
+            .querySelectorAll('.tab-section-item')
+            .forEach((sectionItem) => sectionItem.classList.add('d-none'))
+          document
+            .querySelector(tabItem.getAttribute('data-target'))
+            .classList.remove('d-none')
+        })
       })
     </script>
   </body>

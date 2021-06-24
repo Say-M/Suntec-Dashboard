@@ -84,6 +84,29 @@ textarea {
     background: $red;
   }
 }
+.btn-orange {
+  background: $orange;
+  color: $white;
+  font-size: 1rem !important;
+  &:hover {
+    color: $white;
+    box-shadow: 0 11px 17px rgba(230, 89, 18, 0.15);
+  }
+  &:active,
+  &:focus {
+    border-color: none;
+    outline: none;
+    box-shadow: 0 11px 17px rgba(230, 89, 18, 0.15);
+  }
+}
+.btn-outline-orange {
+  border: 1px solid $orange;
+  color: $orange;
+  &:hover {
+    color: $white;
+    background: $orange;
+  }
+}
 .overlay {
   position: fixed;
   width: 100%;
@@ -113,6 +136,31 @@ textarea {
   }
   .info {
     font-size: 1.3rem;
+  }
+  .annual {
+    display: flex;
+    align-items: center;
+    & > div {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      white-space: nowrap;
+      div {
+        display: flex;
+        align-items: center;
+        margin-right: 1.5rem;
+      }
+      span {
+        height: 20px;
+        display: inline-block;
+        width: 20px;
+        border-radius: 50%;
+        margin-right: 0.8rem;
+      }
+    }
+    i {
+      margin-left: 0.8rem;
+    }
   }
 }
 .bg-red {
@@ -290,4 +338,58 @@ thead {
 .badge-success {
   background-color: $lightDeepGreen;
   color: $deepGreen;
+}
+input[type='date']::-webkit-calendar-picker-indicator {
+  background-image: url(../images/icons/input-calendar.svg);
+}
+.form-group {
+  margin-bottom: 2.5rem;
+}
+.pnt {
+  cursor: pointer;
+}
+.radius-table {
+  tbody {
+    td {
+      &:first-child {
+        border-radius: 1.125rem 0 0 1.125rem;
+        padding-left: 1.5rem;
+      }
+      &:last-child {
+        border-radius: 0 1.125rem 1.125rem 0;
+        padding-right: 1.5rem;
+      }
+    }
+  }
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #fafafa !important;
+  --bs-table-accent-bg: unset;
+}
+.form-check-input {
+  &:checked {
+    background-color: $red;
+  }
+}
+.table {
+  .form-check {
+    display: flex;
+    .form-check-input {
+      height: 1.3rem;
+    }
+  }
+}
+.permission-switch {
+  padding-left: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  .form-check-input {
+    margin-left: 0.5em;
+    background-color: $red !important;
+    margin-left: 1rem;
+    &:checked {
+      background-color: $green !important;
+    }
+  }
 }
