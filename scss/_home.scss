@@ -167,7 +167,6 @@
               &:nth-child(#{$i}) {
                 top: 15px * $i;
                 .project-header {
-                  padding: 0.5rem 1rem;
                   box-shadow: 0px 14px 58px $lightGray;
                 }
               }
@@ -185,10 +184,10 @@
               width: 15rem;
               box-shadow: 0px 14px 58px $lightRed;
               z-index: 2;
-              &:last-of-type {
-                position: absolute;
-                top: 20%;
-                left: 45%;
+              transition: 0.2s;
+              &.active {
+                background: $white;
+                color: $black;
                 padding: 0.5rem 1rem;
                 box-shadow: 0px 14px 58px $lightGray;
               }

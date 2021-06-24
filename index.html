@@ -374,10 +374,7 @@
                       <img src="./assets/images/dooted-load.png" alt="" />
                     </div>
                     <div class="project-item">
-                      <div
-                        class="project-header bg-white text-black"
-                        data-target="#project-a2"
-                      >
+                      <div class="project-header" data-target="#project-a2">
                         <div>
                           <h6>Project A</h6>
                           <span>Need to finish ASAP</span>
@@ -995,9 +992,11 @@
 
       //donut
       var projectOptions = {
-        series: [44, 55, 41],
+        // series: [44, 55, 41],
+        series: [76, 0, 0],
         chart: {
           type: 'donut',
+          height: 300,
         },
         legend: {
           position: 'bottom',
@@ -1011,9 +1010,21 @@
         },
         colors: ['#e65912', '#f08418', '#f9ac1e'],
         labels: ['Contract', 'Pending', 'Canceled'],
+        // labels: ['Contract'],
+        legend: {
+          show: true,
+          position: 'bottom',
+        },
         plotOptions: {
           pie: {
+            startAngle: -135,
+            endAngle: 135,
+            track: {
+              background: '#e7e7e7',
+              strokeWidth: '9%',
+            },
             donut: {
+              size: '90%',
               labels: {
                 show: true,
                 value: {
@@ -1037,13 +1048,12 @@
         },
         // responsive: [
         //   {
-        //     breakpoint: 480,
-        //     options: {
-        //       chart: {
-        //         width: 200,
-        //       },
-        //       legend: {
-        //         position: 'bottom',
+        //     breakpoint: 1450,
+        //     plotOptions: {
+        //       pie: {
+        //         donut: {
+        //           size: '80%',
+        //         },
         //       },
         //     },
         //   },
@@ -1131,6 +1141,7 @@
 
       projectHeaders.forEach((projectHeader) => {
         projectHeader.addEventListener('mouseover', () => {
+          projectHeader.classList.add('active')
           const projectItem = document.querySelector(
             projectHeader.getAttribute('data-target')
           )
@@ -1140,6 +1151,7 @@
       })
       projectHeaders.forEach((projectHeader) => {
         projectHeader.addEventListener('mouseout', () => {
+          projectHeader.classList.remove('active')
           projectList.forEach((projectListItem) => {
             projectListItem.style.height = '0px'
           })
