@@ -331,8 +331,8 @@
                     <div><span>7.00</span></div>
                   </div>
                   <div class="calender-inner-body" id="june-18">
-                    <div class="project-item">
-                      <div class="project-header" data-target="#project-a1">
+                    <div class="project-item" data-target="#project-a1">
+                      <div class="project-header">
                         <div>
                           <h6>Project A</h6>
                           <span>Need to finish ASAP</span>
@@ -373,8 +373,8 @@
                         </ul>
                       </div>
                     </div>
-                    <div class="project-item">
-                      <div class="project-header" data-target="#project-a2">
+                    <div class="project-item" data-target="#project-a2">
+                      <div class="project-header">
                         <div>
                           <h6>Project A</h6>
                           <span>Need to finish ASAP</span>
@@ -410,8 +410,8 @@
                     </div>
                   </div>
                   <div class="calender-inner-body d-none" id="june-19">
-                    <div class="project-item">
-                      <div class="project-header" data-target="#project-b">
+                    <div class="project-item" data-target="#project-b">
+                      <div class="project-header">
                         <div>
                           <h6>Project B</h6>
                           <span>Need to finish ASAP</span>
@@ -455,8 +455,8 @@
                     </div>
                   </div>
                   <div class="calender-inner-body d-none" id="june-20">
-                    <div class="project-item">
-                      <div class="project-header" data-target="#project-c">
+                    <div class="project-item" data-target="#project-c">
+                      <div class="project-header">
                         <div>
                           <h6>Project C</h6>
                           <span>Need to finish ASAP</span>
@@ -500,8 +500,8 @@
                     </div>
                   </div>
                   <div class="calender-inner-body d-none" id="june-21">
-                    <div class="project-item">
-                      <div class="project-header" data-target="#project-d">
+                    <div class="project-item" data-target="#project-d">
+                      <div class="project-header">
                         <div>
                           <h6>Project D</h6>
                           <span>Need to finish ASAP</span>
@@ -545,8 +545,8 @@
                     </div>
                   </div>
                   <div class="calender-inner-body d-none" id="june-22">
-                    <div class="project-item">
-                      <div class="project-header" data-target="#project-e">
+                    <div class="project-item" data-target="#project-e">
+                      <div class="project-header">
                         <div>
                           <h6>Project E</h6>
                           <span>Need to finish ASAP</span>
@@ -590,8 +590,8 @@
                     </div>
                   </div>
                   <div class="calender-inner-body d-none" id="june-23">
-                    <div class="project-item">
-                      <div class="project-header" data-target="#project-f">
+                    <div class="project-item" data-target="#project-f">
+                      <div class="project-header">
                         <div>
                           <h6>Project F</h6>
                           <span>Need to finish ASAP</span>
@@ -635,8 +635,8 @@
                     </div>
                   </div>
                   <div class="calender-inner-body d-none" id="june-24">
-                    <div class="project-item">
-                      <div class="project-header" data-target="#project-g">
+                    <div class="project-item" data-target="#project-g">
+                      <div class="project-header">
                         <div>
                           <h6>Project G</h6>
                           <span>Need to finish ASAP</span>
@@ -1143,22 +1143,22 @@
       })
 
       //project calender
-      const projectHeaders = document.querySelectorAll('.project-header')
+      const projectHeaders = document.querySelectorAll('.project-item')
       const projectList = document.querySelectorAll('.project-list')
 
       projectHeaders.forEach((projectHeader) => {
         projectHeader.addEventListener('mouseover', () => {
-          projectHeader.classList.add('active')
           const projectItem = document.querySelector(
             projectHeader.getAttribute('data-target')
           )
+          projectHeader.childNodes[1].classList.add('active')
           const height = projectItem.scrollHeight
           projectItem.style.height = height + 'px'
         })
       })
       projectHeaders.forEach((projectHeader) => {
         projectHeader.addEventListener('mouseout', () => {
-          projectHeader.classList.remove('active')
+          projectHeader.childNodes[1].classList.remove('active')
           projectList.forEach((projectListItem) => {
             projectListItem.style.height = '0px'
           })
