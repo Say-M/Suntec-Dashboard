@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suntec Dashboard</title>
+
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css"
+      integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.min.js"
+      integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- custom styling -->
+    <link rel="stylesheet" href="./assets/css/styles.min.css" />
+
+    <!-- custom scripts -->
+    <script src="./js/app.js" defer></script>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="/"><img src="./assets/images/logo 1.png" alt="" /></a>
+      </div>
+      <div class="sidebar-body">
+        <ul>
+          <li>
+            <a href="/">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#home"></use>
+              </svg>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="./agents.html">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#user"></use>
+              </svg>
+              Agents</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#file"></use>
+              </svg>
+              Proposals</a
+            >
+          </li>
+          <li>
+            <a href="./projects.html">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#layers"></use>
+              </svg>
+              Projects</a
+            >
+          </li>
+          <li>
+            <a href="./statement.html">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#file-text"></use>
+              </svg>
+              Statements</a
+            >
+          </li>
+          <li>
+            <a href="./calculator.html">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#calculator"></use>
+              </svg>
+              Calculator</a
+            >
+          </li>
+          <li>
+            <a href="./lead.html">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#filter"></use>
+              </svg>
+              Leads</a
+            >
+          </li>
+          <li>
+            <a href="./calender.html">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#calender"></use>
+              </svg>
+              Calendar</a
+            >
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <div class="overlay hide"></div>
+    <main>
+      <header class="header">
+        <div class="left-header">
+          <div class="menu"><i class="fas fa-bars"></i></div>
+          <div class="exit">
+            <span><i class="fas fa-arrow-left"></i></span> Exit
+          </div>
+          <div class="icons">
+            <div class="exit">
+              <span><i class="fas fa-arrow-left ms-0"></i></span> Exit
+            </div>
+            <i class="fas fa-ellipsis-v right-header-menu"></i>
+          </div>
+        </div>
+        <div class="right-header">
+          <div class="language">
+            <div class="language-btn">
+              <img src="./assets/images/flags/united-states.png" alt="" />
+              <i class="fas fa-angle-down"></i>
+            </div>
+            <ul class="shadow-sm language-list">
+              <li>Eng</li>
+              <li>বাংলা</li>
+              <li>اَلْعَرَبِيَّةُ</li>
+            </ul>
+          </div>
+          <div class="page-settings">
+            <ul>
+              <li class="expand"><i class="fas fa-expand-alt"></i></li>
+              <li class="setting-btn">
+                <i class="fas fa-cog"></i>
+                <div>
+                  <ul class="shadow">
+                    <li><a href="#">Site 1</a></li>
+                    <li><a href="#">Site 2</a></li>
+                    <li><a href="#">Site 3</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="notification-btn">
+                <i class="far fa-bell"></i>
+                <div class="shadow">
+                  <h3 class="text-black">Notifications</h3>
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <div class="icon comment">
+                          <span>
+                            <i class="far fa-comment"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="icon user">
+                          <span>
+                            <i class="far fa-user"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="icon comment">
+                          <span>
+                            <i class="far fa-comment"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="icon user">
+                          <span>
+                            <i class="far fa-user"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="#" class="all">View all notifications</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="user" tabindex="0">
+            <img src="./assets/images/user.png" alt="" />
+            <div>
+              <h6>Jhon Doe</h6>
+              <small>Admin</small>
+            </div>
+            <div class="user-opt">
+              <ul class="shadow">
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="tab-section section-shadow">
+        <div class="tab-header">
+          <h3>Edit Agent</h3>
+          <div>
+            <button class="btn btn-red">Save</button>
+          </div>
+        </div>
+        <div class="tab-wrapper">
+          <aside>
+            <ul>
+              <li>
+                <a href="#" class="active tab-item" data-target="#agent-details"
+                  >Agent details</a
+                >
+              </li>
+              <li>
+                <a href="#" class="tab-item" data-target="#bank-details"
+                  >Bank details</a
+                >
+              </li>
+              <li>
+                <a href="#" class="tab-item" data-target="#w9-details"
+                  >W9 details</a
+                >
+              </li>
+              <li>
+                <a href="#" class="tab-item" data-target="#onboarding-documents"
+                  >Onboarding Documents</a
+                >
+              </li>
+            </ul>
+          </aside>
+          <div class="tab-section-item" id="agent-details">
+            <div>
+              <h3 class="title">My profile</h3>
+              <div class="row">
+                <div class="col-md-6 col-lg-12 col-xxl-6">
+                  <div class="form-group">
+                    <label>First name</label>
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      placeholder="Enter your name"
+                      value="Test"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-12 col-xxl-6">
+                  <div class="form-group">
+                    <label>Last name</label>
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      placeholder="Enter your surname"
+                      value="Installer"
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-12 col-xxl-4">
+                  <div class="form-group">
+                    <label>email address</label>
+                    <input
+                      type="email"
+                      class="form-control form-control-lg"
+                      placeholder="Enter mail id"
+                      value="installer@suntec.io"
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-12 col-xxl-4">
+                  <div class="form-group">
+                    <label>password</label>
+                    <input
+                      type="password"
+                      class="form-control form-control-lg"
+                      placeholder="Enter password"
+                      value="123456"
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-12 col-xxl-4">
+                  <div class="form-group">
+                    <label>Contact Number</label>
+                    <input
+                      type="tel"
+                      class="form-control form-control-lg"
+                      placeholder="Enter contact no."
+                      value="(915)234-5678"
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label>Address</label>
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      placeholder="Enter address"
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-8 col-lg-12 col-xxl-8">
+                  <div class="form-group">
+                    <label>CITY</label>
+                    <div class="tags-wrapper">
+                      <input
+                        class="form-control form-control-lg tag-input"
+                        list="city"
+                      />
+                      <div class="tags"></div>
+                      <img
+                        class="arrow"
+                        src="../assets/images/icons/chevron-down.svg"
+                        alt=""
+                      />
+                      <!-- <div class="tags">
+                    <span class="tag-item"
+                      >San Francisco <i class="fas fa-times"></i
+                    ></span>
+                    <span class="tag-item"
+                      >San Francisco <i class="fas fa-times"></i
+                    ></span>
+                    <span class="tag-item"
+                      >San Francisco <i class="fas fa-times"></i
+                    ></span>
+                  </div>
+                  <ul class="shadow" id="data-lists">
+                    <li>San Francisco</li>
+                    <li>New York</li>
+                    <li>Seattle</li>
+                    <li>Los Angeles</li>
+                    <li>Chicago</li>
+                  </ul> -->
+                    </div>
+                    <datalist id="city">
+                      <option value="San Francisco"></option>
+                      <option value="New York"></option>
+                      <option value="Seattle"></option>
+                      <option value="Los Angeles"></option>
+                      <option value="Chicago"></option>
+                    </datalist>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-12 col-xxl-4">
+                  <div class="form-group">
+                    <label>BASELINE</label>
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      placeholder="Enter baseline"
+                      value="2.6"
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-12 col-xxl-6">
+                  <div class="form-group">
+                    <label>STATE</label>
+                    <select class="form-select form-select-lg">
+                      <option value="">Select</option>
+                      <option value="">STATE 1</option>
+                      <option value="">STATE 2</option>
+                      <option value="">STATE 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-12 col-xxl-6">
+                  <div class="form-group">
+                    <label>Zip Code</label>
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      placeholder="Enter code"
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-12 col-xxl-4">
+                  <div class="form-group">
+                    <label>Role</label>
+                    <select class="form-select form-select-lg">
+                      <option value="">Installer</option>
+                      <option value="">Installer 1</option>
+                      <option value="">Installer 2</option>
+                      <option value="">Installer 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-12 col-xxl-4">
+                  <div class="form-group">
+                    <label>Manager</label>
+                    <select class="form-select form-select-lg">
+                      <option value="">None</option>
+                      <option value="">Manager 1</option>
+                      <option value="">Manager 2</option>
+                      <option value="">Manager 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-12 col-xxl-4">
+                  <div class="form-group">
+                    <label>STATUS</label>
+                    <select class="form-select form-select-lg">
+                      <option value="">Active</option>
+                      <option value="">Inactive</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-section-item d-none" id="bank-details">
+            <div>
+              <h3 class="title">Bank Details</h3>
+              <div class="row">
+                <div class="col-md-6 col-lg-12 col-xxl-6">
+                  <div class="form-group">
+                    <label>ACCOUNT TYPE</label>
+                    <select class="form-select form-select-lg">
+                      <option value="">Savings</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-12 col-xxl-6">
+                  <div class="form-group">
+                    <label>ACCOUNT NUMBER</label>
+                    <input
+                      type="number"
+                      class="form-control form-control-lg"
+                      placeholder="Enter account number"
+                      value="895012598041686"
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-12 col-xxl-6">
+                  <div class="form-group">
+                    <label>BANK NAME</label>
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      placeholder="Enter bank name"
+                      value="Canara Bank"
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-12 col-xxl-6">
+                  <div class="form-group">
+                    <label>9-DIGIT ROUTING NUMBER</label>
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      placeholder="Enter 9-Digit no."
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-section-item d-none" id="w9-details">
+            <div>
+              <h3 class="title">
+                W9 Details
+                <svg style="height: 24px; width: 24px; margin-left: 1rem">
+                  <use xlink:href="./assets/svg/sidebar.svg#info"></use>
+                </svg>
+              </h3>
+              <div class="row">
+                <div class="col-md-6 col-lg-12 col-xxl-6">
+                  <div class="form-group">
+                    <label>JOINING AS</label>
+                    <select class="form-select form-select-lg">
+                      <option value="">Individual</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-12 col-xxl-6">
+                  <div class="form-group">
+                    <label>SOCIAL SECURITY NUMBER</label>
+                    <input type="number" class="form-control form-control-lg" />
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-12 col-xxl-6">
+                  <div class="form-group">
+                    <label>TAX CLASSIFICATION</label>
+                    <select class="form-select form-select-lg">
+                      <option value="">Individual/Sole</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-section-item d-none" id="onboarding-documents">
+            <div>
+              <h3 class="title">Onboarding Documents</h3>
+              <small>No Onboarding Documents Found</small>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      const tabItems = document.querySelectorAll('.tab-item')
+      tabItems.forEach((tabItem) => {
+        tabItem.addEventListener('click', (e) => {
+          e.preventDefault()
+          tabItems.forEach((tabItem) => tabItem.classList.remove('active'))
+          tabItem.classList.add('active')
+          document
+            .querySelectorAll('.tab-section-item')
+            .forEach((sectionItem) => sectionItem.classList.add('d-none'))
+          document
+            .querySelector(tabItem.getAttribute('data-target'))
+            .classList.remove('d-none')
+        })
+      })
+    </script>
+  </body>
+</html>

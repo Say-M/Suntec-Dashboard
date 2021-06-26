@@ -80,3 +80,19 @@ notificationBtn.addEventListener('click', function () {
   settingBtn.children[1].classList.remove('active')
   this.children[1].classList.toggle('active')
 })
+
+//handle tag change
+const tagInput = document.querySelector('.tag-input')
+const tagsElement = document.querySelector('.tags')
+
+const handleTagRemove = (e) => {
+  e.parentElement.remove()
+}
+
+tagInput?.addEventListener('change', (e) => {
+  const tagName = e.target.value
+  tagsElement.innerHTML += `<span class="tag-item"
+  >${tagName} <i onClick="handleTagRemove(this)" class="fas fa-times"></i
+></span>`
+  tagInput.value = ''
+})

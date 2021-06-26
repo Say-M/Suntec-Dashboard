@@ -733,7 +733,8 @@
     <script>
       const tabItems = document.querySelectorAll('.tab-item')
       tabItems.forEach((tabItem) => {
-        tabItem.addEventListener('click', () => {
+        tabItem.addEventListener('click', (e) => {
+          e.preventDefault()
           tabItems.forEach((tabItem) => tabItem.classList.remove('active'))
           tabItem.classList.add('active')
           document

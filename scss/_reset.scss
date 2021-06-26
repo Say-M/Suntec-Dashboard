@@ -51,6 +51,9 @@ textarea {
 .text-black {
   color: $black !important;
 }
+.text-red {
+  color: $red !important;
+}
 .btn {
   border-radius: 2rem;
 }
@@ -342,6 +345,47 @@ thead {
 input[type='date']::-webkit-calendar-picker-indicator {
   background-image: url(../images/icons/input-calendar.svg);
 }
+.custom-file-upload {
+  width: 100%;
+  position: relative;
+  background-color: $background;
+  padding: 0 2rem;
+  height: 4rem !important;
+  border-radius: 2rem;
+  line-height: 4rem;
+  color: $gray !important;
+  text-transform: unset !important;
+  font-weight: 400 !important;
+  margin-bottom: 0 !important;
+  margin-top: 1.3rem;
+  display: block;
+  cursor: pointer;
+  & + input {
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    display: none;
+    pointer-events: none;
+  }
+  &::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  &::after {
+    content: 'Browse';
+    position: absolute;
+    top: 0.3rem;
+    right: 0.3rem;
+    background-color: $white;
+    color: $gray;
+    height: calc(100% - 0.6rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4rem;
+    padding: 1.5rem;
+  }
+}
 .form-group {
   margin-bottom: 2.5rem;
 }
@@ -404,5 +448,59 @@ input[type='date']::-webkit-calendar-picker-indicator {
   .apexcharts-tooltip-series-group.apexcharts-active
     .apexcharts-tooltip-marker {
     display: none;
+  }
+}
+.tags-wrapper {
+  position: relative;
+  .arrow {
+    position: absolute;
+    right: 1rem;
+    top: 1.3rem;
+  }
+  .tags {
+    position: absolute;
+    top: 0.25rem;
+    left: 0.3rem;
+    display: flex;
+    .tag-item {
+      white-space: nowrap;
+      background-color: $white;
+      color: $black;
+      height: 3.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-width: 7rem;
+      font-size: 1rem;
+      border-radius: 5rem;
+      padding: 1rem;
+      margin-right: 0.3rem;
+      i {
+        cursor: pointer;
+        margin-left: 1.5rem;
+      }
+    }
+  }
+  ul {
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    max-width: 300px;
+    background-color: $white;
+    padding-left: 0;
+    margin-bottom: 0;
+    z-index: 11;
+    left: 0;
+    top: 5rem;
+    border-radius: 0.5rem;
+    li {
+      border-bottom: 1px solid $background;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      color: $gray;
+      &:hover {
+        color: $black;
+      }
+    }
   }
 }
