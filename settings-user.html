@@ -60,7 +60,7 @@
             >
           </li>
           <li>
-            <a href="#">
+            <a href="#" class="active">
               <svg>
                 <use xlink:href="./assets/svg/sidebar.svg#user"></use>
               </svg>
@@ -68,7 +68,7 @@
             >
           </li>
           <li>
-            <a href="./projects.html" class="active">
+            <a href="./projects.html">
               <svg>
                 <use xlink:href="./assets/svg/sidebar.svg#layers"></use>
               </svg>
@@ -275,7 +275,59 @@
               </li>
             </ul>
           </aside>
-          <div class="tab-section-item" id="dashboard-chart">
+          <div class="tab-section-item" id="role-details">
+            <div>
+              <h3 class="title">Role Details</h3>
+              <div class="row">
+                <div class="col-md-6 col-lg-12 col-xxl-6">
+                  <div class="form-group">
+                    <label>First name</label>
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      placeholder="Enter your name"
+                      value="Solar Pro"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-3 col-lg-12 col-xxl-3">
+                  <div class="form-group">
+                    <label>DEFAULT BASELINE </label>
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      value="2.5"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-3 col-lg-12 col-xxl-3">
+                  <div class="form-group">
+                    <label>Status</label>
+                    <select class="form-select form-select-lg">
+                      <option value="">Active</option>
+                      <option value="">Inactive</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group">
+                    <div class="form-check d-flex align-items-center">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="admin"
+                      />
+                      <label class="form-check-label mb-0 ms-2" for="admin">
+                        Set as Admin
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-section-item d-none" id="dashboard-chart">
             <div>
               <div
                 class="
@@ -313,7 +365,7 @@
                   <thead>
                     <tr>
                       <td>Name</td>
-                      <td>Permissions</td>
+                      <td class="text-center">Permissions</td>
                       <td class="text-end">Filter By</td>
                     </tr>
                   </thead>
@@ -322,7 +374,7 @@
                       <td class="align-middle">
                         <span>Total Commission</span>
                       </td>
-                      <td class="align-middle">
+                      <td class="align-middle text-center">
                         <div class="form-check form-switch permission-switch">
                           <input
                             class="form-check-input"
@@ -354,7 +406,7 @@
                       <td class="align-middle">
                         <span>Project Summary</span>
                       </td>
-                      <td class="align-middle">
+                      <td class="align-middle text-center">
                         <div class="form-check form-switch permission-switch">
                           <input
                             class="form-check-input"
@@ -385,7 +437,7 @@
                       <td class="align-middle">
                         <span>Commission Growth</span>
                       </td>
-                      <td class="align-middle">
+                      <td class="align-middle text-center">
                         <div class="form-check form-switch permission-switch">
                           <input
                             class="form-check-input"
@@ -416,7 +468,7 @@
                       <td class="align-middle">
                         <span>Leads & Summary</span>
                       </td>
-                      <td class="align-middle">
+                      <td class="align-middle text-center">
                         <div class="form-check form-switch permission-switch">
                           <input
                             class="form-check-input"
@@ -448,7 +500,7 @@
                       <td class="align-middle">
                         <span>Total Commission</span>
                       </td>
-                      <td class="align-middle">
+                      <td class="align-middle text-center">
                         <div class="form-check form-switch permission-switch">
                           <input
                             class="form-check-input"
@@ -472,6 +524,149 @@
                           <label class="form-check-label" for="user5"
                             >User</label
                           >
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="tab-section-item d-none" id="agents">
+            <div>
+              <div
+                class="
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  flex-wrap
+                "
+              >
+                <h3 class="title">Agents</h3>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="permission"
+                  />
+                  <label class="form-check-label" for="permission">
+                    Check All Permission(s)
+                  </label>
+                </div>
+              </div>
+              <div class="search mt-3" style="max-width: 345px">
+                <i class="fas fa-search"></i>
+                <input
+                  type="text"
+                  class="form-control form-control-lg"
+                  placeholder="Search"
+                />
+              </div>
+              <div class="table-responsive mt-4">
+                <table
+                  class="table table-borderless table-striped radius-table"
+                >
+                  <thead>
+                    <tr>
+                      <td>Name</td>
+                      <td class="text-center">Permissions</td>
+                      <td>Interacts</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="align-middle">
+                        <span>Pending List</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div
+                          class="
+                            form-check form-switch
+                            permission-switch
+                            justify-content-center
+                          "
+                        >
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="permission1"
+                            checked
+                          />
+                          <label class="form-check-label" for="permission1"
+                            >Allowed</label
+                          >
+                        </div>
+                      </td>
+                      <td class="text-center align-middle">
+                        <div class="d-flex">
+                          <div class="form-check form-switch d-flex ps-0 pe-2">
+                            <input
+                              class="form-check-input ms-2"
+                              type="checkbox"
+                              id="edit1"
+                            />
+                            <label class="form-check-label" for="edit1">
+                              <i class="fas fa-pen ms-2"></i
+                            ></label>
+                          </div>
+                          <div class="form-check form-switch d-flex ps-0 pe-2">
+                            <input
+                              class="form-check-input ms-2"
+                              type="checkbox"
+                              id="delete1"
+                            />
+                            <label class="form-check-label" for="delete1">
+                              <i class="fas fa-trash-alt ms-2"></i
+                            ></label>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle">
+                        <span>View All List </span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div
+                          class="
+                            form-check form-switch
+                            permission-switch
+                            justify-content-center
+                          "
+                        >
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="permission1"
+                          />
+                          <label class="form-check-label" for="permission1"
+                            >Denied</label
+                          >
+                        </div>
+                      </td>
+                      <td class="text-center align-middle">
+                        <div class="d-flex">
+                          <div class="form-check form-switch d-flex ps-0 pe-2">
+                            <input
+                              class="form-check-input ms-2"
+                              type="checkbox"
+                              id="edit2"
+                            />
+                            <label class="form-check-label" for="edit2">
+                              <i class="fas fa-pen ms-2"></i
+                            ></label>
+                          </div>
+                          <div class="form-check form-switch d-flex ps-0 pe-2">
+                            <input
+                              class="form-check-input ms-2"
+                              type="checkbox"
+                              id="delete2"
+                            />
+                            <label class="form-check-label" for="delete2">
+                              <i class="fas fa-trash-alt ms-2"></i
+                            ></label>
+                          </div>
                         </div>
                       </td>
                     </tr>

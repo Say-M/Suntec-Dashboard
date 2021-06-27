@@ -87,6 +87,29 @@ textarea {
     background: $red;
   }
 }
+.btn-green {
+  background: $green;
+  color: $white;
+  font-size: 1rem !important;
+  &:hover {
+    color: $white;
+    box-shadow: 0px 11px 17px rgba(2, 169, 20, 0.15);
+  }
+  &:active,
+  &:focus {
+    border-color: none;
+    outline: none;
+    box-shadow: 0px 11px 17px rgba(2, 169, 20, 0.15);
+  }
+}
+.btn-outline-green {
+  border: 1px solid $green;
+  color: $green;
+  &:hover {
+    color: $white;
+    background: $green;
+  }
+}
 .btn-orange {
   background: $orange;
   color: $white;
@@ -200,7 +223,8 @@ small,
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 2rem 0;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   .left {
     width: 50%;
     margin-bottom: 1rem;
@@ -276,8 +300,9 @@ thead {
 .table {
   white-space: nowrap;
   svg {
-    height: 1rem;
-    width: 1rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    margin: 0 0.5rem;
   }
   i {
     color: $gray;
@@ -503,4 +528,44 @@ input[type='date']::-webkit-calendar-picker-indicator {
       }
     }
   }
+}
+.modal-content {
+  border-radius: 1.25rem;
+  border: none;
+}
+.modal-header {
+  border-bottom: none;
+  border-radius: 1.25rem 1.25rem 0 0;
+  padding: 2.6875rem;
+}
+.modal-body {
+  padding: 0 2.6875rem;
+  .form-group {
+    margin-bottom: 2rem;
+  }
+  .custom-file-upload {
+    margin-top: 0;
+  }
+  label,
+  p {
+    margin-bottom: 0.3375rem !important;
+  }
+}
+.modal-footer {
+  border-top: none;
+  border-radius: 0 0 1.25rem 1.25rem;
+}
+.active-badge {
+  background-color: $lightDeepGreen;
+  color: $green;
+  font-size: 0.8125rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3125rem;
+}
+.inactive-badge {
+  background-color: $lightRed;
+  color: $red;
+  font-size: 0.8125rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3125rem;
 }

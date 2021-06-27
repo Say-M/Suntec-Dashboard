@@ -208,7 +208,7 @@
       }
       .row,
       .table-responsive {
-        margin-top: 2.625rem;
+        margin-top: 1.625rem;
       }
       .form-group {
         label,
@@ -311,6 +311,107 @@
           i {
             font-size: 1.5rem;
           }
+        }
+      }
+      .card-item {
+        border-radius: 0.9375rem;
+        padding: 1.75rem;
+      }
+      .suntec-card {
+        background: $red url(../images/card-bg.png) no-repeat;
+        background-size: cover;
+        background-position: center center;
+        color: $white;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 1rem;
+        height: calc(100% - 1rem);
+        &::before,
+        &::after {
+          // content: '';
+          position: absolute;
+          border-radius: 50%;
+          background-color: $black;
+          width: 15rem;
+        }
+        &::before {
+          opacity: 0.08;
+          right: -10%;
+          top: -40%;
+          height: 11rem;
+        }
+        &::after {
+          opacity: 0.1;
+          left: -10%;
+          bottom: -45%;
+          height: 14rem;
+        }
+        h4 {
+          font-size: 1.375rem;
+          margin-bottom: 0;
+        }
+        small,
+        span {
+          font-size: 0.875rem;
+          font-size: 0.875rem;
+          display: block;
+        }
+        & > span {
+          background-color: transparentize($color: $black, $amount: 0.5);
+          border-radius: 0.25rem;
+          padding: 0.2rem;
+          margin: 2.5rem 0;
+          display: inline-block;
+        }
+        & > div {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+      .add {
+        background: $background;
+        border: 3px dashed $lightGray;
+        display: flex;
+        justify-content: center;
+        &::after,
+        &::before {
+          content: none;
+        }
+        & > div {
+          justify-content: center;
+          align-items: center;
+          .icon {
+            height: 2.5rem;
+            width: 2.5rem;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $red;
+            color: $white;
+            margin-right: 0.8rem;
+          }
+          span {
+            font-size: 1.125rem;
+            color: $black;
+          }
+        }
+      }
+      .subscription-item {
+        border-radius: 0.9375rem;
+        padding: 3.3rem 1.75rem;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        height: calc(100% - 1.5rem);
+        margin-bottom: 1.5rem;
+        text-align: center;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        h5 {
+          color: $black;
+          font-weight: 400;
+          font-size: 1.125rem;
+          margin-bottom: 1.2rem;
         }
       }
     }

@@ -52,7 +52,7 @@
             </a>
           </li>
           <li>
-            <a href="./agents.html">
+            <a href="./agents.html" class="active">
               <svg>
                 <use xlink:href="./assets/svg/sidebar.svg#ticket"></use>
               </svg>
@@ -68,7 +68,7 @@
             >
           </li>
           <li>
-            <a href="./projects.html" class="active">
+            <a href="./projects.html">
               <svg>
                 <use xlink:href="./assets/svg/sidebar.svg#layers"></use>
               </svg>
@@ -211,20 +211,18 @@
       </header>
       <section class="tab-section section-shadow">
         <div class="tab-header">
-          <h3>Project Settings</h3>
-          <div class="d-flex align-items-center">
-            <span class="text-black me-3">INSTALLERS</span>
-            <select style="width: 160px" class="form-select form-select-lg">
-              <option value="">Erus</option>
-            </select>
-          </div>
+          <h3>Billing and Subscriptions</h3>
         </div>
-        <div class="tab-wrapper tab-horizontal">
+        <div class="tab-wrapper">
           <aside>
             <ul>
               <li>
-                <a href="#" class="active tab-item" data-target="#financiers">
-                  Financiers
+                <a
+                  href="#"
+                  class="active tab-item"
+                  data-target="#credit-card-details"
+                >
+                  Credit Card Details
                 </a>
               </li>
               <li>
@@ -232,22 +230,9 @@
                   Finance Options
                 </a>
               </li>
-              <li>
-                <a href="#" class="tab-item" data-target="#adders"> Adders </a>
-              </li>
-              <li>
-                <a href="#" class="tab-item" data-target="#uploads">
-                  Uploads
-                </a>
-              </li>
-              <li>
-                <a href="#" class="tab-item" data-target="#calculator-setup">
-                  Calculator Setup
-                </a>
-              </li>
             </ul>
           </aside>
-          <div class="tab-section-item" id="financiers">
+          <div class="tab-section-item" id="credit-card-details">
             <div>
               <div
                 class="
@@ -257,187 +242,65 @@
                   flex-wrap
                 "
               >
-                <h3 class="title">
-                  Financiers
-                  <span
-                    class="pnt"
-                    data-bs-toggle="modal"
-                    data-bs-target="#loan-term-form"
-                    ><i class="fas fa-plus"></i
-                  ></span>
-                </h3>
-
-                <!-- Loan term form start -->
-                <div
-                  class="modal fade"
-                  id="loan-term-form"
-                  tabindex="-1"
-                  aria-hidden="true"
-                >
-                  <div class="modal-dialog modal-lg modal-dialog-centered">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h3
-                          class="modal-title text-black"
-                          id="exampleModalLabel"
-                        >
-                          Add Loan Term
-                        </h3>
-                        <button
-                          type="button"
-                          class="btn-close"
-                          data-bs-dismiss="modal"
-                          aria-label="Close"
-                        ></button>
-                      </div>
-                      <div class="modal-body">
-                        <form action="#">
-                          <div class="row mt-0">
-                            <div class="col-lg-6">
-                              <div class="form-group">
-                                <label>FINANCIER</label>
-                                <select class="form-select form-select-lg">
-                                  <option value="">Select Financier</option>
-                                </select>
-                              </div>
-                            </div>
-                            <div class="col-lg-3">
-                              <div class="form-group">
-                                <label>YEARS</label>
-                                <input
-                                  type="number"
-                                  class="form-control form-control-lg"
-                                  placeholder="Years"
-                                />
-                              </div>
-                            </div>
-                            <div class="col-lg-3">
-                              <div class="form-group">
-                                <label>INTEREST RATE </label>
-                                <input
-                                  type="number"
-                                  class="form-control form-control-lg"
-                                  placeholder="Years"
-                                />
-                              </div>
-                            </div>
-                            <div class="col-lg-3">
-                              <div class="form-group">
-                                <label>DEALER FEE</label>
-                                <input
-                                  type="text"
-                                  class="form-control form-control-lg"
-                                  placeholder="Dealer fee"
-                                />
-                              </div>
-                            </div>
-                            <div class="col-lg-9">
-                              <div class="form-group">
-                                <label>PRODUCT IDENTIFIER</label>
-                                <input
-                                  type="text"
-                                  class="form-control form-control-lg"
-                                  placeholder="Product identifier"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                        </form>
-                      </div>
+                <h3 class="title">Credit Card</h3>
+                <i class="fas fa-pen pnt"></i>
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-lg-12 col-xxl-6">
+                  <div class="card-item suntec-card">
+                    <h4>Jose Humberto Lopez</h4>
+                    <small>1346 N. Zaragoza Ste. C El Paso, TX, 79936 </small>
+                    <span>CVC 170</span>
+                    <div>
+                      <span>4427 4221 2360 9581</span>
+                      <span>02 / 2025</span>
                     </div>
                   </div>
                 </div>
-                <!-- Loan term form end -->
-                <div class="search">
-                  <i class="fas fa-search"></i>
-                  <input
-                    type="text"
-                    class="form-control form-control-lg"
-                    placeholder="Search"
-                  />
+                <div class="col-md-6 col-lg-12 col-xxl-6">
+                  <div class="card-item suntec-card add">
+                    <div>
+                      <span class="icon"><i class="fas fa-plus"></i></span>
+                      <span>Add Card</span>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="table-responsive mt-3">
-                <table
-                  class="table table-borderless table-striped radius-table"
-                >
-                  <thead>
-                    <tr>
-                      <td>Financier Name <i class="fas fa-sort"></i></td>
-                      <td class="text-end">
-                        Action <i class="fas fa-sort"></i>
-                      </td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="align-middle">
-                        <span>Sunlight</span>
-                      </td>
-                      <td class="text-end align-middle">
-                        <span>
-                          <i class="fas fa-pen mx-2"></i>
-                          <i class="far fa-trash-alt mx-2"></i>
-                        </span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="align-middle">
-                        <span>Mosaic</span>
-                      </td>
-                      <td class="text-end align-middle">
-                        <span>
-                          <i class="fas fa-pen mx-2"></i>
-                          <i class="far fa-trash-alt mx-2"></i>
-                        </span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="align-middle">
-                        <span>LoanPal</span>
-                      </td>
-                      <td class="text-end align-middle">
-                        <span>
-                          <i class="fas fa-pen mx-2"></i>
-                          <i class="far fa-trash-alt mx-2"></i>
-                        </span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="align-middle">
-                        <span>Loan</span>
-                      </td>
-                      <td class="text-end align-middle">
-                        <span>
-                          <i class="fas fa-pen mx-2"></i>
-                          <i class="far fa-trash-alt mx-2"></i>
-                        </span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="align-middle">
-                        <span>Dividend</span>
-                      </td>
-                      <td class="text-end align-middle">
-                        <span>
-                          <i class="fas fa-pen mx-2"></i>
-                          <i class="far fa-trash-alt mx-2"></i>
-                        </span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="align-middle">
-                        <span>Cash</span>
-                      </td>
-                      <td class="text-end align-middle">
-                        <span>
-                          <i class="fas fa-pen mx-2"></i>
-                          <i class="far fa-trash-alt mx-2"></i>
-                        </span>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+              <h3 class="title mt-5 mb-4">Subscription Plan</h3>
+              <div class="row mt-0">
+                <div class="col-md-4 col-sm-6 col-lg-12 col-xxl-4">
+                  <div
+                    class="subscription-item"
+                    style="
+                      background: #fbfff2 url('./assets/images/solar-bg.png');
+                    "
+                  >
+                    <h5>Solar Simple Start</h5>
+                    <button class="btn btn-lg btn-green">Subscribed</button>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-12 col-xxl-4">
+                  <div
+                    class="subscription-item"
+                    style="
+                      background: #fff6d4 url('./assets/images/hvac-bg.png');
+                    "
+                  >
+                    <h5>HVAC Simple Start</h5>
+                    <button class="btn btn-lg btn-red">Subscribe</button>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-12 col-xxl-4">
+                  <div
+                    class="subscription-item"
+                    style="
+                      background: #dffefe url('./assets/images/water-bg.png');
+                    "
+                  >
+                    <h5>Water Simple Start</h5>
+                    <button class="btn btn-lg btn-red">Subscribe</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

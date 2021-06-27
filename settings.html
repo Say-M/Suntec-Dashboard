@@ -245,8 +245,123 @@
             <div>
               <div class="d-flex justify-content-between align-items-center">
                 <h3 class="title">Company Details</h3>
-                <span class="pnt"><i class="fas fa-pen"></i></span>
+                <span
+                  class="pnt"
+                  data-bs-toggle="modal"
+                  data-bs-target="#company-form"
+                  ><i class="fas fa-pen"></i
+                ></span>
               </div>
+              <!-- company form start -->
+              <div
+                class="modal fade"
+                id="company-form"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h3 class="modal-title text-black" id="exampleModalLabel">
+                        Company Form
+                      </h3>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <form action="#">
+                        <div class="row mt-0">
+                          <div class="col-lg-6">
+                            <div class="form-group">
+                              <label>COMPANY NAME</label>
+                              <input
+                                type="text"
+                                class="form-control form-control-lg"
+                                value="Suntec"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="form-group">
+                              <label>LEGAL NAME</label>
+                              <input
+                                type="text"
+                                class="form-control form-control-lg"
+                                value="Suntec LLC"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="form-group">
+                              <label>OWNER'S NAME</label>
+                              <input
+                                type="text"
+                                class="form-control form-control-lg"
+                                value="Peter Lopez"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="form-group">
+                              <label>COMPANY ADDRESS</label>
+                              <input
+                                type="text"
+                                class="form-control form-control-lg"
+                                value="1346 N Zaragoza Rd Ste C"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-group">
+                              <label>COMPANY NUMBER</label>
+                              <input
+                                type="tel"
+                                class="form-control form-control-lg"
+                                value="(915)320-4608"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-group">
+                              <label>SUPPORT EMAIL</label>
+                              <input
+                                type="email"
+                                class="form-control form-control-lg"
+                                value="support@suntec.io"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-group">
+                              <label>ACCOUNTING EMAIL</label>
+                              <input
+                                type="email"
+                                class="form-control form-control-lg"
+                                value="accounting@suntec.io"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-group">
+                              <label>FINANCE EMAIL</label>
+                              <input
+                                type="email"
+                                class="form-control form-control-lg"
+                                value="support@suntec.io"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- company form end -->
               <div class="row">
                 <div class="col-md-6 col-lg-12 col-xxl-6">
                   <div class="detail-item">
@@ -322,12 +437,12 @@
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5
+                        <h3
                           class="modal-title text-black"
                           id="exampleModalLabel"
                         >
                           Write Signature
-                        </h5>
+                        </h3>
                         <button
                           type="button"
                           class="btn-close"
@@ -373,8 +488,84 @@
             <div>
               <div class="d-flex justify-content-between align-items-center">
                 <h3 class="title">Installer Partners</h3>
-                <span class="pnt"><i class="fas fa-plus-circle"></i></span>
+                <span
+                  class="pnt"
+                  data-bs-toggle="modal"
+                  data-bs-target="#installer-partners-form"
+                  ><i class="fas fa-plus-circle"></i
+                ></span>
               </div>
+
+              <!-- Installer Partners form start -->
+              <div
+                class="modal fade"
+                id="installer-partners-form"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h3 class="modal-title text-black" id="exampleModalLabel">
+                        Installer Partners Form
+                      </h3>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <form action="#">
+                        <div class="row mt-0">
+                          <div class="col-lg-6">
+                            <div class="form-group">
+                              <label>NAME</label>
+                              <input
+                                type="text"
+                                class="form-control form-control-lg"
+                                value="Home Pros "
+                              />
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="form-group">
+                              <label>ADDRESS</label>
+                              <input
+                                type="text"
+                                class="form-control form-control-lg"
+                                value="1035 Belvidere St"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="form-group">
+                              <label>EMAIL</label>
+                              <input
+                                type="email"
+                                class="form-control form-control-lg"
+                                value="accounting@homepros.com"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="form-group">
+                              <label>BASELINE</label>
+                              <input
+                                type="email"
+                                class="form-control form-control-lg"
+                                value="1.9"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Installer Partners form end -->
               <div class="row">
                 <div class="col-md-6 col-lg-12 col-xxl-6">
                   <div class="partner-item">
@@ -446,8 +637,120 @@
             <div>
               <div class="d-flex justify-content-between align-items-center">
                 <h3 class="title">Company Logos</h3>
-                <span class="pnt"><i class="fas fa-pen"></i></span>
+                <span
+                  class="pnt"
+                  data-bs-toggle="modal"
+                  data-bs-target="#company-logos-form"
+                  ><i class="fas fa-pen"></i
+                ></span>
               </div>
+
+              <!-- Company Logos form start -->
+              <div
+                class="modal fade"
+                id="company-logos-form"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h3 class="modal-title text-black" id="exampleModalLabel">
+                        Company Logos Form
+                      </h3>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <form action="#">
+                        <div class="row mt-0">
+                          <div class="col-lg-6">
+                            <div class="form-group">
+                              <label>FAVICON</label>
+                              <label for="favicon" class="custom-file-upload"
+                                >Choose file</label
+                              >
+                              <input id="favicon" type="file" />
+                              <small
+                                >Size: 50px * 55px, type: ICO. Max size of
+                                800kB</small
+                              >
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="form-group">
+                              <label>EMAIL LOGO</label>
+                              <label for="email-logo" class="custom-file-upload"
+                                >Choose file</label
+                              >
+                              <input id="email-logo" type="file" />
+                              <small
+                                >Size: 250px * 55px, type: PNG. Max size of
+                                800kB</small
+                              >
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="form-group">
+                              <label>PRIMARY LOGO</label>
+                              <label
+                                for="primary-logo"
+                                class="custom-file-upload"
+                                >Choose file</label
+                              >
+                              <input id="primary-logo" type="file" />
+                              <small
+                                >Size: 250px * 55px, type: PNG. Max size of
+                                800kB</small
+                              >
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="form-group">
+                              <label>SECONDARY LOGO</label>
+                              <label
+                                for="secondary-logo"
+                                class="custom-file-upload"
+                                >Choose file</label
+                              >
+                              <input id="secondary-logo" type="file" />
+                              <small
+                                >Size: 250px * 55px, type: PNG. Max size of
+                                800kB</small
+                              >
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="form-group">
+                              <label>LOGIN BACKGROUND IMAGE</label>
+                              <label
+                                for="login-background-image"
+                                class="custom-file-upload"
+                                >Choose file</label
+                              >
+                              <input id="login-background-image" type="file" />
+                              <small
+                                >Size: 2000px * 1300px, type: JPG. Max size of
+                                800kB</small
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <div class="text-center mb-5">
+                          <button type="submit" class="btn btn-lg btn-red">
+                            Save
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Company Logos form end -->
               <div class="row">
                 <div class="col-md-6 col-lg-12 col-xxl-6">
                   <div class="logo-item">

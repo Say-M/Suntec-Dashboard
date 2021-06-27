@@ -127,7 +127,7 @@
         padding-right: 0;
       }
       .language-btn {
-        border: 1px solid $borderColor;
+        border: 1px solid $lightGray;
         border-radius: 2rem;
         padding: 0.1rem;
         display: flex;
@@ -171,8 +171,8 @@
       }
     }
     .page-settings {
-      border-left: 1px solid $borderColor;
-      border-right: 1px solid $borderColor;
+      border-left: 1px solid $lightGray;
+      border-right: 1px solid $lightGray;
       margin: 0 1.5rem;
       padding: 0 1.5rem;
       @media screen and(max-width:991.98px) {

@@ -56,6 +56,11 @@
         <path d="M12 16V12" stroke="#F9AC1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M12 8H12.01" stroke="#F9AC1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
+    <svg id="alert-info" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.895 1.5H12.105L16.5 5.895V12.105L12.105 16.5H5.895L1.5 12.105V5.895L5.895 1.5Z" stroke="#E65912" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9 6V9" stroke="#E65912" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9 12H9.0075" stroke="#E65912" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
     <svg id="money" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M17.1427 7.49037L15.3466 0.78705C15.2302 0.352706 14.7844 0.0953153 14.3508 0.211472L1.10062 3.76188C0.667024 3.87804 0.409634 4.32391 0.526025 4.75821L2.32218 11.4615C2.43857 11.8959 2.8844 12.1533 3.31799 12.0371L16.5682 8.48674C17.0017 8.37054 17.2591 7.92471 17.1427 7.49037Z" fill="#14A36D"/>
         <path d="M17.1427 7.49037L15.3466 0.78705C15.2302 0.352706 14.7844 0.0953153 14.3508 0.211472L1.10062 3.76188C0.667024 3.87804 0.409634 4.32391 0.526025 4.75821L2.32218 11.4615C2.43857 11.8959 2.8844 12.1533 3.31799 12.0371L16.5682 8.48674C17.0017 8.37054 17.2591 7.92471 17.1427 7.49037ZM15.7481 5.4679C14.7391 6.04408 14.1123 7.12868 14.1185 8.29034L5.34117 10.6422C4.76573 9.63302 3.68062 9.00715 2.51873 9.01268L1.9207 6.78073C2.92968 6.20454 3.55598 5.12093 3.55026 3.95829L12.3284 1.60619C12.904 2.61611 13.9882 3.24143 15.1501 3.23594L15.7481 5.4679Z" fill="#15BE79"/>
