@@ -249,7 +249,7 @@
         </div>
       </header>
       <section class="calender section-shadow">
-        <div class="calender-header">
+        <!-- <div class="calender-header">
           <div class="left">
             <h3 class="text-black">Calender</h3>
             <select class="form-select" style="width: 139px">
@@ -262,8 +262,8 @@
             <span class="right-btn"><i class="fas fa-chevron-right"></i></span>
             <span class="add-btn"><i class="fas fa-plus"></i></span>
           </div>
-        </div>
-        <div class="my-4 checkbox">
+        </div> -->
+        <!-- <div class="my-4">
           <div class="form-check form-check-inline">
             <input
               class="form-check-input"
@@ -311,7 +311,8 @@
             />
             <label class="form-check-label" for="CREDIT">CREDIT DENIED</label>
           </div>
-        </div>
+        </div> -->
+        <!-- 
         <div class="calender-body">
           <div class="calender-day">
             <span>Sun</span>
@@ -323,11 +324,11 @@
             <span>Sat</span>
           </div>
           <div class="calender-date"></div>
-        </div>
-        <!-- <div id="calender"></div> -->
+        </div> -->
+        <div id="calender"></div>
       </section>
     </main>
-    <!-- <script>
+    <script>
       document.addEventListener('DOMContentLoaded', function () {
         var calendarEl = document.getElementById('calender')
         var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -439,8 +440,8 @@
         //   </div>`
         // })
       })
-    </script> -->
-    <script>
+    </script>
+    <!-- <script>
       const leftBtn = document.querySelector('.left-btn')
       const month = document.querySelector('.month')
       const rightBtn = document.querySelector('.right-btn')
@@ -463,10 +464,14 @@
         } else if (setMonth === 1) totalDay = 28
         else totalDay = 30
         const gap = new Date(setYear, setMonth).getDay()
-        let box = 0
         for (let day = 1; day <= gap; day++) {
-          calenderDate.insertAdjacentHTML('beforeend', `<span></span>`)
-          box++
+          // const isWeekend = day % 7 === 0
+          // console.log(isWeekend)
+          // console.log(day)
+          calenderDate.insertAdjacentHTML(
+            'beforeend',
+            `<span class=${'border-0'}></span>`
+          )
         }
         month.innerHTML = `${setYear}-${
           setMonth + 1 <= 9 ? '0' + (setMonth + 1) : setMonth + 1
@@ -476,25 +481,7 @@
           // const isWeekend = day % 7 === 0
           // console.log(isWeekend)
           // console.log(day)
-          calenderDate.insertAdjacentHTML(
-            'beforeend',
-            `<span class="${d.getDate() === day ? 'today' : ''}" id=${
-              (day > 9 ? day : '0' + day) +
-              '-' +
-              (setMonth + 1 > 9 ? setMonth + 1 : '0' + (setMonth + 1)) +
-              '-' +
-              setYear
-            }>${day}</span>`
-          )
-          box++
-        }
-        let i = 1
-        for (let day = box; day < 42; day++) {
-          calenderDate.insertAdjacentHTML(
-            'beforeend',
-            `<span class='mute'>${i}</span>`
-          )
-          i++
+          calenderDate.insertAdjacentHTML('beforeend', `<span>${day}</span>`)
         }
       }
       setTotalDay()
@@ -521,111 +508,6 @@
         }
         setTotalDay()
       }
-
-      //demo event
-      const events = [
-        {
-          id: '01-06-2021',
-          items: [
-            {
-              time: '8.30',
-              title: 'David Rodrigo',
-              textColor: '#FF9C1A',
-              backgroundColor: '#FFF0DD',
-            },
-          ],
-        },
-        {
-          id: '02-06-2021',
-          items: [
-            {
-              time: '2.30',
-              title: 'Jerin Macwell',
-              textColor: '#00CFDD',
-              backgroundColor: '#DCFDFF',
-            },
-            {
-              time: '3.30',
-              title: 'Diago Anders',
-              textColor: '#00CFDD',
-              backgroundColor: '#DCFDFF',
-            },
-          ],
-        },
-        {
-          id: '03-06-2021',
-          items: [
-            {
-              time: '10.30',
-              title: 'Jerin Macwell',
-              textColor: '#00CFDD',
-              backgroundColor: '#DCFDFF',
-            },
-          ],
-        },
-        {
-          id: '04-06-2021',
-          items: [
-            {
-              time: '10.30',
-              title: 'Jerin Macwell',
-              textColor: '#00CFDD',
-              backgroundColor: '#DCFDFF',
-            },
-            {
-              time: '10.30',
-              title: 'Jerin Macwell',
-              textColor: '#E65912',
-              backgroundColor: '#FFEADF',
-            },
-          ],
-        },
-        {
-          id: '05-06-2021',
-          items: [
-            {
-              time: '02.30',
-              title: 'Jerin Macwell',
-              textColor: '#20AA14',
-              backgroundColor: '#D9FFD6',
-            },
-            {
-              time: '03.30',
-              title: 'Diago Anders',
-              textColor: '#00CFDD',
-              backgroundColor: '#DCFDFF',
-            },
-            {
-              time: '03.30',
-              title: 'Diago Anders',
-              textColor: '#E65912',
-              backgroundColor: '#FFEADF',
-            },
-          ],
-        },
-      ]
-      events.forEach((event) => {
-        event.items.forEach((item, i) => {
-          if (i > 1) {
-            document
-              .getElementById(event.id)
-              .insertAdjacentHTML(
-                'beforeend',
-                `<div class="more">${event.items.length - 2} more</div>`
-              )
-          } else {
-            const htmlEvent = `
-              <div class="event"
-              style="background-color: ${item.backgroundColor}; color: ${item.textColor}">
-                <strong>${item.time}</strong>
-                <p>${item.title}</p>
-              </div>`
-            document
-              .getElementById(event.id)
-              .insertAdjacentHTML('beforeend', htmlEvent)
-          }
-        })
-      })
-    </script>
+    </script> -->
   </body>
 </html>
