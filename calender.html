@@ -525,7 +525,7 @@
       //demo event
       const events = [
         {
-          id: '01-06-2021',
+          id: '01-07-2021',
           items: [
             {
               time: '8.30',
@@ -536,7 +536,7 @@
           ],
         },
         {
-          id: '02-06-2021',
+          id: '02-07-2021',
           items: [
             {
               time: '2.30',
@@ -553,7 +553,7 @@
           ],
         },
         {
-          id: '03-06-2021',
+          id: '03-07-2021',
           items: [
             {
               time: '10.30',
@@ -564,7 +564,7 @@
           ],
         },
         {
-          id: '04-06-2021',
+          id: '04-07-2021',
           items: [
             {
               time: '10.30',
@@ -581,7 +581,7 @@
           ],
         },
         {
-          id: '05-06-2021',
+          id: '05-07-2021',
           items: [
             {
               time: '02.30',
@@ -613,6 +613,18 @@
                 'beforeend',
                 `<div class="more">${event.items.length - 2} more</div>`
               )
+            const divElement = document.createElement('div')
+            divElement.classList.add('more-events', 'd-none')
+
+            const htmlEvent = `
+              <div class="event"
+              style="background-color: ${item.backgroundColor}; color: ${item.textColor}">
+                <strong>${item.time}</strong>
+                <p>${item.title}</p>
+              </div>`
+            divElement.innerHTML += htmlEvent
+            console.log(divElement)
+            document.getElementById(event.id).appendChild(divElement)
           } else {
             const htmlEvent = `
               <div class="event"
@@ -620,10 +632,17 @@
                 <strong>${item.time}</strong>
                 <p>${item.title}</p>
               </div>`
+            console.log(document.getElementById(event.id))
             document
               .getElementById(event.id)
               .insertAdjacentHTML('beforeend', htmlEvent)
           }
+        })
+      })
+      const moreBtns = document.querySelectorAll('.more')
+      moreBtns.forEach((moreBtn) => {
+        moreBtn.addEventListener('click', () => {
+          moreBtn.nextElementSibling.classList.toggle('d-none')
         })
       })
     </script>

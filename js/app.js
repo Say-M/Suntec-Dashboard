@@ -23,7 +23,7 @@ const search = document.querySelector('.search')
 rightHeaderMenu.addEventListener('click', () => {
   rightHeader.classList.toggle('active')
 })
-leftHeaderSearch.addEventListener('click', () => {
+leftHeaderSearch?.addEventListener('click', () => {
   search.classList.toggle('active')
 })
 
