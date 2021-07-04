@@ -308,7 +308,11 @@
           <div class="calculator-end">
             <div class="left">
               <strong>Select Finance Option</strong>
-              <span class="cash-btn">
+              <span
+                class="cash-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#finance-form"
+              >
                 <svg>
                   <use xlink:href="./assets/svg/sidebar.svg#home"></use>
                 </svg>
@@ -318,7 +322,7 @@
               <!-- Select Finance Option form start -->
               <div
                 class="modal fade"
-                id="company-form"
+                id="finance-form"
                 tabindex="-1"
                 aria-hidden="true"
               >
@@ -326,7 +330,7 @@
                   <div class="modal-content">
                     <div class="modal-header">
                       <h3 class="modal-title text-black" id="exampleModalLabel">
-                        Company Form
+                        Select Finance Option
                       </h3>
                       <button
                         type="button"
@@ -338,86 +342,35 @@
                     <div class="modal-body">
                       <form action="#">
                         <div class="row mt-0">
-                          <div class="col-lg-6">
+                          <div class="col-lg-4">
                             <div class="form-group">
-                              <label>COMPANY NAME</label>
-                              <input
-                                type="text"
-                                class="form-control form-control-lg"
-                                value="Suntec"
-                              />
-                            </div>
-                          </div>
-                          <div class="col-lg-6">
-                            <div class="form-group">
-                              <label>LEGAL NAME</label>
-                              <input
-                                type="text"
-                                class="form-control form-control-lg"
-                                value="Suntec LLC"
-                              />
-                            </div>
-                          </div>
-                          <div class="col-lg-6">
-                            <div class="form-group">
-                              <label>OWNER'S NAME</label>
-                              <input
-                                type="text"
-                                class="form-control form-control-lg"
-                                value="Peter Lopez"
-                              />
-                            </div>
-                          </div>
-                          <div class="col-lg-6">
-                            <div class="form-group">
-                              <label>COMPANY ADDRESS</label>
-                              <input
-                                type="text"
-                                class="form-control form-control-lg"
-                                value="1346 N Zaragoza Rd Ste C"
-                              />
+                              <label>FINANCE TYPE</label>
+                              <select class="form-select form-select-lg">
+                                <option value="">Select Type</option>
+                              </select>
                             </div>
                           </div>
                           <div class="col-lg-4">
                             <div class="form-group">
-                              <label>COMPANY NUMBER</label>
-                              <input
-                                type="tel"
-                                class="form-control form-control-lg"
-                                value="(915)320-4608"
-                              />
+                              <label>FINANCIER</label>
+                              <select class="form-select form-select-lg">
+                                <option value="">Select Financier</option>
+                              </select>
                             </div>
                           </div>
                           <div class="col-lg-4">
                             <div class="form-group">
-                              <label>SUPPORT EMAIL</label>
-                              <input
-                                type="email"
-                                class="form-control form-control-lg"
-                                value="support@suntec.io"
-                              />
+                              <label>LOAN TERM</label>
+                              <select class="form-select form-select-lg">
+                                <option value="">Select Term</option>
+                              </select>
                             </div>
                           </div>
-                          <div class="col-lg-4">
-                            <div class="form-group">
-                              <label>ACCOUNTING EMAIL</label>
-                              <input
-                                type="email"
-                                class="form-control form-control-lg"
-                                value="accounting@suntec.io"
-                              />
-                            </div>
-                          </div>
-                          <div class="col-lg-4">
-                            <div class="form-group">
-                              <label>FINANCE EMAIL</label>
-                              <input
-                                type="email"
-                                class="form-control form-control-lg"
-                                value="support@suntec.io"
-                              />
-                            </div>
-                          </div>
+                        </div>
+                        <div class="text-center mb-5">
+                          <button type="submit" class="btn btn-lg btn-red">
+                            Save
+                          </button>
                         </div>
                       </form>
                     </div>

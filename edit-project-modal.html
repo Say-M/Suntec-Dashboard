@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suntec Dashboard</title>
+
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css"
+      integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.min.js"
+      integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- custom styling -->
+    <link rel="stylesheet" href="./assets/css/styles.min.css" />
+
+    <!-- custom scripts -->
+    <script src="./js/app.js" defer></script>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="/"><img src="./assets/images/logo 1.png" alt="" /></a>
+      </div>
+      <div class="sidebar-body">
+        <ul>
+          <li>
+            <a href="/">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#home"></use>
+              </svg>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="./agents.html">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#user"></use>
+              </svg>
+              Agents</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#file"></use>
+              </svg>
+              Proposals</a
+            >
+          </li>
+          <li>
+            <a href="./projects.html" class="active">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#layers"></use>
+              </svg>
+              Projects</a
+            >
+          </li>
+          <li>
+            <a href="./statement.html">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#file-text"></use>
+              </svg>
+              Statements</a
+            >
+          </li>
+          <li>
+            <a href="./calculator.html">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#calculator"></use>
+              </svg>
+              Calculator</a
+            >
+          </li>
+          <li>
+            <a href="./lead.html">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#filter"></use>
+              </svg>
+              Leads</a
+            >
+          </li>
+          <li>
+            <a href="./calender.html">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#calender"></use>
+              </svg>
+              Calendar</a
+            >
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <div class="overlay hide"></div>
+    <main>
+      <header class="header">
+        <div class="left-header">
+          <div class="menu"><i class="fas fa-bars"></i></div>
+          <div class="search">
+            <i class="fas fa-search"></i>
+            <input
+              type="text"
+              class="form-control form-control-lg"
+              placeholder="Search..."
+            />
+          </div>
+          <div class="icons">
+            <i class="fas fa-search left-header-search"></i>
+            <i class="fas fa-ellipsis-v right-header-menu"></i>
+          </div>
+        </div>
+        <div class="right-header">
+          <div class="language">
+            <div class="language-btn">
+              <img src="./assets/images/flags/united-states.png" alt="" />
+              <i class="fas fa-angle-down"></i>
+            </div>
+            <ul class="shadow-sm language-list">
+              <li>Eng</li>
+              <li>বাংলা</li>
+              <li>اَلْعَرَبِيَّةُ</li>
+            </ul>
+          </div>
+          <div class="page-settings">
+            <ul>
+              <li class="expand"><i class="fas fa-expand-alt"></i></li>
+              <li class="setting-btn">
+                <i class="fas fa-cog"></i>
+                <div>
+                  <ul class="shadow">
+                    <li><a href="#">Site 1</a></li>
+                    <li><a href="#">Site 2</a></li>
+                    <li><a href="#">Site 3</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="notification-btn">
+                <i class="far fa-bell"></i>
+                <div class="shadow">
+                  <h3 class="text-black">Notifications</h3>
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <div class="icon comment">
+                          <span>
+                            <i class="far fa-comment"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="icon user">
+                          <span>
+                            <i class="far fa-user"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="icon comment">
+                          <span>
+                            <i class="far fa-comment"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="icon user">
+                          <span>
+                            <i class="far fa-user"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="#" class="all">View all notifications</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="user" tabindex="0">
+            <img src="./assets/images/user.png" alt="" />
+            <div>
+              <h6>Jhon Doe</h6>
+              <small>Admin</small>
+            </div>
+            <div class="user-opt">
+              <ul class="shadow">
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Approval List form start -->
+      <div
+        class="modal fade"
+        id="approval-list"
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title text-black" id="exampleModalLabel">
+                Approval List
+              </h3>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="approval-list">
+                <div class="approval-list-wrapper">
+                  <div class="approval-list-item">
+                    <span>Project Details</span>
+                    <i class="fas fa-chevron-down"></i>
+                  </div>
+                  <div class="approval-list-detail">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <small class="text-muted">First Name</small>
+                        <p>Roberto</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <small class="text-muted">Last Name</small>
+                        <p>Barron</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <small class="text-muted">Contract Date</small>
+                        <p>June 10, 2021</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <small class="text-muted">Lead</small>
+                        <p>Self Gen</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <small class="text-muted">Assigned Agent</small>
+                        <p>Revoltm Solar</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <small class="text-muted">Co Agent</small>
+                        <p>N/A</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <small class="text-muted">Status</small>
+                        <p>Pending</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="approval-list-wrapper">
+                  <div class="approval-list-item">
+                    <span>Project Uploads</span>
+                    <i class="fas fa-chevron-down"></i>
+                  </div>
+                  <div class="approval-list-detail">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <small class="text-muted">First Name</small>
+                        <p>Roberto</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <small class="text-muted">Last Name</small>
+                        <p>Barron</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <small class="text-muted">Contract Date</small>
+                        <p>June 10, 2021</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <small class="text-muted">Lead</small>
+                        <p>Self Gen</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <small class="text-muted">Assigned Agent</small>
+                        <p>Revoltm Solar</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <small class="text-muted">Co Agent</small>
+                        <p>N/A</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <small class="text-muted">Status</small>
+                        <p>Pending</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="approval-list-wrapper">
+                  <div class="approval-list-item">
+                    <span>Commission Calculator</span>
+                    <i class="fas fa-chevron-down"></i>
+                  </div>
+                  <div class="approval-list-detail">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <small class="text-muted">First Name</small>
+                        <p>Roberto</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <small class="text-muted">Last Name</small>
+                        <p>Barron</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <small class="text-muted">Contract Date</small>
+                        <p>June 10, 2021</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <small class="text-muted">Lead</small>
+                        <p>Self Gen</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <small class="text-muted">Assigned Agent</small>
+                        <p>Revoltm Solar</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <small class="text-muted">Co Agent</small>
+                        <p>N/A</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <small class="text-muted">Status</small>
+                        <p>Pending</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="approval-list-wrapper">
+                  <div class="approval-list-item">
+                    <span>Project Uploads</span>
+                    <i class="fas fa-chevron-down"></i>
+                  </div>
+                  <div class="approval-list-detail">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <small class="text-muted">First Name</small>
+                        <p>Roberto</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <small class="text-muted">Last Name</small>
+                        <p>Barron</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <small class="text-muted">Contract Date</small>
+                        <p>June 10, 2021</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <small class="text-muted">Lead</small>
+                        <p>Self Gen</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <small class="text-muted">Assigned Agent</small>
+                        <p>Revoltm Solar</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <small class="text-muted">Co Agent</small>
+                        <p>N/A</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <small class="text-muted">Status</small>
+                        <p>Pending</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="approval-list-wrapper">
+                  <div class="approval-list-item">
+                    <span>Finance Details</span>
+                    <i class="fas fa-chevron-down"></i>
+                  </div>
+                  <div class="approval-list-detail">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <small class="text-muted">First Name</small>
+                        <p>Roberto</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <small class="text-muted">Last Name</small>
+                        <p>Barron</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <small class="text-muted">Contract Date</small>
+                        <p>June 10, 2021</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <small class="text-muted">Lead</small>
+                        <p>Self Gen</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <small class="text-muted">Assigned Agent</small>
+                        <p>Revoltm Solar</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <small class="text-muted">Co Agent</small>
+                        <p>N/A</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <small class="text-muted">Status</small>
+                        <p>Pending</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- solar pro form end -->
+      <section class="tab-section section-shadow">
+        <div class="tab-header">
+          <h3>Edit Project</h3>
+          <div>
+            <button class="btn btn-orange">Approved</button>
+            <button class="btn btn-red">Save</button>
+          </div>
+        </div>
+        <div class="tab-wrapper">
+          <aside>
+            <ul>
+              <li>
+                <a
+                  href="#"
+                  class="active tab-item"
+                  data-target="#project-details"
+                  >Project details</a
+                >
+              </li>
+              <li>
+                <a href="#" class="tab-item" data-target="#finance-details"
+                  >Finance details</a
+                >
+              </li>
+              <li>
+                <a href="#" class="tab-item" data-target="#uploads">Uploads</a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="tab-item"
+                  data-target="#commission-calculator"
+                  >Commission calculator</a
+                >
+              </li>
+              <li>
+                <a href="#" class="tab-item" data-target="#installer-status"
+                  >Installer Status</a
+                >
+              </li>
+              <li>
+                <a href="#" class="tab-item" data-target="#statement"
+                  >Statement</a
+                >
+              </li>
+              <li>
+                <a href="#" class="tab-item" data-target="#statement-list"
+                  >Statement list</a
+                >
+              </li>
+              <li>
+                <a href="#" class="tab-item" data-target="#notes">Notes</a>
+              </li>
+            </ul>
+          </aside>
+          <div class="tab-section-item" id="project-details">
+            <div>
+              <h3 class="title">Project Details</h3>
+              <div class="row">
+                <div class="col-md-6 col-lg-12 col-xxl-6">
+                  <div class="form-group">
+                    <label>First name</label>
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      placeholder="Enter your name"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-12 col-xxl-6">
+                  <div class="form-group">
+                    <label>Last name</label>
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      placeholder="Enter your surname"
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-12 col-xxl-4">
+                  <div class="form-group">
+                    <label>email address</label>
+                    <input
+                      type="email"
+                      class="form-control form-control-lg"
+                      placeholder="Enter mail id"
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-12 col-xxl-4">
+                  <div class="form-group">
+                    <label>phone</label>
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      placeholder="Enter no."
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-12 col-xxl-4">
+                  <div class="form-group">
+                    <label>Contract Date</label>
+                    <input type="date" class="form-control form-control-lg" />
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-12 col-xxl-4">
+                  <div class="form-group">
+                    <label>lead</label>
+                    <select class="form-select form-select-lg">
+                      <option value="">Option</option>
+                      <option value="">Lead 1</option>
+                      <option value="">Lead 2</option>
+                      <option value="">Lead 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-12 col-xxl-4">
+                  <div class="form-group">
+                    <label>Assigned Agent</label>
+                    <select class="form-select form-select-lg">
+                      <option value="">Option</option>
+                      <option value="">Assigned Agent 1</option>
+                      <option value="">Assigned Agent 2</option>
+                      <option value="">Assigned Agent 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-12 col-xxl-4">
+                  <div class="form-group">
+                    <label>Go Agent</label>
+                    <select class="form-select form-select-lg">
+                      <option value="">Option</option>
+                      <option value="">Go Agent 1</option>
+                      <option value="">Go Agent 2</option>
+                      <option value="">Go Agent 3</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-section-item d-none" id="finance-details">
+            <div>
+              <h3 class="title">Finance Details</h3>
+              <div class="row">
+                <div class="col-sm-6 col-md-4 col-lg-12 col-xxl-4">
+                  <div class="form-group">
+                    <label>Installers</label>
+                    <select class="form-select form-select-lg">
+                      <option value="">Option</option>
+                      <option value="">Installer 1</option>
+                      <option value="">Installer 2</option>
+                      <option value="">Installer 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-12 col-xxl-4">
+                  <div class="form-group">
+                    <label>LOAN TERM</label>
+                    <select class="form-select form-select-lg">
+                      <option value="">Option</option>
+                      <option value="">LOAN TERM 1</option>
+                      <option value="">LOAN TERM 2</option>
+                      <option value="">LOAN TERM 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-12 col-xxl-4">
+                  <div class="form-group">
+                    <label>SYSTEM SIZE (KW)</label>
+                    <select class="form-select form-select-lg">
+                      <option value="">Option</option>
+                      <option value="">SYSTEM SIZE (KW) 1</option>
+                      <option value="">SYSTEM SIZE (KW) 2</option>
+                      <option value="">SYSTEM SIZE (KW) 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-12 col-xxl-4">
+                  <div class="form-group">
+                    <span class="icon"><i class="fas fa-bolt"></i></span>
+                    <label>FINAL PPW</label>
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      value="5.67"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-section-item d-none" id="uploads">
+            <div>
+              <h3 class="title">Uploads</h3>
+              <small
+                >Maximum upload file size: 10MB. Allowed file types: .png, .jpg,
+                .jpeg, .pdf</small
+              >
+              <div class="row">
+                <div class="col-xxl-3 col-lg-6 col-md-4 col-sm-6">
+                  <div class="form-group drag-drop">
+                    <p>Purchase Agreement</p>
+                    <label for="file-1">
+                      <img
+                        src="./assets/images/icons/upload-cloud.svg"
+                        alt=""
+                      />
+                      <span>Drag & Drop</span>
+                    </label>
+                    <input id="file-1" type="file" />
+                    <div class="file">
+                      <div>
+                        <p>RDC.jpg</p>
+                        <span>2.5mb</span>
+                      </div>
+                      <span class="icon"><i class="far fa-eye"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xxl-3 col-lg-6 col-md-4 col-sm-6">
+                  <div class="form-group drag-drop">
+                    <p>Utility Bill</p>
+                    <label for="file-1">
+                      <img
+                        src="./assets/images/icons/upload-cloud.svg"
+                        alt=""
+                      />
+                      <span>Drag & Drop</span>
+                    </label>
+                    <input id="file-1" type="file" />
+                    <div class="file">
+                      <div>
+                        <p>DOC.jpg</p>
+                        <span>2.5mb</span>
+                      </div>
+                      <span class="icon"><i class="far fa-eye"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xxl-3 col-lg-6 col-md-4 col-sm-6">
+                  <div class="form-group drag-drop">
+                    <p>Final Proposal</p>
+                    <label for="file-1">
+                      <img
+                        src="./assets/images/icons/upload-cloud.svg"
+                        alt=""
+                      />
+                      <span>Drag & Drop</span>
+                    </label>
+                    <input id="file-1" type="file" />
+                    <div class="file">
+                      <div>
+                        <p>acer.jpg</p>
+                        <span>2.5mb</span>
+                      </div>
+                      <span class="icon"><i class="far fa-eye"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xxl-3 col-lg-6 col-md-4 col-sm-6">
+                  <div class="form-group drag-drop">
+                    <p>Main Panel Image</p>
+                    <label for="file-1">
+                      <img
+                        src="./assets/images/icons/upload-cloud.svg"
+                        alt=""
+                      />
+                      <span>Drag & Drop</span>
+                    </label>
+                    <input id="file-1" type="file" />
+                    <div class="file">
+                      <div>
+                        <p>mpi.jpg</p>
+                        <span>2.5mb</span>
+                      </div>
+                      <span class="icon"><i class="far fa-eye"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-section-item d-none" id="commission-calculator">
+            <div>
+              <h3 class="title mb-3">Commission Calculator</h3>
+              <small class="bg-color"
+                ><i class="fas fa-calculator me-2"></i> You are using
+                <strong>Calculator With Dealer Fee!</strong></small
+              >
+              <div class="row align-items-end">
+                <div class="col-md-5 col-lg-12 col-xxl-5">
+                  <div class="form-group">
+                    <label>COMMISSION</label>
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      placeholder="Enter Amt."
+                    />
+                  </div>
+                </div>
+                <div class="col-md-5 col-lg-10 col-xxl-5">
+                  <div class="form-group">
+                    <label>FINAL COMMISSION</label>
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      placeholder="Enter Amt."
+                    />
+                  </div>
+                </div>
+                <div class="col-2">
+                  <button class="btn btn-red">Adders</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-section-item d-none" id="installer-status">
+            <div>
+              <h3 class="title mb-3">Installer Status</h3>
+              <div class="row align-items-end">
+                <div class="col-md-10 col-lg-12 col-xxl-10">
+                  <div class="form-group">
+                    <label>SITE SURVEY</label>
+                    <input type="date" class="form-control form-control-lg" />
+                  </div>
+                </div>
+                <div class="col-2">
+                  <button class="btn btn-outline-red">Approve</button>
+                </div>
+                <div class="col-md-10 col-lg-12 col-xxl-10">
+                  <div class="form-group">
+                    <label>INSTALLATION</label>
+                    <input type="date" class="form-control form-control-lg" />
+                  </div>
+                </div>
+                <div class="col-2">
+                  <button class="btn btn-outline-red">Approve</button>
+                </div>
+                <div class="col-md-10 col-lg-12 col-xxl-10">
+                  <div class="form-group">
+                    <label>PERMISSION TO PERATE</label>
+                    <input type="date" class="form-control form-control-lg" />
+                  </div>
+                </div>
+                <div class="col-2">
+                  <button class="btn btn-outline-red">Approve</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-section-item d-none" id="statement">
+            <div>
+              <h3 class="title mb-3">Statement</h3>
+              <div class="row">
+                <div class="col-md-5 col-lg-12 col-xxl-5">
+                  <div class="form-group">
+                    <label>Ammount</label>
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      placeholder="Enter Amt."
+                    />
+                  </div>
+                </div>
+                <div class="col-md-3 col-lg-12 col-xxl-3">
+                  <div class="form-group">
+                    <label>Percentage</label>
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      placeholder="Enter Percentage"
+                      value="50%"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-4 col-lg-12 col-xxl-4">
+                  <div class="form-group">
+                    <label>Payment Date</label>
+                    <input type="date" class="form-control form-control-lg" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-section-item d-none" id="statement-list">
+            <div>
+              <h3 class="title mb-3">Statement List</h3>
+              <div class="table-responsive">
+                <table class="table table-borderless">
+                  <thead>
+                    <tr>
+                      <td>Reference No. <i class="fas fa-sort"></i></td>
+                      <td>Payment Dt. <i class="fas fa-sort"></i></td>
+                      <td>Amount <i class="fas fa-sort"></i></td>
+                      <td>Percentage <i class="fas fa-sort"></i></td>
+                      <td>Bill To <i class="fas fa-sort"></i></td>
+                      <td>Status <i class="fas fa-sort"></i></td>
+                      <td style="max-width: 3rem" class="text-end">
+                        Action <i class="fas fa-sort"></i>
+                      </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="align-middle">
+                        <span class="reference">20210518-000271</span>
+                      </td>
+                      <td class="align-middle">
+                        <span
+                          ><i class="far fa-calendar me-1"></i> 05/21/2021</span
+                        >
+                      </td>
+                      <td class="align-middle">
+                        <span class="text-success">$7,755.99</span>
+                      </td>
+                      <td class="align-middle"><span>100%</span></td>
+                      <td class="align-middle"><span>Sylvia Garcia</span></td>
+                      <td class="align-middle">
+                        <span class="badge badge-success">Paid</span>
+                      </td>
+                      <td class="text-end align-middle">
+                        <span style="opacity: 0.7">
+                          <svg class="ms-2">
+                            <use
+                              xlink:href="./assets/svg/sidebar.svg#check-circle"
+                            ></use>
+                          </svg>
+                          <svg class="mx-2">
+                            <use
+                              xlink:href="./assets/svg/sidebar.svg#download"
+                            ></use>
+                          </svg>
+                          <i class="fas fa-pen mx-2"></i>
+                          <i class="fas fa-trash-alt ms-2"></i>
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="tab-section-item d-none" id="notes">
+            <div>
+              <h3 class="title mb-3">Notes</h3>
+              <div class="row align-items-end">
+                <div class="col-md-10 col-lg-12 col-xxl-10">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      placeholder="Enter note here"
+                    />
+                  </div>
+                </div>
+                <div class="col-2">
+                  <button class="btn btn-outline-red">Add</button>
+                </div>
+              </div>
+              <ul class="notes">
+                <li>
+                  <img src="./assets/images/user/user-2.png" alt="" />
+                  <div>
+                    <h6>Sylvia Garcia <span class="muted">20min ago</span></h6>
+                    <p>
+                      Nulla eget efficitur neque. Praesent at dolor eget metus
+                      porttitor vulputate vitae a arcu. Sed in eleifend metus.
+                      Etiam eget tellus eleifend, finibus lacus at, dapibus
+                      nisl. Aliquam erat volutpat.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <img src="./assets/images/user/user-1.png" alt="" />
+                  <div>
+                    <h6>Priyanka Some <span class="muted">20min ago</span></h6>
+                    <p>Nulla eget efficitur neque. Praesent at dolor eget.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      const tabItems = document.querySelectorAll('.tab-item')
+      tabItems.forEach((tabItem) => {
+        tabItem.addEventListener('click', (e) => {
+          e.preventDefault()
+          tabItems.forEach((tabItem) => tabItem.classList.remove('active'))
+          tabItem.classList.add('active')
+          document
+            .querySelectorAll('.tab-section-item')
+            .forEach((sectionItem) => sectionItem.classList.add('d-none'))
+          document
+            .querySelector(tabItem.getAttribute('data-target'))
+            .classList.remove('d-none')
+        })
+      })
+      const modal = new bootstrap.Modal(
+        document.querySelector('#approval-list')
+      )
+      modal.show()
+      const approvalListItems = document.querySelectorAll('.approval-list-item')
+      const approvalListDetails = document.querySelectorAll(
+        '.approval-list-detail'
+      )
+      approvalListItems.forEach((item) => {
+        item.addEventListener('click', () => {
+          approvalListDetails.forEach((detail) => (detail.style.height = 0))
+          const height = item.nextElementSibling.clientHeight
+          const scrollHeight = item.nextElementSibling.scrollHeight
+          if (height === 0) {
+            item.nextElementSibling.style.height = scrollHeight + 'px'
+          } else item.nextElementSibling.style.height = 0
+        })
+      })
+    </script>
+  </body>
+</html>

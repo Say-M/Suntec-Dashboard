@@ -3,6 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+@font-face {
+  font-family: 'Google Sans';
+  src: url('../assets/fonts/FontsFree-Net-SFProDisplay-Thin.ttf')
+    format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Google Sans';
+  src: url('../assets/fonts/FontsFree-Net-SFProDisplay-Semibold.ttf')
+    format('truetype');
+  font-weight: 500;
+}
 html {
   font-size: 16px;
   // @media screen and(max-width: 991.98px) {
@@ -56,6 +68,10 @@ textarea {
 }
 .btn {
   border-radius: 2rem;
+  &:focus,
+  &:active {
+    box-shadow: none;
+  }
 }
 .border,
 .border-top,
@@ -207,16 +223,23 @@ small,
   height: 2.125rem;
   border-radius: 50%;
   background: $red;
-  color: $white;
+  color: $white !important;
   display: flex;
   align-items: center;
   justify-content: center;
+  a {
+    text-decoration: none;
+    color: $white !important;
+  }
 }
 .bg-white-shadow {
   input,
   select {
     background-color: $background;
     border: none !important;
+  }
+  .form-check-input[type='radio'] {
+    border: 1px solid $lightGray !important;
   }
 }
 .filter {
@@ -367,6 +390,10 @@ thead {
   background-color: $lightDeepGreen;
   color: $deepGreen;
 }
+.badge-warning {
+  background-color: $lightYellow;
+  color: $yellow;
+}
 input[type='date']::-webkit-calendar-picker-indicator {
   background-image: url(../images/icons/input-calendar.svg);
 }
@@ -420,13 +447,12 @@ input[type='date']::-webkit-calendar-picker-indicator {
 .radius-table {
   tbody {
     td {
+      padding: 1.5rem;
       &:first-child {
         border-radius: 1.125rem 0 0 1.125rem;
-        padding-left: 1.5rem;
       }
       &:last-child {
         border-radius: 0 1.125rem 1.125rem 0;
-        padding-right: 1.5rem;
       }
     }
   }
@@ -536,10 +562,10 @@ input[type='date']::-webkit-calendar-picker-indicator {
 .modal-header {
   border-bottom: none;
   border-radius: 1.25rem 1.25rem 0 0;
-  padding: 2.6875rem;
+  padding: 2rem;
 }
 .modal-body {
-  padding: 0 2.6875rem;
+  padding: 0 2rem;
   .form-group {
     margin-bottom: 2rem;
   }
@@ -568,4 +594,60 @@ input[type='date']::-webkit-calendar-picker-indicator {
   font-size: 0.8125rem;
   padding: 0.2rem 0.5rem;
   border-radius: 0.3125rem;
+}
+.modal {
+  .btn {
+    font-size: 0.75rem !important;
+    padding: 1rem 2rem;
+  }
+}
+.text-gray {
+  color: $gray !important;
+}
+.approval-list {
+  margin-bottom: 3rem;
+}
+.approval-list-wrapper {
+  background-color: #f9f9f9;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  padding: 1rem;
+  .approval-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    span {
+      color: $black;
+      position: relative;
+      font-weight: 500;
+      padding-left: 2rem;
+      &::before {
+        content: '';
+        position: absolute;
+        background-color: $background;
+        border: 1px solid $lightGray;
+        border-radius: 50%;
+        left: 0;
+        width: 1.125rem;
+        height: 1.125rem;
+        transform: translateY(-50%);
+        top: 50%;
+      }
+    }
+  }
+  .approval-list-detail {
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    height: 0;
+  }
+  .row {
+    margin-top: 2rem;
+  }
+  small {
+    font-size: 0.8125rem;
+  }
+  p {
+    color: $black;
+  }
 }

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suntec Dashboard</title>
+
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css"
+      integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.min.js"
+      integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- custom styling -->
+    <link rel="stylesheet" href="./assets/css/styles.min.css" />
+
+    <!-- custom scripts -->
+    <script src="./js/app.js" defer></script>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="/"><img src="./assets/images/logo 1.png" alt="" /></a>
+      </div>
+      <div class="sidebar-body">
+        <ul>
+          <li>
+            <a href="./settings.html">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#bulding"></use>
+              </svg>
+              Company
+            </a>
+          </li>
+          <li>
+            <a href="./agents.html">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#ticket"></use>
+              </svg>
+              Billings</a
+            >
+          </li>
+          <li>
+            <a href="#" class="active">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#user"></use>
+              </svg>
+              User</a
+            >
+          </li>
+          <li>
+            <a href="./projects.html">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#layers"></use>
+              </svg>
+              Projects</a
+            >
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <div class="overlay hide"></div>
+    <main>
+      <header class="header">
+        <div class="left-header">
+          <div class="menu"><i class="fas fa-bars"></i></div>
+          <div class="exit">
+            <span><i class="fas fa-arrow-left"></i></span> Exit
+          </div>
+          <div class="icons">
+            <div class="exit">
+              <span><i class="fas fa-arrow-left ms-0"></i></span> Exit
+            </div>
+            <i class="fas fa-ellipsis-v right-header-menu"></i>
+          </div>
+        </div>
+        <div class="right-header">
+          <div class="language">
+            <div class="language-btn">
+              <img src="./assets/images/flags/united-states.png" alt="" />
+              <i class="fas fa-angle-down"></i>
+            </div>
+            <ul class="shadow-sm language-list">
+              <li>Eng</li>
+              <li>বাংলা</li>
+              <li>اَلْعَرَبِيَّةُ</li>
+            </ul>
+          </div>
+          <div class="page-settings">
+            <ul>
+              <li class="expand"><i class="fas fa-expand-alt"></i></li>
+              <li class="setting-btn">
+                <i class="fas fa-cog"></i>
+                <div>
+                  <ul class="shadow">
+                    <li><a href="#">Site 1</a></li>
+                    <li><a href="#">Site 2</a></li>
+                    <li><a href="#">Site 3</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="notification-btn">
+                <i class="far fa-bell"></i>
+                <div class="shadow">
+                  <h3 class="text-black">Notifications</h3>
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <div class="icon comment">
+                          <span>
+                            <i class="far fa-comment"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="icon user">
+                          <span>
+                            <i class="far fa-user"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="icon comment">
+                          <span>
+                            <i class="far fa-comment"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="icon user">
+                          <span>
+                            <i class="far fa-user"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="#" class="all">View all notifications</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="user" tabindex="0">
+            <img src="./assets/images/user.png" alt="" />
+            <div>
+              <h6>Jhon Doe</h6>
+              <small>Admin</small>
+            </div>
+            <div class="user-opt">
+              <ul class="shadow">
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="bg-white-shadow">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center my-3">
+            <h3 class="text-black mb-0">List</h3>
+            <div class="plus-btn ms-3"><i class="fas fa-plus"></i></div>
+          </div>
+          <div>
+            <i class="fas fa-print pnt ms-2"></i>
+            <i class="fas fa-pen pnt ms-2"></i>
+          </div>
+        </div>
+        <div class="table-responsive text-nowrap">
+          <table class="table table-borderless">
+            <thead>
+              <tr>
+                <td>Name</td>
+                <td>Description</td>
+                <td>Last Updated</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="align-middle">
+                  <span>Solar Pro</span>
+                </td>
+                <td class="align-middle">
+                  <span>Made Simple </span>
+                </td>
+                <td class="align-middle">
+                  May 07 2021 01:30:04 am <br />
+                  <span class="active-badge">Active</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

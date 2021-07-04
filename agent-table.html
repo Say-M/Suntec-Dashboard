@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suntec Dashboard</title>
+
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css"
+      integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.min.js"
+      integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- custom styling -->
+    <link rel="stylesheet" href="./assets/css/styles.min.css" />
+
+    <!-- custom scripts -->
+    <script src="./js/app.js" defer></script>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="/"><img src="./assets/images/logo 1.png" alt="" /></a>
+      </div>
+      <div class="sidebar-body">
+        <ul>
+          <li>
+            <a href="/">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#home"></use>
+              </svg>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="./agents.html" class="active">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#user"></use>
+              </svg>
+              Agents</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#file"></use>
+              </svg>
+              Proposals</a
+            >
+          </li>
+          <li>
+            <a href="./projects.html">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#layers"></use>
+              </svg>
+              Projects</a
+            >
+          </li>
+          <li>
+            <a href="./statement.html">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#file-text"></use>
+              </svg>
+              Statements</a
+            >
+          </li>
+          <li>
+            <a href="./calculator.html">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#calculator"></use>
+              </svg>
+              Calculator</a
+            >
+          </li>
+          <li>
+            <a href="./lead.html">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#filter"></use>
+              </svg>
+              Leads</a
+            >
+          </li>
+          <li>
+            <a href="./calender.html">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#calender"></use>
+              </svg>
+              Calendar</a
+            >
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <div class="overlay hide"></div>
+    <main>
+      <header class="header">
+        <div class="left-header">
+          <div class="menu"><i class="fas fa-bars"></i></div>
+          <div class="search">
+            <i class="fas fa-search"></i>
+            <input
+              type="text"
+              class="form-control form-control-lg"
+              placeholder="Search..."
+            />
+          </div>
+          <div class="icons">
+            <i class="fas fa-search left-header-search"></i>
+            <i class="fas fa-ellipsis-v right-header-menu"></i>
+          </div>
+        </div>
+        <div class="right-header">
+          <div class="language">
+            <div class="language-btn">
+              <img src="./assets/images/flags/united-states.png" alt="" />
+              <i class="fas fa-angle-down"></i>
+            </div>
+            <ul class="shadow-sm language-list">
+              <li>Eng</li>
+              <li>বাংলা</li>
+              <li>اَلْعَرَبِيَّةُ</li>
+            </ul>
+          </div>
+          <div class="page-settings">
+            <ul>
+              <li class="expand"><i class="fas fa-expand-alt"></i></li>
+              <li class="setting-btn">
+                <i class="fas fa-cog"></i>
+                <div>
+                  <ul class="shadow">
+                    <li><a href="#">Site 1</a></li>
+                    <li><a href="#">Site 2</a></li>
+                    <li><a href="#">Site 3</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="notification-btn">
+                <i class="far fa-bell"></i>
+                <div class="shadow">
+                  <h3 class="text-black">Notifications</h3>
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <div class="icon comment">
+                          <span>
+                            <i class="far fa-comment"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="icon user">
+                          <span>
+                            <i class="far fa-user"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="icon comment">
+                          <span>
+                            <i class="far fa-comment"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="icon user">
+                          <span>
+                            <i class="far fa-user"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="#" class="all">View all notifications</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="user" tabindex="0">
+            <img src="./assets/images/user.png" alt="" />
+            <div>
+              <h6>Jhon Doe</h6>
+              <small>Admin</small>
+            </div>
+            <div class="user-opt">
+              <ul class="shadow">
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="bg-white-shadow">
+        <div class="d-flex align-items-center my-3">
+          <h3 class="text-black mb-0">Agents List</h3>
+          <div class="plus-btn ms-3"><i class="fas fa-plus"></i></div>
+        </div>
+        <div class="filter">
+          <div class="left">
+            <div class="search" style="max-width: 350px; width: 100%">
+              <i class="fas fa-search"></i>
+              <input
+                type="text"
+                placeholder="Search"
+                class="form-control form-control-lg"
+              />
+            </div>
+          </div>
+          <div class="right">
+            <select class="form-select form-select-lg" style="max-width: 175px">
+              <option value="">Short by</option>
+            </select>
+            <select class="form-select form-select-lg" style="max-width: 175px">
+              <option value="">All</option>
+            </select>
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-borderless table-striped radius-table">
+            <thead>
+              <tr>
+                <td style="max-width: 2rem" class="text-center">
+                  ID <i class="fas fa-sort"></i>
+                </td>
+                <td>Name</td>
+                <td>Status</td>
+                <td>Email</td>
+                <td>Templates</td>
+                <td style="max-width: 3rem" class="text-center">Action</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-center"><span class="id">281</span></td>
+                <td><span>Moises Lopez</span></td>
+                <td><span class="badge badge-success">Active</span></td>
+                <td class="text-gray">
+                  <i class="fas fa-envelope me-2"></i> Priyanka99n@gmail.com
+                </td>
+                <td class="text-gray">
+                  <i class="fas fa-phone-alt me-2"></i> (981) 722-1229
+                </td>
+                <td class="text-center">
+                  <span style="opacity: 0.7">
+                    <i class="fas fa-pen"></i>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center"><span class="id">283</span></td>
+                <td><span>Jorge De Anda</span></td>
+                <td><span class="badge badge-success">Active</span></td>
+                <td class="text-gray">
+                  <i class="fas fa-envelope me-2"></i> Priyanka99n@gmail.com
+                </td>
+                <td class="text-gray">
+                  <i class="fas fa-phone-alt me-2"></i> (981) 722-1229
+                </td>
+                <td class="text-center">
+                  <span style="opacity: 0.7">
+                    <i class="fas fa-pen"></i>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center"><span class="id">291</span></td>
+                <td><span>Scott Fromwiller</span></td>
+                <td><span class="badge badge-warning">Pending</span></td>
+                <td class="text-gray">
+                  <i class="fas fa-envelope me-2"></i> Priyanka99n@gmail.com
+                </td>
+                <td class="text-gray">
+                  <i class="fas fa-phone-alt me-2"></i> (981) 722-1229
+                </td>
+                <td class="text-center">
+                  <span style="opacity: 0.7">
+                    <i class="fas fa-pen"></i>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center"><span class="id">292</span></td>
+                <td><span>Xochiti Torres</span></td>
+                <td><span class="badge badge-success">Active</span></td>
+                <td class="text-gray">
+                  <i class="fas fa-envelope me-2"></i> Priyanka99n@gmail.com
+                </td>
+                <td class="text-gray">
+                  <i class="fas fa-phone-alt me-2"></i> (981) 722-1229
+                </td>
+                <td class="text-center">
+                  <span style="opacity: 0.7">
+                    <i class="fas fa-pen"></i>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center"><span class="id">299</span></td>
+                <td><span>Moises Lopez</span></td>
+                <td><span class="badge badge-success">Active</span></td>
+                <td class="text-gray">
+                  <i class="fas fa-envelope me-2"></i> Priyanka99n@gmail.com
+                </td>
+                <td class="text-gray">
+                  <i class="fas fa-phone-alt me-2"></i> (981) 722-1229
+                </td>
+                <td class="text-center">
+                  <span style="opacity: 0.7">
+                    <i class="fas fa-pen"></i>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center"><span class="id">321</span></td>
+                <td><span>Scott Fromwiller</span></td>
+                <td><span class="badge badge-success">Active</span></td>
+                <td class="text-gray">
+                  <i class="fas fa-envelope me-2"></i> Priyanka99n@gmail.com
+                </td>
+                <td class="text-gray">
+                  <i class="fas fa-phone-alt me-2"></i> (981) 722-1229
+                </td>
+                <td class="text-center">
+                  <span style="opacity: 0.7">
+                    <i class="fas fa-pen"></i>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center"><span class="id">332</span></td>
+                <td><span>Jorge De Anda</span></td>
+                <td><span class="badge badge-success">Active</span></td>
+                <td class="text-gray">
+                  <i class="fas fa-envelope me-2"></i> Priyanka99n@gmail.com
+                </td>
+                <td class="text-gray">
+                  <i class="fas fa-phone-alt me-2"></i> (981) 722-1229
+                </td>
+                <td class="text-center">
+                  <span style="opacity: 0.7">
+                    <i class="fas fa-pen"></i>
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

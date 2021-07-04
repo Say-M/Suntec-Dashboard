@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suntec Dashboard</title>
+
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css"
+      integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.min.js"
+      integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- custom styling -->
+    <link rel="stylesheet" href="./assets/css/styles.min.css" />
+
+    <!-- custom scripts -->
+    <script src="./js/app.js" defer></script>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="/"><img src="./assets/images/logo 1.png" alt="" /></a>
+      </div>
+      <div class="sidebar-body">
+        <ul>
+          <li>
+            <a href="./settings.html">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#bulding"></use>
+              </svg>
+              Company
+            </a>
+          </li>
+          <li>
+            <a href="./agents.html">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#ticket"></use>
+              </svg>
+              Billings</a
+            >
+          </li>
+          <li>
+            <a href="#" class="active">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#user"></use>
+              </svg>
+              User</a
+            >
+          </li>
+          <li>
+            <a href="./projects.html">
+              <svg>
+                <use xlink:href="./assets/svg/sidebar.svg#layers"></use>
+              </svg>
+              Projects</a
+            >
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <div class="overlay hide"></div>
+    <main>
+      <header class="header">
+        <div class="left-header">
+          <div class="menu"><i class="fas fa-bars"></i></div>
+          <div class="exit">
+            <span><i class="fas fa-arrow-left"></i></span> Exit
+          </div>
+          <div class="icons">
+            <div class="exit">
+              <span><i class="fas fa-arrow-left ms-0"></i></span> Exit
+            </div>
+            <i class="fas fa-ellipsis-v right-header-menu"></i>
+          </div>
+        </div>
+        <div class="right-header">
+          <div class="language">
+            <div class="language-btn">
+              <img src="./assets/images/flags/united-states.png" alt="" />
+              <i class="fas fa-angle-down"></i>
+            </div>
+            <ul class="shadow-sm language-list">
+              <li>Eng</li>
+              <li>বাংলা</li>
+              <li>اَلْعَرَبِيَّةُ</li>
+            </ul>
+          </div>
+          <div class="page-settings">
+            <ul>
+              <li class="expand"><i class="fas fa-expand-alt"></i></li>
+              <li class="setting-btn">
+                <i class="fas fa-cog"></i>
+                <div>
+                  <ul class="shadow">
+                    <li><a href="#">Site 1</a></li>
+                    <li><a href="#">Site 2</a></li>
+                    <li><a href="#">Site 3</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="notification-btn">
+                <i class="far fa-bell"></i>
+                <div class="shadow">
+                  <h3 class="text-black">Notifications</h3>
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <div class="icon comment">
+                          <span>
+                            <i class="far fa-comment"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="icon user">
+                          <span>
+                            <i class="far fa-user"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="icon comment">
+                          <span>
+                            <i class="far fa-comment"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="icon user">
+                          <span>
+                            <i class="far fa-user"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, distinctio?
+                          </p>
+                          <span>50m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="#" class="all">View all notifications</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="user" tabindex="0">
+            <img src="./assets/images/user.png" alt="" />
+            <div>
+              <h6>Jhon Doe</h6>
+              <small>Admin</small>
+            </div>
+            <div class="user-opt">
+              <ul class="shadow">
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="bg-white-shadow">
+        <div class="d-flex justify-content-between align-items-center mt-4">
+          <p class="mb-0">CONTENT</p>
+          <div>
+            <i class="fas fa-print pnt ms-2"></i>
+            Preview
+          </div>
+        </div>
+        <!-- <div class="text-editor">
+          <div id="editor">
+            <h6 style="text-align: center; color: #000">
+              Welcome to Suntecsoft LLC your Direct Seller Agreement
+            </h6>
+            <p>
+              Look at “Exhibit A” at the bottom of this contract for Pay
+              Agreement. Please fill out all the required information.
+              Suntecsoft will mentioned on from this point on as “Suntec”.
+            </p>
+            <h6 style="text-align: center; color: #000">
+              SUNTECSOFT LLC DIRECT SELLER AGREEMENT
+            </h6>
+            <h6 style="text-align: center; color: #000">“SOLAR PRO”</h6>
+            <p>
+              For good and valuable consideration, the receipt and sufficiency
+              of which is hereby established, the Undersigned Direct Seller and
+              Suntec hereby enter this Suntec, Direct Seller Agreement
+              (“Agreement”). This Agreement constitutes the terms of certain
+              services to be provided by the seller to Suntec during the Sales
+              Program as defined herein below.
+            </p>
+            <h6 style="color: #000">1. Definitions.</h6>
+            <p>
+              a) “Confidential Information “means any present or future
+              information belonging to Suntec that pertains to Suntec business,
+              whether developed by Seller or by Suntec employees, contractors,
+              or agents, that is confidential or property in nature, and that is
+              not generally known in the public domain. Confidential Information
+              includes, without limitation, information regarding Suntec
+              finances, financial condition, operations, business plans,
+              business opportunities, purchasing activities, suppliers or
+              potential suppliers, costs of materials, pricing, margins, sales,
+              markets, marketing strategies, plans and ideas, customers,
+              customer lists, customer agreements, customer purchases, customer
+              documents, potential customers, employees, employee compensation,
+              technical data, research, product plans, products, methodologies,
+              services, software, developments, inventions, processes, formulas,
+              technology, designs, drawings, engineering, hardware configuration
+              information, Trade Secrets, Confidential business, etc.
+            </p>
+            <p>
+              Information of Suntec that is disclosed to or obtained by Seller,
+              directly or indirectly, flash drive, or other electronic means.
+            </p>
+            <p>
+              (b) “Confidential Materials “means any tangible medium containing
+              Confidential Information, including it not limited to paper,
+              electronic or magnetic media, prototypes, products, and other
+              materials.
+            </p>
+            <p>
+              (c) “Intellectual Property” means all patents, copyrights,
+              trademarks, service marks, trade secrets, know how, technology,
+              ideas, or computer
+            </p>
+          </div>
+        </div> -->
+        <div class="text-editor"><div id="editor"></div></div>
+
+        <!-- solar pro form start -->
+        <div class="modal fade" id="solar-pro" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title text-black" id="exampleModalLabel">
+                  Edit: Solar Pro
+                </h3>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form action="#">
+                  <div class="row mt-0">
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label>NAME</label>
+                        <select class="form-select form-control-lg">
+                          <option value="">Solar Pro</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label>NAME</label>
+                        <select class="form-select form-control-lg">
+                          <option value="">Made Simple</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="mb-2">
+                        <div class="form-check d-flex justify-content-center">
+                          <input
+                            class="form-check-input me-2"
+                            type="radio"
+                            name="flexRadioDefault"
+                            id="default"
+                          />
+                          <label class="form-check-label" for="default">
+                            Set as Default
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-center mb-5">
+                    <button type="submit" class="btn btn-lg btn-red">
+                      Save
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- solar pro form end -->
+      </section>
+    </main>
+    <script src="./js/lib/ckeditor/ckeditor.js"></script>
+    <script>
+      CKEDITOR.replace('editor')
+      const modal = new bootstrap.Modal(document.querySelector('#solar-pro'))
+      modal.show()
+    </script>
+  </body>
+</html>
