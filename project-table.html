@@ -245,9 +245,16 @@
         </div>
       </header>
       <section class="bg-white-shadow">
-        <div class="d-flex align-items-center my-3">
-          <h3 class="text-black mb-0">Project List</h3>
-          <div class="plus-btn ms-3"><i class="fas fa-plus"></i></div>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center my-3">
+            <h3 class="text-black mb-0">Project List</h3>
+            <div class="plus-btn ms-3"><i class="fas fa-plus"></i></div>
+          </div>
+          <i
+            class="fas fa-eye pnt p-2"
+            data-bs-toggle="modal"
+            data-bs-target="#project-view"
+          ></i>
         </div>
         <div class="filter">
           <div class="left">
@@ -269,6 +276,176 @@
             </select>
           </div>
         </div>
+
+        <!-- Modal start -->
+        <div
+          class="modal fade"
+          id="project-view"
+          tabindex="-1"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title text-black" id="exampleModalLabel">
+                  Project View
+                </h3>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="row project-view">
+                  <div class="col-xl-3">
+                    <div class="project-item project-item-left">
+                      <h6>Your Solar Project</h6>
+                      <img
+                        class="w-100 img-fluid"
+                        src="http://nevonprojects.com/wp-content/uploads/2021/04/nevon-solar-seawater-desalinator-sm.jpg"
+                        alt=""
+                      />
+                      <h6>
+                        <i class="fas fa-map-marker-alt text-red"></i> Location
+                      </h6>
+                      <p>
+                        Akshya Nagar 1st Block 1st Cross, Rammurthy nagar,
+                        Bangalore-560016
+                      </p>
+                      <div>
+                        <h6>Current Stage</h6>
+                        <button class="btn btn-sm btn-red">
+                          Permission to operate
+                        </button>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Omnis quam iste repudiandae, corporis totam odio
+                          et ea id assumenda cumque.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-6">
+                    <div class="project-item project-item-middle">
+                      <h4>Tract Project</h4>
+                      <div class="timeline">
+                        <div class="timeline-point check"></div>
+                        <div class="timeline-component">
+                          <h6>Site Survey</h6>
+                          <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Dolorem id nemo animi perspiciatis. Sequi,
+                            nihil.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="timeline">
+                        <div class="timeline-point check"></div>
+                        <div class="timeline-component">
+                          <h6>Design</h6>
+                          <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Dolorem id nemo animi perspiciatis. Sequi,
+                            nihil.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="timeline">
+                        <div class="timeline-point circle"></div>
+                        <div class="timeline-component">
+                          <h6>Permitting</h6>
+                          <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Dolorem id nemo animi perspiciatis. Sequi,
+                            nihil.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="timeline">
+                        <div class="timeline-point no-icon"></div>
+                        <div class="timeline-component">
+                          <h6>Installation</h6>
+                          <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Dolorem id nemo animi perspiciatis. Sequi,
+                            nihil.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="timeline">
+                        <div class="timeline-point no-icon"></div>
+                        <div class="timeline-component">
+                          <h6>Final Inspection</h6>
+                          <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Dolorem id nemo animi perspiciatis. Sequi,
+                            nihil.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="timeline">
+                        <div class="timeline-point no-icon"></div>
+                        <div class="timeline-component">
+                          <h6>Permission to operate</h6>
+                          <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Dolorem id nemo animi perspiciatis. Sequi,
+                            nihil.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3">
+                    <div class="project-item project-item-right">
+                      <div>
+                        <h6 class="mb-3">Your Sales Partner</h6>
+                        <h2
+                          style="font-weight: 400; margin-bottom: 1rem"
+                          class="text-red"
+                        >
+                          Suntec Soft Ltd.
+                        </h2>
+                        <h6>Contact</h6>
+                        <p><i class="far fa-envelope"></i> noemail@gmail.com</p>
+                        <p><i class="fas fa-phone-alt"></i> 520-288-9604</p>
+                      </div>
+                      <div>
+                        <h6 class="mb-3">Your Installation</h6>
+                        <h2
+                          style="font-weight: 400; margin-bottom: 0"
+                          class="text-red"
+                        >
+                          Titan Paso Ltd.
+                        </h2>
+                        <strong class="text-black d-block mb-3"
+                          >XDP05897890</strong
+                        >
+                        <p><i class="far fa-envelope"></i> noemail@gmail.com</p>
+                        <p><i class="fas fa-phone-alt"></i> 520-288-9604</p>
+                        <p><i class="fas fa-globe"></i> www.titanpaso.com</p>
+                      </div>
+                      <div>
+                        <h6 class="mb-3">Project Highlight</h6>
+                        <ul>
+                          <li>System Size: 6460 W</li>
+                          <li>Inverter: Solaredge</li>
+                          <li>Module: 19X Titan Solar Panel (SILFAB 340)</li>
+                          <li>Utility: EL Paso Electric Tx</li>
+                          <li>Jurisdiction: EL Paso City (Tx)</li>
+                          <li>Deal Type: Loanpal</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal end -->
         <div class="table-responsive">
           <table class="table table-borderless table-striped radius-table">
             <thead>
