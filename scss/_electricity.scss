@@ -1,0 +1,115 @@
+.electricity {
+  .form-check:not(.form-switch) {
+    .form-check-input {
+      background: #f1f1f1;
+      border: 1px solid #c9c9c9;
+      &:focus {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2.5' fill='%23E65912'/%3e%3c/svg%3e");
+      }
+      &:checked {
+        background-color: #ffcbb0 !important;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2.5' fill='%23E65912'/%3e%3c/svg%3e");
+      }
+    }
+  }
+  .form-control,
+  .form-select {
+    background-color: $background;
+    border: none !important;
+    padding: 0 2rem;
+    font-size: 1rem;
+  }
+  .usage-item {
+    padding: 1.25rem;
+    text-align: center;
+    background-color: transparentize($color: $lightGray, $amount: 0.67);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    &.active {
+      background-color: rgba(255, 236, 197, 0.5);
+      border: 2px solid $orange;
+    }
+    h6 {
+      color: $black;
+      margin-bottom: 0;
+    }
+  }
+  .month-start {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -2rem;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 2rem;
+    border-top: 1px solid transparentize($color: $black, $amount: 0.9);
+    border-bottom: 1px solid transparentize($color: $black, $amount: 0.9);
+    label {
+      text-transform: uppercase;
+      font-size: 0.875rem;
+      color: $black;
+      font-weight: 500;
+      margin-bottom: 0;
+      margin-right: 1rem;
+    }
+    input {
+      max-width: 260px;
+      border: none !important;
+      background-color: $background;
+    }
+  }
+  .unit-wrapper {
+    margin-bottom: 2rem;
+    .btn {
+      margin-top: 1.5rem;
+    }
+    .unit-input {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.625rem;
+      label {
+        text-transform: uppercase;
+        font-size: 0.875rem;
+        color: $black;
+        font-weight: 500;
+        margin-bottom: 0;
+        margin-right: 1rem;
+        width: 80px;
+      }
+      & > div {
+        position: relative;
+        width: calc(100% - 120px);
+        @media screen and(max-width: 991.98px) {
+          width: 100%;
+        }
+        span {
+          position: absolute;
+          top: 50%;
+          right: 1rem;
+          transform: translateY(-50%);
+          color: transparentize($color: $black, $amount: 0.5);
+        }
+      }
+      input {
+        border: none !important;
+        background-color: $background;
+        padding-right: 4.5rem;
+        color: $black !important;
+      }
+    }
+  }
+  .electricity-item {
+    padding: 1.875rem 1.5rem;
+    border: 1px solid $lightGray;
+    border-radius: 1rem;
+    margin-bottom: 2.4375rem;
+    .electricity-item-header {
+      font-weight: 500;
+      color: $black;
+      display: flex;
+      justify-content: space-between;
+      p {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+}
